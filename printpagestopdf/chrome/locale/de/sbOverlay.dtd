@@ -1,0 +1,5 @@
+<!ENTITY printPages2Pdf_sboverlay.label "Print pages to PDF">
+<!ENTITY printPages2Pdf_sboverlay.print.label "Lesezeichen drucken">
+<!ENTITY printPages2Pdf_mainpopup.print.tooltip "Alle gewählten Lesezeichen in ein PDF Dokument umwandeln">
+<!ENTITY printPages2Pdf_sboverlay.printText.label "Lesezeichen drucken (text)">
+<!ENTITY printPages2Pdf_mainpopup.printText.tooltip "Alle gewählten Lesezeichen als Text in ein PDF Dokument umwandeln">

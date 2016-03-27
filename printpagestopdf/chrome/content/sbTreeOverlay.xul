@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://printPages2Pdf/skin/sbOverlay.css" type="text/css"?>
+
+<!--locale-->
+<!DOCTYPE overlay [
+  <!ENTITY % commonDTD SYSTEM "chrome://printPages2Pdf/locale/general_ov.dtd">
+  %commonDTD;
+  <!ENTITY % mainwindowDTD SYSTEM "chrome://printPages2Pdf/locale/sbOverlay.dtd">
+  %mainwindowDTD;
+]>
+
+<overlay id="printPages2PdfTreeOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<!--JavaScript-->
+	<script type="application/x-javascript" src="chrome://printPages2Pdf/content/sb.js" />
+	<!--
+	<keyset>
+		<key id="printPages2Pdf_sbTreeOverlayKey" modifiers="accel shift" key="Q"
+			oncommand="printPages2Pdf.sbOverlay.handleKeyboardShortcut(event);" />
+	</keyset>
+-->
+	<!--overlay to popup-->
+	<menupopup id="sbPopup">
+		<menu id="printPages2Pdf_sbPopup" label="&printPages2Pdf_sboverlay.label;" key="printPages2Pdf_sbTreeOverlayKey" class="menu-iconic printPages2Pdf_mainAppIcon"  >
+		  	<menupopup>
+		    	<menuitem  label="&printPages2Pdf_sboverlay.print.label;"  
+						 tooltiptext="&printPages2Pdf_mainpopup.print.tooltip;"
+						 class="menuitem-iconic printPages2Pdf_sbovPrintGrafikIcon"
+				         oncommand="printPages2Pdf.sbOverlay.exec(null, false,false);"
+			          	 onclick="if ( event.button == 1 ) printPages2Pdf.sbOverlay.exec(null, true,false);document.getElementById('sbPopup').hidePopup();" />
+		    	<menuitem  label="&printPages2Pdf_sboverlay.printText.label;"  
+						 tooltiptext="&printPages2Pdf_mainpopup.printText.tooltip;"
+						 class="menuitem-iconic  printPages2Pdf_sbovPrintTextIcon"
+				         oncommand="printPages2Pdf.sbOverlay.exec(null, false,true);"
+			          	 onclick="if ( event.button == 1 ) printPages2Pdf.sbOverlay.exec(null, true,true);document.getElementById('sbPopup').hidePopup();" />
+			    <menuseparator />
+    			<menuitem 
+				 section="convert-scrapbook-pages"
+                 label="&printPages2Pdf_menitem.help.label;"
+				 class="helpmenuitem menuitem-iconic"
+				 tooltiptext="&printPages2Pdf_menitem.help.tooltip;"
+                 oncommand="RRprintPages2Pdf.showHelp(this.getAttribute('section'));event.stopPropagation();" />
+			</menupopup>
+		</menu>
+	</menupopup>
+	
+	<popupset>
+	  	<menupopup id="printPages2_PdfTreePopup">
+	    	<menuitem  label="&printPages2Pdf_sboverlay.print.label;"  
+					 tooltiptext="&printPages2Pdf_mainpopup.print.tooltip;"
+					 class="menuitem-iconic printPages2Pdf_sbovPrintGrafikIcon"
+			         oncommand="printPages2Pdf.sbOverlay.exec(null, false,false);"
+		          	 onclick="if ( event.button == 1 ) printPages2Pdf.sbOverlay.exec(null, true,false);document.getElementById('sbPopup').hidePopup();" />
+	    	<menuitem  label="&printPages2Pdf_sboverlay.printText.label;"  
+					 tooltiptext="&printPages2Pdf_mainpopup.printText.tooltip;"
+					 class="menuitem-iconic  printPages2Pdf_sbovPrintTextIcon"
+			         oncommand="printPages2Pdf.sbOverlay.exec(null, false,true);"
+		          	 onclick="if ( event.button == 1 ) printPages2Pdf.sbOverlay.exec(null, true,true);document.getElementById('sbPopup').hidePopup();" />
+				    <menuseparator />
+			<menuitem 
+			 section="convert-scrapbook-pages"
+	         label="&printPages2Pdf_menitem.help.label;"
+			 class="helpmenuitem menuitem-iconic"
+			 tooltiptext="&printPages2Pdf_menitem.help.tooltip;"
+	         oncommand="RRprintPages2Pdf.showHelp(this.getAttribute('section'));event.stopPropagation();" />
+		</menupopup>
+	</popupset>
+
+</overlay>

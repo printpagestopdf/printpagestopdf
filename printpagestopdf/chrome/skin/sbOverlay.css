@@ -1,0 +1,19 @@
+
+.printPages2Pdf_mainAppIcon
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/printPages2Pdf16x16.png");  
+}
+.printPages2Pdf_sbovPrintGrafikIcon
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/sb-grafik.png");  
+}
+.printPages2Pdf_sbovPrintTextIcon
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/sb-text.png");  
+}
+
+.helpmenuitem
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/symbol_help16.png");  
+}
+

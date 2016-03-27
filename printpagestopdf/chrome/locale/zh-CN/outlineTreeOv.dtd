@@ -1,0 +1,11 @@
+<!ENTITY outlinetree.header "书签">
+<!ENTITY outlinetree.button.delete.label "删除">
+<!ENTITY outlinetree.button.delete.tooltip "删除选中的书签">
+<!ENTITY outlinetree.button.outdent.label "取消缩进">
+<!ENTITY outlinetree.button.outdent.tooltip "左移选中书签的缩进 (取消缩进)">
+<!ENTITY outlinetree.button.indent.label "缩进">
+<!ENTITY outlinetree.button.indent.tooltip "右移选中书签的缩进">
+<!ENTITY outlinetree.button.clear.label "清除">
+<!ENTITY outlinetree.button.clear.tooltip "清除所有书签">
+<!ENTITY outlinetree.button.settitle.label "标题">
+<!ENTITY outlinetree.button.settitle.tooltip "添加网页标题为第一个书签项">

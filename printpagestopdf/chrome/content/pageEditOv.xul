@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css"?>
+<?xml-stylesheet href="chrome://printPages2Pdf/skin/pageEditOv.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://printPages2Pdf/locale/pageEditOv.dtd" >
+
+<overlay id="printPages2Pdf_pageEditOv"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script type="application/x-javascript" src="chrome://printPages2Pdf/content/pageEditOv.js" />
+	
+  	<vbox id="browserBox"   flex="1">
+  		<stack flex="1">
+  			<browser id="editBrowser" type="content-primary" flex="1" style="background-color:#ffffff;" />
+			<box id="busyIndicator"  pack="center" align="center">
+				<image src="chrome://printPages2Pdf/skin/icon_loading_75x75.gif" hidden="false"/>
+			</box>
+		</stack>
+		<toolbox id="editToolbox" style="overflow:hidden;" >
+			<toolbar id="editToolbar">
+				<toolbarbutton label="&pageedit.button.header1.label;" tooltiptext="&pageedit.button.header1.tooltip;" id="btH1"   class="imageOnly" />
+				<toolbarbutton label="&pageedit.button.header2.label;" tooltiptext="&pageedit.button.header2.tooltip;" id="btH2"    class="imageOnly" />
+				<toolbarbutton label="&pageedit.button.header3.label;" tooltiptext="&pageedit.button.header3.tooltip;" id="btH3"   class="imageOnly" />
+				<toolbarbutton label="&pageedit.button.header4.label;" tooltiptext="&pageedit.button.header4.tooltip;" id="btH4"    class="imageOnly" />
+				<toolbarbutton label="&pageedit.button.header5.label;" tooltiptext="&pageedit.button.header5.tooltip;" id="btH5"    class="imageOnly" />
+				<toolbarbutton label="&pageedit.button.header6.label;" tooltiptext="&pageedit.button.header6.tooltip;" id="btH6"   class="imageOnly" />
+				<toolbarseparator/>
+				<toolbarbutton type="checkbox"  label="&pageedit.button.domdelete.label;" tooltiptext="&pageedit.button.domdelete.tooltip;" id="btDeleteSel"   class="imageOnly" />
+				<toolbarbutton disabled="true"  label="Undo" tooltiptext="Undo the last delete" id="btUndo"   class="imageOnly" />
+				<!--<toolbarbutton label="&pageedit.button.addtext.label;" tooltiptext="&pageedit.button.addtext.tooltip;" id="btNote"   class="imageOnly" />-->
+				<toolbarbutton label="&pageedit.button.textonly.label;" tooltiptext="&pageedit.button.textonly.tooltip;" id="btTextOnly"   class="imageOnly" />
+				<toolbarseparator/>
+				<toolbarbutton label="&pageedit.button.reload.label;" tooltiptext="&pageedit.button.reload.tooltip;" id="btReload"   class="imageOnly" />
+				<toolbarbutton label="&pageedit.button.save.label;" tooltiptext="&pageedit.button.save.tooltip;" id="btSaveEditWin" disabled="true"  class="imageOnly" />
+			</toolbar>
+		</toolbox>	
+
+	</vbox>
+
+		 
+</overlay>

@@ -1,0 +1,20 @@
+<!ENTITY action.openwith.label "Ouvrir…">
+<!ENTITY action.openwith.tooltip "Ouvrir cet élément avec l'application du système d'exploitation">
+<!ENTITY action.cut.label "Couper">
+<!ENTITY action.cut.tooltip "Copie les éléments dans le presse-papiers et les supprime de cet emplacement">
+<!ENTITY action.copy.label "Copier">
+<!ENTITY action.copy.tooltip "Copie les éléments dans le presse-papiers">
+<!ENTITY action.paste.label "Insérer">
+<!ENTITY action.paste.tooltip "Insérer les éléments depuis le presse-papiers">
+<!ENTITY action.delete.label "Supprimer">
+<!ENTITY action.delete.tooltip "Supprimer les éléments sélectionnés">
+<!ENTITY action.newfolder.label "Nouveau dossier">
+<!ENTITY action.newfolder.tooltip "Crée un nouveau dossier">
+<!ENTITY action.newarchive.label "Nouvelle archive">
+<!ENTITY action.newarchive.tooltip "Crée une nouvelle archive">
+<!ENTITY action.rename.label "Renommer">
+<!ENTITY action.rename.tooltip "Renomme un élément sélectionné">
+<!ENTITY action.help.label "Aide">
+<!ENTITY action.help.tooltip "Ouvre la page d'aide pour l'extension Print pages to PDF">
+<!ENTITY action.fav.label "Favoris">
+<!ENTITY action.fav.tooltip "Ajoute le dossier sélectionné à la liste des favoris">

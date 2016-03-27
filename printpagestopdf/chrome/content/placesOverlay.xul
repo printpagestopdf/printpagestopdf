@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://printPages2Pdf/skin/placesOverlay.css" type="text/css"?>
+
+<!--locale-->
+<!DOCTYPE overlay [
+  <!ENTITY % commonDTD SYSTEM "chrome://printPages2Pdf/locale/general_ov.dtd">
+  %commonDTD;
+  <!ENTITY % mainwindowDTD SYSTEM "chrome://printPages2Pdf/locale/sbOverlay.dtd">
+  %mainwindowDTD;
+]>
+
+<overlay id="printPages2Pdf_placesOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	
+	<script type="application/x-javascript" src="chrome://printPages2Pdf/content/placesOverlay.js" />    
+	
+	<keyset name="printPages2Pdf_placesOverlayKeySet">
+		<key id="printPages2Pdf_placesOverlayKey" modifiers="accel shift" key="Q"
+			oncommand="printPages2Pdf.bookmarks.handleKeyboardShortcut(event);" />
+	</keyset>
+
+	<popupset>
+	  	<menupopup id="printPages2Pdf_placesOverlay">
+	    	<menuitem  label="&printPages2Pdf_sboverlay.print.label;" 
+					 tooltiptext="&printPages2Pdf_mainpopup.print.tooltip;"
+					 class="menuitem-iconic"
+					 id="printPages2Pdf_printLinkGrafik"
+			         oncommand="printPages2Pdf.bookmarks.onMouseUp(event,false,false);"
+		          	 />
+	    	<menuitem  label="&printPages2Pdf_sboverlay.printText.label;"  
+					 tooltiptext="&printPages2Pdf_mainpopup.printText.tooltip;"
+					 class="menuitem-iconic"
+					 id="printPages2Pdf_printLinkText"
+			         oncommand="printPages2Pdf.bookmarks.onMouseUp(event, false,true);"
+		          	 />
+		    <menuseparator />
+			<menuitem 
+			 section="convert-bookmarks"
+             label="&printPages2Pdf_menitem.help.label;"
+			 class="helpmenuitem menuitem-iconic"
+			 tooltiptext="&printPages2Pdf_menitem.help.tooltip;"
+             oncommand="RRprintPages2Pdf.showHelp(this.getAttribute('section'));event.stopPropagation();" />
+		</menupopup>
+	</popupset>     	
+	<menupopup id="placesContext">
+		<menuseparator />			
+				<menu  label="&printPages2Pdf_sboverlay.label;" id="printPages2Pdf_printLink"	              
+						 class="menu-iconic"
+				  selectiontype="single|multiple"
+	              xselection="link|folder|query"
+	              selection="link|folder|query"
+				  key="printPages2Pdf_placesOverlayKey"  >	
+			  	<menupopup >
+			    	<menuitem  label="&printPages2Pdf_sboverlay.print.label;" 
+							 tooltiptext="&printPages2Pdf_mainpopup.print.tooltip;"
+							 class="menuitem-iconic"
+							 id="printPages2Pdf_printLinkGrafik"
+					         onmouseup="printPages2Pdf.bookmarks.onMouseUp(event,false,false);"
+				          	 />
+			    	<menuitem  label="&printPages2Pdf_sboverlay.printText.label;"  
+							 tooltiptext="&printPages2Pdf_mainpopup.printText.tooltip;"
+							 class="menuitem-iconic"
+							 id="printPages2Pdf_printLinkText"
+					         onmouseup="printPages2Pdf.bookmarks.onMouseUp(event, false,true);"
+				          	 />
+				    <menuseparator />
+					<menuitem 
+					 section="convert-bookmarks"
+		             label="&printPages2Pdf_menitem.help.label;"
+					 class="helpmenuitem menuitem-iconic"
+					 tooltiptext="&printPages2Pdf_menitem.help.tooltip;"
+		             oncommand="RRprintPages2Pdf.showHelp(this.getAttribute('section'));event.stopPropagation();" />
+				</menupopup>
+			  </menu>
+
+<!--			
+				<menu  label="&printPages2Pdf_sboverlay.label;" id="printPages2Pdf_printLink"	              
+				  selectiontype="single|multiple"
+	              selection="link|folder|query">	
+			  	<menupopup >
+			    	<menuitem  label="&printPages2Pdf_sboverlay.print.label;"  
+							 tooltiptext="&printPages2Pdf_mainpopup.print.tooltip;"
+							  selectiontype="single|multiple"
+				              selection="link|folder|query"
+					         oncommand="printPages2Pdf.bookmarks.printSelection(false,false);"
+				          	 onclick="if ( event.button == 1 ) printPages2Pdf.bookmarks.printSelection( true,false);event.target.parentNode.hidePopup();" />
+			    	<menuitem  label="&printPages2Pdf_sboverlay.printText.label;"  
+							 tooltiptext="&printPages2Pdf_mainpopup.printText.tooltip;"
+							  selectiontype="single|multiple"
+				              selection="link|folder|query"
+					         oncommand="printPages2Pdf.bookmarks.printSelection( false,true);"
+				          	 onclick="if ( event.button == 1 ) printPages2Pdf.bookmarks.printSelection( true,true);event.target.parentNode.hidePopup();" />
+				</menupopup>
+			  </menu>
+			
+	    <menuitem id="printPages2Pdf_printLink"
+	              oncommand="printPages2Pdf.bookmarks.printSelection(false,false);"
+	              label="PDF erzeugen"
+	              selectiontype="single|multiple"
+	              selection="link|folder|query"/>
+-->
+
+	</menupopup>						
+</overlay>

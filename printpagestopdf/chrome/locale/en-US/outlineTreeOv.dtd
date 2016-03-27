@@ -1,0 +1,11 @@
+<!ENTITY outlinetree.header "Outline">
+<!ENTITY outlinetree.button.delete.label "Delete">
+<!ENTITY outlinetree.button.delete.tooltip "Delete selected Outlines">
+<!ENTITY outlinetree.button.outdent.label "Unindent">
+<!ENTITY outlinetree.button.outdent.tooltip "Moves the indentation of the selected Outlines to the left (Unindent)">
+<!ENTITY outlinetree.button.indent.label "Intent">
+<!ENTITY outlinetree.button.indent.tooltip "Moves the indentation of the selected Outlines to the right">
+<!ENTITY outlinetree.button.clear.label "Clear">
+<!ENTITY outlinetree.button.clear.tooltip "Removes all Outlines">
+<!ENTITY outlinetree.button.settitle.label "Title">
+<!ENTITY outlinetree.button.settitle.tooltip "Add the Title of the Webpage as the first Outline item">

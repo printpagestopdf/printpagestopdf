@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://printPages2Pdf/skin/processPdf.css" type="text/css"?>
+<?xml-stylesheet href="chrome://browser/skin/preferences/preferences.css"?>
+
+<?xul-overlay href="chrome://printPages2Pdf/content/prefs_wkhOoptOverlay.xul"?>
+<?xul-overlay href="chrome://printPages2Pdf/content/outlineTreeOv.xul"?>
+<?xul-overlay href="chrome://printPages2Pdf/content/pageEditOv.xul"?>
+
+<!DOCTYPE overlay [
+  <!ENTITY % commonDTD SYSTEM "chrome://printPages2Pdf/locale/general_ov.dtd">
+  %commonDTD;
+  <!ENTITY % mainwindowDTD SYSTEM "chrome://printPages2Pdf/locale/processPdf.dtd">
+  %mainwindowDTD;
+]>
+
+<window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	xmlns:html="http://www.w3.org/1999/xhtml" 
+	id="processPdfDlg" title="&windowtitle;" buttons="" >
+		<html:head>
+		  <html:link rel="icon" href="chrome://printPages2Pdf/icons/default/processPdfDlg.png" style="display:none;" />
+		</html:head>
+	<!--JavaScript-->
+		<script type="application/x-javascript" src="chrome://printPages2Pdf/content/processPdf.js" />
+	<broadcasterset>
+		<broadcaster id="brDocavailable" disabled="true" />
+		<broadcaster id="brItemListSelection" disabled="true" />
+		<broadcaster id="brEditWin" hidden="true" />
+		<broadcaster tooltiptext="Opens preview Window" oncommand="printPages2Pdf.processHandler.previewPdf();" id="brPreview" hidden="false" />
+	</broadcasterset>
+	
+	<popupset>
+		<menupopup id="ctxMenItemList">
+			<menuitem observes="brItemListSelection" label="&maintoolbar.button.items.up.label;" tooltiptext="&maintoolbar.button.items.up.tooltip;"    name="ItemsUpButton"  class="menuitem-iconic" />
+			<menuitem observes="brItemListSelection" label="&maintoolbar.button.items.down.label;" tooltiptext="&maintoolbar.button.items.down.tooltip;"    name="ItemsDownButton"  class="menuitem-iconic" />
+			<menuitem observes="brItemListSelection" label="&maintoolbar.button.items.remove.label;" tooltiptext="&maintoolbar.button.items.remove.tooltip;"    name="ItemsRemoveButton"  class="menuitem-iconic" />
+		</menupopup>		
+	</popupset>
+	
+	<deck selectedindex="0" flex="1" >	
+	<hbox flex="1" >
+		<vbox id="leftVbox" flex="1" >
+	<toolbox id="mainToolbox" style="overflow:hidden;" >
+		<toolbar id="mainToolbar">
+			<deck id="StartStopDeck">
+				<toolbarbutton label="&maintoolbar.button.processing.label;" tooltiptext="&maintoolbar.button.processing.tooltip;" disabled="false" name="PdfProcessButton" id="PdfProcessButton"   class="imageOnly" />
+				<toolbarbutton label="&maintoolbar.button.stopprocessing.label;" tooltiptext="&maintoolbar.button.stopprocessing.tooltip;" disabled="false" name="PdfStopProcessButton" id="PdfStopProcessButton" class="imageOnly" />
+			</deck>
+			<toolbarseparator/>
+			<toolbarbutton label="&maintoolbar.button.save.label;" tooltiptext="&maintoolbar.button.save.tooltip;"   observes="brDocavailable" name="PdfSaveButton" type="menu-button" id="PdfSaveButton"  class="imageOnly" >
+	 			  <menupopup id="popmen_save" onpopupshowing="printPages2Pdf.processHandler.listFavorites(event);">
+				  </menupopup>
+			</toolbarbutton>
+			<toolbarseparator/>
+			<toolbarbutton label="&maintoolbar.button.properties.label;" tooltiptext="&maintoolbar.button.properties.tooltip;" name="GlobalPropsButton"   id="GlobalPropsButton"  class="imageOnly" />
+			<hbox id="tbBoxItems" collapsed="false">
+				<toolbarseparator/>
+				<toolbarbutton observes="brItemListSelection" label="&maintoolbar.button.items.up.label;" tooltiptext="&maintoolbar.button.items.up.tooltip;"    name="ItemsUpButton"  class="imageOnly" />
+				<toolbarbutton observes="brItemListSelection" label="&maintoolbar.button.items.down.label;" tooltiptext="&maintoolbar.button.items.down.tooltip;"    name="ItemsDownButton"  class="imageOnly" />
+				<toolbarbutton observes="brItemListSelection" label="&maintoolbar.button.items.remove.label;" tooltiptext="&maintoolbar.button.items.remove.tooltip;"    name="ItemsRemoveButton"  class="imageOnly" />
+				<toolbarseparator/>
+			</hbox>
+			<hbox  id="tbBoxProgress" collapsed="true">
+				<toolbarseparator/>
+				<toolbarbutton  label="&maintoolbar.button.progress.clear.label;" tooltiptext="&maintoolbar.button.progress.clear.tooltip;"    id="ClearProgressButton"  class="imageOnly" />
+				<toolbarseparator/>
+			</hbox>
+			<toolbarbutton 				 
+				 section="processing_window"
+                 label="&printPages2Pdf_menitem.help.label;"
+				 class="helpmenuitem"
+				 tooltiptext="&printPages2Pdf_menitem.help.tooltip;"
+                 oncommand="RRprintPages2Pdf.showHelp(this.getAttribute('section'));event.stopPropagation();" />
+		</toolbar>
+	</toolbox>	
+
+	<groupbox height="22" >
+		<caption>
+			<label value="&titlebox.label;" tooltiptext="&titlebox.tooltip;" />
+		</caption>
+		<menulist   editable="true"  id="menDocTitle" >
+		  <menupopup>
+		  </menupopup>
+		</menulist>						
+	</groupbox>
+	<hbox pack="center" align="center">
+		<groupbox flex="1" height="22" >
+		<caption>
+			<label value="&resultbox.label;"/>
+			<deck selectedIndex="0" collapsed="true" id="busyDeck">
+			<vbox  pack="center">
+				<image height="10" src="chrome://printPages2Pdf/skin/redBarloader.gif" />
+			</vbox>
+			<vbox  pack="center">
+				<progressmeter mode="determined" value="100" class="meter" />
+			</vbox>
+			<vbox  pack="center">
+				<progressmeter mode="determined" value="75" class="red meter" />
+			</vbox>
+			</deck>
+		</caption>
+		<grid>
+			<columns>
+				<column flex="1" minwidth="50">
+					<label crop="end" tooltiptext="&resultbox.link.tooltip;" draggable="true" observes="brDocavailable"  class="header text-link"  id="PdfFileLabel"  />
+				</column>
+				<column >
+					<!--<button label="Save As"  observes="brDocavailable" id="PdfSaveButton"  class="imageOnly" />-->
+				</column>
+				<column>
+					<!--<button label="Process"  disabled="false" id="PdfProcessButton"  class="imageOnly" />-->
+				</column>					
+			</columns>
+		</grid>
+	</groupbox>
+		<button observes="brPreview"   id="btPreview"/>	
+	</hbox>
+	<tabbox flex="1" id="mainTabBox" selectedIndex="1">
+		<tabs id="mainTabs">
+			<tab label="&tabbox.tab.progress.label;" tooltiptext="&tabbox.tab.progress.tooltip;" />
+			<tab label="&tabbox.tab.webpages.label;" tooltiptext="&tabbox.tab.webpages.tooltip;" />
+		</tabs>
+		<tabpanels flex="1">
+			<tabpanel>
+				<box hidden="true" collapsed="true" id="ProgrGridTemplateContainer">
+					<row phase="0" status="none" dir="normal" hidden="true" role="rowTemplate">
+						<label role="label" pack="center"  crop="end" />
+						<hbox align="center">
+							<deck selectedIndex="0" role="typeimagedeck" >
+								<image src="chrome://printPages2Pdf/skin/Globe-32.png" width="16" height="16"/>
+								<image src="chrome://printPages2Pdf/skin/save.png" width="16" height="16"/>
+								<image src="chrome://printPages2Pdf/skin/document-convert.png" width="16" height="16"/>
+								<image src="chrome://printPages2Pdf/skin/processing.png" width="16" height="16"/>
+							</deck>
+						</hbox>
+						<hbox align="center" orient="horizontal">
+							<deck selectedIndex="0" role="progressdeck" >
+								<progressmeter role="progress" mode="determined" value="0" class="orange meter" dir="normal" orient="horizontal" flex="1"/>
+								<image  src="chrome://printPages2Pdf/skin/greenBarLoader1.gif" width="15" />
+							</deck>
+						</hbox>
+						<hbox align="center">
+							<image role="image" src="chrome://printPages2Pdf/skin/icon_loading_75x75.gif" width="16" height="16"/>
+						</hbox>
+						<label role="message" pack="center"  crop="end" />
+					</row>
+					<hbox  class="textrow" hidden="true" role="textTemplate"  >
+						<vbox align="stretch" flex="1">
+							<spacer flex="1" orient="vertical"/>
+							<hbox style="background-color:#000000;" height="2"/>
+							<spacer flex="1" orient="vertical"/>
+						</vbox>
+						<label flex="1"  value="dummy" style="min-width:25em;"/>
+						<vbox align="stretch" flex="1">
+							<spacer flex="1" orient="vertical"/>
+							<hbox style="background-color:#000000;" height="2"/>
+							<spacer flex="1" orient="vertical"/>
+						</vbox>
+					</hbox>
+				</box>
+				<scrollbox flex="1" style="overflow:auto;" id="box_progressGrid" >	
+					<grid orient="horizontal" flex="1" id="progressGrid" >
+						<columns  orient="horizontal" dir="normal">
+							<column minwidth="50" flex="1"/>
+							<column width="16"/>
+							<column width="100" />
+							<column width="16"/>
+							<column width="100"/>
+						</columns>
+						<rows>
+						</rows>
+					</grid>
+				</scrollbox>
+			</tabpanel>
+			<tabpanel>
+					<richlistitem align="center" draggable="true"  hidden="true" role="rli_template"  class="alternatingColorRlb">
+							<image style="padding-right: 10px;padding-left: 5px;" pack="left" align="left" tooltiptext="&webpages.item.srcimage.tooltip;" role="img_src" type="unknown" />
+							<image width="16" height="16" pack="center"  role="img_item"  />
+							<label flex="1" pack="start" role="lbl_title" crop="end"/>
+							<checkbox label="&webpages.item.cb.image.label;" tootliptext="&webpages.item.cb.image.tooltip;" role="cb_isImage"/>
+							<checkbox label="&webpages.item.cb.textonly.label;" tootliptext="&webpages.item.cb.textonly.tooltip;" role="cb_isText"/>
+							<button type="menu" popup="objectPrefPopup"  xlabel="&webpages.item.button.label;" tooltiptext="&webpages.item.button.tooltip;"  crop="end" role="bt_props" class="imageOnly propIcon"  />
+							<button   xlabel="&webpages.item.edit.button.label;" tooltiptext="&webpages.item.edit.button.tooltip;"  crop="end" role="bt_edit"  class="imageOnly editIcon"  />
+					</richlistitem>
+
+					<richlistbox contextmenu="ctxMenItemList" class="alternatingColorRlb" seltype="multiple"  suppressonselect="false" orient="horizontal" flex="1" id="rlb_pagelist" xid="itemGrid" style="overflow:auto;">
+					</richlistbox>		
+			</tabpanel>
+		</tabpanels>
+	</tabbox>
+	<splitter  observes="brEditWin" collapse="none" resizeafter="closest" resizebefore="closest" />
+	<vbox   observes="brEditWin" flex="1" id="boxOutlineTree">
+	</vbox>
+	
+	</vbox>
+	<splitter id="splitVertical" observes="brEditWin" collapse="none" resizeafter="closest" resizebefore="closest" />
+		<vbox id="browserBox" observes="brEditWin"  flex="1"></vbox>
+  </hbox>
+		<groupbox xheight="11" flex="1" style="overflow:scroll" id="browserParent"  orient="horizontal" >
+			<!--<browser src=""  autoscroll="false"  width="1024" height="1024"  type="content" id="contentbrowser" xflex="1"/>-->
+		</groupbox>
+	</deck>	
+	<scrollbox  hidden="true" >
+		<html:canvas id="printPages2Pdf_buffer_canvas" xstyle="display: none"/>
+	</scrollbox>	
+	<panel  id="objectPrefPopup"  type="arrow" backdrag="true" level="parent" noautohide="true">
+		<vbox orient="vertical"  style="overflow:auto;" flex="1">
+		<prefpane id="docWkhtmlObject" ></prefpane>
+		<hbox pack="end">
+			<button class="imageOnly" label="&objectprefpane.okbutton.label;" tooltiptext="&objectprefpane.okbutton.tooltip;" id="pref_btOk" />
+			<button class="imageOnly" label="&objectprefpane.cancelbutton.label;" tooltiptext="&objectprefpane.cancelbutton.tooltip;" id="pref_btCancel"/>
+		</hbox>
+		</vbox>
+	</panel>
+	
+</window>

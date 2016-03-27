@@ -1,0 +1,38 @@
+<!ENTITY windowtitle "Print Pages to Pdf (変換)">
+<!ENTITY maintoolbar.button.processing.label "開始">
+<!ENTITY maintoolbar.button.processing.tooltip "変換を開始します">
+<!ENTITY maintoolbar.button.stopprocessing.label "停止">
+<!ENTITY maintoolbar.button.stopprocessing.tooltip "変換を停止します">
+<!ENTITY maintoolbar.button.save.label "保存">
+<!ENTITY maintoolbar.button.save.tooltip "名前を付けて Pdf ファイルを保存....">
+<!ENTITY maintoolbar.button.items.up.label "上へ">
+<!ENTITY maintoolbar.button.items.up.tooltip "選択したアイテムを上に移動します">
+<!ENTITY maintoolbar.button.items.down.label "下へ">
+<!ENTITY maintoolbar.button.items.down.tooltip "選択したアイテムを上に移動します">
+<!ENTITY maintoolbar.button.items.remove.label "削除">
+<!ENTITY maintoolbar.button.items.remove.tooltip "選択したアイテムを削除します">
+<!ENTITY maintoolbar.button.properties.label "プロパティ">
+<!ENTITY maintoolbar.button.properties.tooltip "グローバル プロパティを開きます…">
+<!ENTITY resultbox.label "変換結果">
+<!ENTITY resultbox.link.tooltip "Opens the Pdf Result; its although possible to Drag the File by Mouse e.g. to Desktop">
+<!ENTITY titlebox.label "ドキュメントのタイトル">
+<!ENTITY titlebox.tooltip "PDF ドキュメントのタイトルはファイル名にも使用されます">
+<!ENTITY tabbox.tab.progress.label "進行状況">
+<!ENTITY tabbox.tab.progress.tooltip "Processing steps with Progress indicators">
+<!ENTITY tabbox.tab.webpages.label "Web ページ">
+<!ENTITY tabbox.tab.webpages.tooltip "List of Webpages with individual Prefrerences">
+<!ENTITY webpages.item.edit.button.label "編集">
+<!ENTITY webpages.item.edit.button.tooltip "Web ページの編集(削除、挿入、アウトライン)です">
+<!ENTITY webpages.item.button.label "プロパティ">
+<!ENTITY webpages.item.button.tooltip "Web ページ特有のプロパティです…">
+<!ENTITY webpages.item.cb.image.label "グラフィック">
+<!ENTITY webpages.item.cb.image.tooltip "Web ページをテキストではなく図として Pdf 文書に配置します">
+<!ENTITY webpages.item.cb.textonly.label "テキストのみ">
+<!ENTITY webpages.item.cb.textonly.tooltip "この Web ページをテキストのみプリントします">
+<!ENTITY webpages.item.srcimage.tooltip "ソース">
+<!ENTITY maintoolbar.button.progress.clear.label "クリア">
+<!ENTITY maintoolbar.button.progress.clear.tooltip "進行状況タブのすべてのエントリを消去">
+<!ENTITY objectprefpane.okbutton.label "OK">
+<!ENTITY objectprefpane.okbutton.tooltip "選択した Web ページにこの設定を使用します">
+<!ENTITY objectprefpane.cancelbutton.label "キャンセル">
+<!ENTITY objectprefpane.cancelbutton.tooltip "変更を適用せずにこのウィンドウを閉じます">

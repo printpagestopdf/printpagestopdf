@@ -1,0 +1,19 @@
+
+#printPages2Pdf_printLink
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/printPages2Pdf16x16.png");  
+}
+#printPages2Pdf_printLinkGrafik
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/bookmark-grafik.png");  
+}
+#printPages2Pdf_printLinkText
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/bookmark-text.png");  
+}
+
+.helpmenuitem
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/symbol_help16.png");  
+}
+

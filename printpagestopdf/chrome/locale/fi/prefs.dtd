@@ -1,0 +1,306 @@
+<!ENTITY windowtitle "Tulosta sivut PDF-muodossa, Asetukset">
+<!ENTITY prefpane.general "Yleiset">
+<!ENTITY prefpane.general.tooltip "Tämän lisäosan yleiset asetukset">
+<!ENTITY prefpane.docWkhtmlGlobal "Koko PDF">
+<!ENTITY prefpane.docWkhtmlGlobal.tooltip "Koko PDF-asiakirjaan liittyvät asetukset">
+<!ENTITY prefpane.docWkhtmlObject "PDF (verkkosivu)">
+<!ENTITY prefpane.docWkhtmlObject.tooltip "Verkkosivukohtaiset asetukset">
+<!ENTITY prefpane.about "Tietoja">
+<!ENTITY prefpane.about.tooltip "Tietoja tästä lisäosasta">
+<!ENTITY prefpane.archive "Arkisto">
+<!ENTITY prefpane.archive.tooltip "PDF-arkiston asetukset">
+<!ENTITY tab.document "Asiakirja-asetukset">
+<!ENTITY tab.document.tooltip "Kirjoitettavan PDF-tiedoston asetukset">
+<!ENTITY tab.pagesizes "Koot ja marginaalit">
+<!ENTITY tab.pagesizes.tooltip "Määrittää paperin muodon, koon ja marginaalit">
+<!ENTITY tab.outline "Jäsentelyt">
+<!ENTITY tab.outline.tooltip "Määritää jäsentelyiden asetukset">
+<!ENTITY tab.styling "Sivumuotoilu">
+<!ENTITY tab.styling.tooltip "PDF-asiakirjan sivumuotoilu">
+<!ENTITY tab.pageinfo "Verkkosivutiedot">
+<!ENTITY tab.pageinfo.tooltip "Verkkosivun tietojen käyttö PDF-asiakirjassa">
+<!ENTITY tab.header "Ylätunniste">
+<!ENTITY tab.header.tooltip "Ylätunnisteen muotoilun määrittely">
+<!ENTITY tab.footer "Alatunniste">
+<!ENTITY tab.footer.tooltip "Alatunnisteen muotoilun määrittely">
+<!ENTITY tab.javascript "Javascript">
+<!ENTITY tab.javascript.tooltip "Kuinka muunnosohjelma käsittelee Javascriptia sisältävät sivut">
+<!ENTITY tab.tec "Virheet ja koodaus">
+<!ENTITY tab.tec.tooltip "Virheiden ja merkistökoodauksen asetukset">
+<!ENTITY processing.openConvertResult "Avaa PDF">
+<!ENTITY processing.openConvertResult.tooltip "Avaa PDF-asiakirjan menestyksellisen muunnoksen jälkeen">
+<!ENTITY processing.startConvImmediately "Autom. käynnistys">
+<!ENTITY processing.startConvImmediately.tooltip "Käynnistää muunnoksen automaattisesti muunnosvalintaikkunan auettua">
+<!ENTITY processing.convSeparate "Erilliset PDF:t">
+<!ENTITY processing.convSeparate.tooltip "Luo erillisen PDF-tiedoston jokaisesta verkkosivusta">
+<!ENTITY size.pageSize "Paperinkoko">
+<!ENTITY size.pageSize.tooltip "Paperinkoon valinta">
+<!ENTITY size.width "Leveys">
+<!ENTITY size.width.tooltip "PDF-sivun leveys">
+<!ENTITY size.height "Korkeus">
+<!ENTITY size.height.tooltip "PDF-sivun korkeus">
+<!ENTITY orientation "Tulostussuunta">
+<!ENTITY orientation.tooltip "Pysty- tai vaakatulostus">
+<!ENTITY orientation.content.Protrait "Pysty">
+<!ENTITY orientation.content.Landscape "Vaaka">
+<!ENTITY colorMode "Väritys">
+<!ENTITY colorMode.tooltip "Värillinen tai harmaasävytulostus">
+<!ENTITY colorMode.content.color "Väri">
+<!ENTITY colorMode.content.grayscale "Harmaasävy">
+<!ENTITY pageOffset "Aloitussivu">
+<!ENTITY pageOffset.tooltip "Määrittelee sivunnumeroinnin aloitusnumeron">
+<!ENTITY outline "Jäsentely">
+<!ENTITY outline.tooltip "Luo tälle sivulle jäsentelyn PDF-asiakirjaan">
+<!ENTITY outlineDepth "Jäsentelytasot">
+<!ENTITY outlineDepth.tooltip "Jäsentelytasojen enimmäismäärä">
+<!ENTITY dumpOutline "Jäsentelytiedosto">
+<!ENTITY dumpOutline.tooltip "Tiedosto, johon XML-jäsentely kirjoitetaan (vain virheenetsintää varten)">
+<!ENTITY dumpOutline.content.fileDlg.title "Tallenna jäsentely XML-tiedostona">
+<!ENTITY documentTitle "Asiakirjan otsikko">
+<!ENTITY documentTitle.tooltip "PDF-asiakirjan otsikko">
+<!ENTITY useCompression "Pakkaa PDF">
+<!ENTITY useCompression.tooltip "Määrittelee pakataanko PDF-tiedosto">
+<!ENTITY margin.top "Ylämarginaali">
+<!ENTITY margin.top.tooltip "Ylämarginaalin korkeus">
+<!ENTITY margin.right "Oikea marginaali">
+<!ENTITY margin.right.tooltip "Oikean sivumarginaalin leveys">
+<!ENTITY margin.left "Vasen marginaali">
+<!ENTITY margin.left.tooltip "Vasemman sivumarginaalin leveys">
+<!ENTITY margin.bottom "Alamarginaali">
+<!ENTITY margin.bottom.tooltip "Alamarginaalin korkeus">
+<!ENTITY outputFormat "Tulostusmuoto">
+<!ENTITY outputFormat.tooltip "Tulostusmuoto (Huom.: PostScript vain erikoiskäyttöön)">
+<!ENTITY dpi "DPI (asiakirja)">
+<!ENTITY dpi.tooltip "PDF-tiedoston tarkkuus;-1=oletus.">
+<!ENTITY useScreenDpi "Näyttötarkkuus">
+<!ENTITY useScreenDpi.tooltip "Käytä näyttötarkkuutta PDF:n tarkkuutena.">
+<!ENTITY imageDPI "Graafinen tarkkuus">
+<!ENTITY imageDPI.tooltip "Suurin grafiikan tarkkuus PDF-asiakirjassa (dpi)">
+<!ENTITY imageQuality "Grafiikan pakkaus">
+<!ENTITY imageQuality.tooltip "Grafiikan pakkaustiheys (esim. 92). Suuri pakkaustiheys = pieni tiedosto, mutta heikompi laatu.">
+<!ENTITY load.cookieJar "Evästepurkki">
+<!ENTITY load.cookieJar.tooltip "Polku lähetettävät evästeet sisältävään tiedostoon">
+<!ENTITY load.cookieJar.content.fileDlg.title "Avaa evästepurkki">
+<!ENTITY load.cookieJar.content.fileDlg.jarTypeDesc "jar-tiedosto (*.jar)">
+<!ENTITY pageunits "Mittayksiköt">
+<!ENTITY pageunits.tooltip "Sivukokojen mittayksiköt">
+<!ENTITY createToc "Sisällysluettelo">
+<!ENTITY createToc.tooltip "Luo sisällysluettelon">
+<!ENTITY toc.useDottedLines "Pisteviivat">
+<!ENTITY toc.useDottedLines.tooltip "Tulostaa blankot pisteviivoina">
+<!ENTITY toc.captionText "Otsikko">
+<!ENTITY toc.captionText.tooltip "Sisällysluettelon otsikko">
+<!ENTITY toc.forwardLinks "Käytä linkkejä">
+<!ENTITY toc.forwardLinks.tooltip "Luo linkit sisällysluettelosta PDF-sivuille">
+<!ENTITY toc.backLinks "Linkit taaksepäin">
+<!ENTITY toc.backLinks.tooltip "Luo linkit PDF-sivuilta takaisin sisällysluetteloon">
+<!ENTITY toc.indentation "Sisennys">
+<!ENTITY toc.indentation.tooltip "Sisennyksen leveys tasolta toiselle sisällysluettelossa">
+<!ENTITY toc.fontScale "Merkistön piennennys">
+<!ENTITY toc.fontScale.tooltip "Suhdeluku, jolla pienennetään merkistön kokoa tasolta toiselle sisällysluettelossa (esim. 0,8)">
+<!ENTITY tocXsl "XSL-tyylitiedosto">
+<!ENTITY tocXsl.tooltip "Polku olemassaolevaan sisällysluettelon muotoilussa käytettävään XSL-tiedostoon">
+<!ENTITY tocXsl.content.fileDlg.xslTypeDesc "Tyyliarkki (*.xsl)">
+<!ENTITY tocXsl.content.fileDlg.title "Valitse tyyliarkki">
+<!ENTITY useCover "Kansilehti">
+<!ENTITY useCover.tooltip "Lisää kansilehti">
+<!ENTITY coverFile "Kansilehden malli">
+<!ENTITY coverFile.tooltip "Polku kansilehden HTML-malliin (jos tyhjä, käytä oletusta).">
+<!ENTITY coverFile.content.fileDlg.htmlTypeDesc "HTML-tiedosto (*.html)">
+<!ENTITY coverFile.content.fileDlg.title "Valitse kansilehden malli">
+<!ENTITY guessPageLength "Sivunpituuden arvaus">
+<!ENTITY guessPageLength.tooltip "Arvaa sivunpituus yhtä sivua varten (ei mahdollista, jos useita verkkosivuja!)">
+<!ENTITY resolution "PDF-tarkkuus">
+<!ENTITY resolution.tooltip "Valinta 'screen' käyttää näytön tarkkuutta, 'high' yrittää käyttää korkeinta tarkkuutta.">
+<!ENTITY useExternalLinks "Ulkoiset linkit">
+<!ENTITY useExternalLinks.tooltip "Aseta ulkoisia linkkejä PDF-tiedostoon">
+<!ENTITY useLocalLinks "Paikalliset linkit">
+<!ENTITY useLocalLinks.tooltip "Luo paikallisia linkkejä PDF-tiedoston sisälle (Huom.: epäluotettava)">
+<!ENTITY produceForms "Lomake">
+<!ENTITY produceForms.tooltip "Luo PDF-lomakkeen verkkolomakkeesta (Huom.: ei kovin luotettava)">
+<!ENTITY includeInOutline "Jäsentelyyn!">
+<!ENTITY includeInOutline.tooltip "Lisää tämä verkkosivu jäsentelyyn">
+<!ENTITY pagesCount "Sivunumerointiin!">
+<!ENTITY pagesCount.tooltip "Ottaa nämä sivut huomioon sivunumeroitaessa jäsentelyjä ja sisällysluetteloita">
+<!ENTITY web.background "Tausta">
+<!ENTITY web.background.tooltip "Tulosta verkkosivun tausta">
+<!ENTITY web.loadImages "Grafiikka">
+<!ENTITY web.loadImages.tooltip "Tulostaa verkkosivun grafiikat">
+<!ENTITY web.enableJavascript "Javascript">
+<!ENTITY web.enableJavascript.tooltip "Salli Javascript sivulla">
+<!ENTITY web.enableIntelligentShrinking "Älykäs muotoilu">
+<!ENTITY web.enableIntelligentShrinking.tooltip "Optimoi muotoilua sisällyttääkseen enemmän yhdelle sivulle">
+<!ENTITY web.minimumFontSize "Pienin merkkikoko">
+<!ENTITY web.minimumFontSize.tooltip "Pienin PDF-asiakirjassa käytettävä merkkikoko (esim. 6)">
+<!ENTITY web.printMediaType "Paperitulostus">
+<!ENTITY web.printMediaType.tooltip "Käyttää paperitulostusarvoja näyttötulostuksen asemasta">
+<!ENTITY web.defaultEncoding "Oletusmerkkikoodaus">
+<!ENTITY web.defaultEncoding.tooltip "Merkkikoodaus, jota käytetään, mikäli verkkosivulla ei ole määriteltyä koodausta">
+<!ENTITY web.userStyleSheet "Tyyliarkki">
+<!ENTITY web.userStyleSheet.tooltip "Polku käyttäjän määrittelemään tyyliarkkiin, jota käytettän kaikkien verkkosivujen tulostamiseen">
+<!ENTITY web.userStyleSheet.content.fileDlg.fileTypeName "Tyyliarkki">
+<!ENTITY web.userStyleSheet.content.fileDlg.title "Avaa tyyliarkki">
+<!ENTITY web.enablePlugins "Laajennukset">
+<!ENTITY web.enablePlugins.tooltip "Käytä PDF-kirjaston laajennuksia (Huom.: ei välttämättä hyvän näköistä)">
+<!ENTITY load.username "Käyttäjän nimi">
+<!ENTITY load.username.tooltip "Jos verkkosivu vaatii tunnistautumista, käytä tätä käyttäjän nimenä">
+<!ENTITY load.password "Salasana">
+<!ENTITY load.password.tooltip "Jos verkkosivu vaatii tunnistautumista, käytä tätä salasanana">
+<!ENTITY load.jsdelay "JS-viive">
+<!ENTITY load.jsdelay.tooltip "Odottaa tämän ajan (ms) ennen muunnoksen aloittamista (jotta Javascript ehtisi toimia normaalisti)">
+<!ENTITY load.zoomFactor "zoomauskerroin">
+<!ENTITY load.zoomFactor.tooltip "Sisällön kokoa muunnellaan tällä kertoimella">
+<!ENTITY load.repeatCustomHeaders "HTTP-otsikoiden toisto">
+<!ENTITY load.repeatCustomHeaders.tooltip "Toistaa käyttäjän määrittelemät HTTP-otsikot">
+<!ENTITY load.blockLocalFileAccess "Ei pääsyä tiedostoihin">
+<!ENTITY load.blockLocalFileAccess.tooltip "Älä salli PDF-kirjastolle pääsyä paikallisiin tiedostoihin">
+<!ENTITY load.stopSlowScript "Pysäytä hitaat komentosarjat">
+<!ENTITY load.stopSlowScript.tooltip "Keskeyttää Javascript-komentosarjat, joiden ajo kestää pitkään">
+<!ENTITY load.debugJavascript "JS-virheenetsintä">
+<!ENTITY load.debugJavascript.tooltip "Tulostaa JS-virheenetsintäsanomat">
+<!ENTITY load.loadErrorHandling "Latausvirheet">
+<!ENTITY load.loadErrorHandling.tooltip "Miten toimitaan, mikäli muunnoksen aikana tapahtuu latausvirhe">
+<!ENTITY load.loadErrorHandling.content.skip "Ohita">
+<!ENTITY load.loadErrorHandling.content.skip.tooltip "Jättää tämän (osittain ladatun) sivun pois tuloksesta ja jatkaa muiden sivujen käsittelyä">
+<!ENTITY load.loadErrorHandling.content.abort "Keskeytä">
+<!ENTITY load.loadErrorHandling.content.abort.tooltip "Keskeyttää koko muunnosprosessin">
+<!ENTITY load.loadErrorHandling.content.ignore "Jatka">
+<!ENTITY load.loadErrorHandling.content.ignore.tooltip "Yrittää ottaa tämän (osittain ladatun) sivun mukaan tulokseen ja jatkaa muiden sivujen käsittelyä">
+<!ENTITY header.fontSize "Merkistön koko">
+<!ENTITY header.fontSize.tooltip "Ylätunnisteen merkkikoko">
+<!ENTITY header.fontName "Merkistö">
+<!ENTITY header.fontName.tooltip "Ylätunnisteen merkistön nimi">
+<!ENTITY header.left "Teksti vasemmalla">
+<!ENTITY header.left.tooltip "Ylätunnisteen teksti joka tulee vasemmalle">
+<!ENTITY header.center "Teksti keskellä">
+<!ENTITY header.center.tooltip "Ylätunnisteen teksti joka tulee keskelle">
+<!ENTITY header.right "Teksti oikealla">
+<!ENTITY header.right.tooltip "Ylätunnisteen teksti joka tulee oikealle">
+<!ENTITY header.line "Erotin">
+<!ENTITY header.line.tooltip "Tulostaa erotinviivan ylätunnisteen ja PDF-asiakirjan pääosan väliin">
+<!ENTITY header.space "Tekstimarginaali">
+<!ENTITY header.space.tooltip "Ylätunnisteen ja asiakirjan pääosan tekstin välinen etäisyys (Huom.: voit joutua muuttamaan ylämarginaalia)">
+<!ENTITY header.htmlUrl "Ylätunniste (HTML)">
+<!ENTITY header.htmlUrl.tooltip "Url tai polku HTML-tiedostoon, jota käytetään ylätunnisteena">
+<!ENTITY header.htmlUrl.content.fileDlg.title "Ylätunnisteen HTML-tiedosto">
+<!ENTITY footer.fontSize "Merkkikoko">
+<!ENTITY footer.fontSize.tooltip "Alatunnisteen merkkikoko">
+<!ENTITY footer.fontName "Merkistö">
+<!ENTITY footer.fontName.tooltip "Alatunnisteen merkistö">
+<!ENTITY footer.left "Teksti vasemmalla">
+<!ENTITY footer.left.tooltip "Alatunnisteen teksti joka tulee vasemmalle">
+<!ENTITY footer.center "Teksti keskellä">
+<!ENTITY footer.center.tooltip "Alatunnisteen teksti joka tulee keskelle">
+<!ENTITY footer.right "Teksti oikealla">
+<!ENTITY footer.right.tooltip "Alatunnisteen teksti joka tulee oikealle">
+<!ENTITY footer.line "Erotin">
+<!ENTITY footer.line.tooltip "Tulostaa erotinviivan ylätunnisteen ja PDF-asiakirjan pääosan väliin">
+<!ENTITY footer.space "Tekstimarginaali">
+<!ENTITY footer.space.tooltip "Alatunnisteen ja asiakirjan pääosan tekstin välinen etäisyys (Huom.: voit joutua muuttamaan alamarginaalia)">
+<!ENTITY footer.htmlUrl "Alatunniste (HTML)">
+<!ENTITY footer.htmlUrl.tooltip "Url tai polku HTML-tiedostoon, jota käytetään alatunnisteena">
+<!ENTITY footer.htmlUrl.content.fileDlg.title "Alatunnisteen HTML-tiedosto">
+<!ENTITY outline.titleOnly.title "Vain sivuotsikot">
+<!ENTITY outline.titleOnly.tooltip "Poistaa käytöstä (mahd. sekaannusta aiheuttavan) automaattisten jäsentelyiden luonnin, vain verkkosivun otsikko tulee jäsentelyyn">
+<!ENTITY pageload.timeout "Latausten aikakatkaisu">
+<!ENTITY pageload.timeout.tooltip "Aika (ms) jonka järjestelmä odottaa ennen aikakatkaisua">
+<!ENTITY pageload.minLocal "Optimoitu tallennus">
+<!ENTITY pageload.minLocal.tooltip "Tallentaa vain minimimäärän tietoa verkkosivusta">
+<!ENTITY ui.toolbarbuttons "Työkalupalkit">
+<!ENTITY ui.toolbarbuttons.tooltip "Valitse työkalupalkit joita käytetään muunnosikkunassa">
+<!ENTITY ui.showsbmenus "Scrapbook-valikko">
+<!ENTITY ui.showsbmenus.tooltip "Mikäli Scrapbook tai Scrapbook plus on asennettu, näyttää Tulosta sivut PDF-muodossa -lisäosan näiden kontekstivalikossa">
+<!ENTITY ui.showplacesmenus "Kirjanmerkkivalikko">
+<!ENTITY ui.showplacesmenus.tooltip "Näyttää Tulosta sivut PDF-muodossa -alivalikon kirjanmerkkien kontekstivalikossa (vaatii uudelleenkäynnistyksen)">
+<!ENTITY ui.showpagemenus "Verkkosivuvalikko">
+<!ENTITY ui.showpagemenus.tooltip "Näyttää Tulosta sivut PDF-muodossa -alivalikon verkkosivujen kontekstivalikossa (vaatii uudelleenkäynnistyksen)">
+<!ENTITY ui.showextramenus "Työkalut-valikko">
+<!ENTITY ui.showextramenus.tooltip "Näyttää Tulosta sivut PDF-muodossa -kohdan Firefoxin Työkalut-valikossa (vaatii uudelleenkäynnistyksen)">
+<!ENTITY ui.showtbbmenus "Työkalupalkkinappivalikko">
+<!ENTITY ui.showtbbmenus.tooltip "Näyttää Tulosta PDF:nä alivalikon työkalunappina (uudelleenkäynnistys tarpeen)">
+<!ENTITY ui.showtabmenu "Välilehtivalikko">
+<!ENTITY ui.showtabmenu.tooltip "Näyttää Tulosta sivut PDF-muodossa -kohdan välilehtivalikossa (vaatii uudelleenkäynnistyksen)">
+<!ENTITY ui.tbbfunction "Nappi tulostaa...">
+<!ENTITY ui.tbbfunction.tooltip "Määrittelee tulostaako työkalupalkkinappi kaikki välilehdet vai vain aktiivisen.">
+<!ENTITY ui.tbbfunction.alltabs "Kaikki välilehdet">
+<!ENTITY ui.tbbfunction.activetab "Aktiivinen välilehti">
+<!ENTITY ui.toolbarbuttons.selectvalue.full "Kuvakkeet ja teksti">
+<!ENTITY ui.toolbarbuttons.selectvalue.icons "Kuvakkeet">
+<!ENTITY ui.toolbarbuttons.selectvalue.text "Teksti">
+<!ENTITY processing.closeDlgAfterConversion "Sulje valintaikkuna">
+<!ENTITY processing.closeDlgAfterConversion.tooltip "Sulkee muunnoksen valintaikkunan automaattisesti menestyksellisen muunnoksen jälkeen">
+<!ENTITY hdrftr.variables.menu.label "Muuttujat">
+<!ENTITY hdrftr.variables.menu.tooltip "Syöttää muuttujan joka korvataan sen arvolla muunnoksen aikana">
+<!ENTITY hdrftr.variables.page.label "Sivunnumero">
+<!ENTITY hdrftr.variables.page.tooltip "Korvataan kunkin tulostettavan sivun numerolla: [page]">
+<!ENTITY hdrftr.variables.frompage.label "Miltä sivulta">
+<!ENTITY hdrftr.variables.frompage.tooltip "Korvataan ensimmäisen tulostettavan sivun numerolla: [frompage]">
+<!ENTITY hdrftr.variables.topage.label "Mille sivulle">
+<!ENTITY hdrftr.variables.topage.tooltip "Korvataan viimeisen tulostettavan sivun numerolla: [topage]">
+<!ENTITY hdrftr.variables.webpage.label "Verkkosivu">
+<!ENTITY hdrftr.variables.webpage.tooltip "Korvataan tulostettavan verkkosivun URL:illa: [webpage]">
+<!ENTITY hdrftr.variables.section.label "Osa">
+<!ENTITY hdrftr.variables.section.tooltip "Korvataan nykyisen osan nimellä: [section]">
+<!ENTITY hdrftr.variables.subsection.label "Aliosa">
+<!ENTITY hdrftr.variables.subsection.tooltip "Korvataan nykyisen aliosan nimellä: [subsection]">
+<!ENTITY hdrftr.variables.date.label "Päiväys">
+<!ENTITY hdrftr.variables.date.tooltip "Korvataan tämän päivän päiväyksellä: [date]">
+<!ENTITY hdrftr.variables.time.label "Aika">
+<!ENTITY hdrftr.variables.time.tooltip "Korvataan tämänhetkisellä aikaleimalla: [time]">
+<!ENTITY hdrftr.variables.title.label "Otsikko">
+<!ENTITY hdrftr.variables.title.tooltip "Korvataan nykysivun otsikolla: [title]">
+<!ENTITY hdrftr.variables.doctitle.label "Asiakirjan otsikko">
+<!ENTITY hdrftr.variables.doctitle.tooltip "Korvataan tulostettavan asiakirjan otsikolla: [doctitle]">
+<!ENTITY processing.outputDir "Tulostushakemisto">
+<!ENTITY processing.outputDir.tooltip "Määrittelee hakemiston minne PDF-tiedostot tallennetaan">
+<!ENTITY processing.outputDir.fileDlg.title "Tulostushakemisto">
+<!ENTITY processing.pdfViewer "Avaa sovelluksessa...">
+<!ENTITY processing.pdfViewer.tooltip "Valitse sovellus jota haluat käyttää syntyvien PDF-tiedostojen katseluun">
+<!ENTITY processing.pdfViewer.selectvalue.os_default "Oletus">
+<!ENTITY processing.pdfViewer.selectvalue.os_default.tooltip "Asiakirja avataan käyttöjärjestelmän oletus-PDF-lukijalla">
+<!ENTITY processing.pdfViewer.selectvalue.open_browser "Firefox">
+<!ENTITY processing.pdfViewer.selectvalue.open_browser.tooltip "Avaa PDF-asiakirjan Firefoxin välilehdessä">
+<!ENTITY processing.pdfViewer.selectvalue.open_directory "Hakemisto">
+<!ENTITY processing.pdfViewer.selectvalue.open_directory.tooltip "Avaa hakemiston jossa PDF-asiakirja sijaitsee">
+<!ENTITY processing.pdfViewer.selectvalue.select_app "Avaa sovelluksessa...">
+<!ENTITY processing.pdfViewer.selectvalue.select_app.tooltip "Määrittele itse PDF-asiakirjan avaamiseen käytettävä sovellus">
+<!ENTITY processing.pdfViewer.content.fileDlg.exeTypeDesc "Sovellus (*.exe)">
+<!ENTITY processing.pdfViewer.content.fileDlg.title "Valitse sovellus">
+<!ENTITY processing.groupbox.menus.title "Valikot">
+<!ENTITY processing.groupbox.processing.title "Käynnissä">
+<!ENTITY archive.showMyDocuments.label "Näytä 'Tiedostot' -kansio">
+<!ENTITY archive.showMyDocuments.tooltip "Näyttää 'Tiedostot' -kansion PDF-arkistosivupalkissa.">
+<!ENTITY archive.showRecent.label "Näytä 'Viimeisimmät' -kansio">
+<!ENTITY archive.showRecent.tooltip "Näyttää kansion 'Viimeisimmät' PDF-arkistosivupalkissa.">
+<!ENTITY archive.preview.label "Esikatselu (konversio)">
+<!ENTITY archive.preview.tooltip "Näyttää PDF:n esikatselussa käsittelyikkunassa konversion jälkeen.">
+<!ENTITY archive.showthumbs.label "Esikatselu (arkisto)">
+<!ENTITY archive.showthumbs.tooltip "Näyttää PDF:n pikkukuva, kun hiiren kursori on yllä.">
+<!ENTITY archive.thumbsquality.label "Pikkukuvan laatu">
+<!ENTITY archive.thumbsquality.tooltip "Pikkukuvatiedoston laatu (parempi laatu = isompi tiedosto).">
+<!ENTITY processing.closeDlgAfterConversion.ask.label "Näytä aina 'Tallenna nimellä'">
+<!ENTITY processing.closeDlgAfterConversion.ask.tooltip "Avaa aina 'Tallenna nimellä' muunnoksen jälkeen">
+<!ENTITY processing.closeDlgOnWarning.label "Sulje, vaikka varoituksia">
+<!ENTITY processing.closeDlgOnWarning.tooltip "Dialogi-ikkuna suljetaan, vaikka olisi varoituksia.">
+<!ENTITY processing.convSeparate.ask.label "Erilliset kansiot">
+<!ENTITY processing.convSeparate.ask.tooltip "Avaa erillinen 'Tallenna nimellä' jokaiselle muunnetulle PDF:lle">
+<!ENTITY tab.shortcuts.label "Pikanäppäimet">
+<!ENTITY tab.shortcuts.tooltip "Pikanäppäinten määrittely">
+<!ENTITY ui.shortcut.header.function.label "Toiminto">
+<!ENTITY ui.shortcut.header.function.tooltip "Pikanäppäimen käynnistämä toiminto">
+<!ENTITY ui.shortcut.header.controlkey.label "Ctrl">
+<!ENTITY ui.shortcut.header.controlkey.tooltip "Ctrl-näppäin (Control)">
+<!ENTITY ui.shortcut.header.altkey.label "Alt">
+<!ENTITY ui.shortcut.header.altkey.tooltip "Alt-näppäin">
+<!ENTITY ui.shortcut.header.shiftkey.label "Vaihto">
+<!ENTITY ui.shortcut.header.shiftkey.tooltip "Vaihtonäppäin">
+<!ENTITY ui.shortcut.header.key.label "Näppäin">
+<!ENTITY ui.shortcut.header.key.tooltip "Näppäimenlyönti pikatoiminnolle">
+<!ENTITY ui.shortcut.popupmenu.label "Ponnahdusvalikko">
+<!ENTITY ui.shortcut.popupmenu.tooltip "Avaa lisäosan ponnahdusvalikon perusvaihtoehtoineen">
+<!ENTITY ui.shortcut.printtab.label "Tulosta välilehti">
+<!ENTITY ui.shortcut.printtab.tooltip "Käynnistää nykyisen välilehden tulostamisen">
+<!ENTITY ui.shortcut.printtabs.label "Tulosta kaikki välil.">
+<!ENTITY ui.shortcut.printtabs.tooltip "Käynnistää kaikkien välilehtien tulostamisen">
+<!ENTITY ui.shortcut.sidebar.label "Avaa/sulje sivupalkki">
+<!ENTITY ui.shortcut.sidebar.tooltip "Avaa tai sulkee PDF-arkistosivupalkin">

@@ -1,0 +1,20 @@
+<!ENTITY action.openwith.label "Avaa...">
+<!ENTITY action.openwith.tooltip "Avaa kohteen oletussovelluksella">
+<!ENTITY action.cut.label "Leikkaa">
+<!ENTITY action.cut.tooltip "Leikkaa leiketauluun ja poistaa sen täältä">
+<!ENTITY action.copy.label "Kopioi">
+<!ENTITY action.copy.tooltip "Kopioi leiketauluun">
+<!ENTITY action.paste.label "Liitä">
+<!ENTITY action.paste.tooltip "Liittää leiketaulun sisällön">
+<!ENTITY action.delete.label "Poista">
+<!ENTITY action.delete.tooltip "Poistaa valitut kohteet">
+<!ENTITY action.newfolder.label "Uusi kansio">
+<!ENTITY action.newfolder.tooltip "Luo uuden kansion">
+<!ENTITY action.newarchive.label "Uusi arkisto">
+<!ENTITY action.newarchive.tooltip "Luo uuden arkiston">
+<!ENTITY action.rename.label "Uudelleennimeä">
+<!ENTITY action.rename.tooltip "Nimeää uudelleen valitun kohteen">
+<!ENTITY action.help.label "Ohje">
+<!ENTITY action.help.tooltip "Avaa arkistomodulin ohjesivut">
+<!ENTITY action.fav.label "Lisää suosikkeihin">
+<!ENTITY action.fav.tooltip "Lisää valitun kansion suosikkilistaan">

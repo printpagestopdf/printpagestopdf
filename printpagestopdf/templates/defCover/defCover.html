@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+       "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="cover.css">
+<script>
+	window.onload = function(){
+		var pagelists=document.getElementsByTagName("ul");
+		for(var uls=0; uls < pagelists.length;uls++)
+		{
+			var ul=pagelists[uls];
+			if(ul.getAttribute("class").search(/pagelist/) > -1)
+			{
+				var pages=ul.getElementsByTagName("li");
+				if(pages.length < 5)
+					ul.setAttribute("style","font-size:2.5em;");
+				else if(pages.length < 10)
+					ul.setAttribute("style","font-size:2em;");
+				else if(pages.length < 15)
+					ul.setAttribute("style","font-size:1.5em;");
+				else 
+					ul.setAttribute("style","font-size:1em;"); 
+					
+			}
+		}
+	}
+</script>
+</head>
+<body >
+<div class="background" >
+
+	<div class="title">[title]</div>
+	<div class="pages">[pagelist]</div>
+
+	<div class="datetime">[date] [time]</div>
+</div>
+</body>
+</html>

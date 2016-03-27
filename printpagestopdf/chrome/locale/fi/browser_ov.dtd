@@ -1,0 +1,28 @@
+<!ENTITY printPages2Pdf_mainmenu.label "Tulosta sivut PDF-muodossa">
+<!ENTITY printPages2Pdf_mainpopup.printAllTabs.label "Tulosta kaikki välilehdet">
+<!ENTITY printPages2Pdf_mainpopup.printAllTabs.tooltip "Tulostaa kaikkien välilehtien sisällön yhtenä PDF-asiakirjana">
+<!ENTITY printPages2Pdf_mainpopup.printAllTabsText.label "Tulosta kaikki välilehdet (tekstinä)">
+<!ENTITY printPages2Pdf_mainpopup.printAllTabsText.tooltip "Tulostaa kaikkien välilehtien sisällön yhtenä PDF-asiakirjana (tekstinä)">
+<!ENTITY printPages2Pdf_mainpopup.printTab.label "Tulosta aktiivinen välilehti">
+<!ENTITY printPages2Pdf_mainpopup.printTab.tooltip "Tulostaa aktiivisen välilehden sisällön yhtenä PDF-asiakirjana">
+<!ENTITY printPages2Pdf_mainpopup.printTabText.label "Tulosta aktiivinen välilehti (tekstinä)">
+<!ENTITY printPages2Pdf_mainpopup.printTabText.tooltip "Tulostaa aktiivisen välilehden sisällön yhtenä PDF-asiakirjana (tekstinä)">
+<!ENTITY printPages2Pdf_mainpopup.printFrame.label "Tulosta kehys">
+<!ENTITY printPages2Pdf_mainpopup.printFrame.tooltip "Tulostaa tämän kehyksen sisällön yhtenä PDF-asiakirjana">
+<!ENTITY printPages2Pdf_mainpopup.printLink.label "Tulosta linkki">
+<!ENTITY printPages2Pdf_mainpopup.printLink.tooltip "Tulostaa tämän linkin sisällön yhtenä PDF-asiakirjana">
+<!ENTITY printPages2Pdf_tabpopup.printThisTab.label "Tulosta välilehti PDF-muodossa">
+<!ENTITY printPages2Pdf_tabpopup.printThisTab.tooltip "Tulostaa tämän välilehden sisällön PDF-muodossa">
+<!ENTITY printPages2Pdf_tabpopup.printSelectedTabs.label "Tulosta valitut välilehdet PDF-muodossa">
+<!ENTITY printPages2Pdf_tabpopup.printSelectedTabs.tooltip "Tulostaa valittujen välilehtien sisällön PDF-muodossa">
+<!ENTITY printPages2Pdf_mainpopup.preferences.label "Asetukset...">
+<!ENTITY printPages2Pdf_mainpopup.preferences.tooltip "Avaa Asetukset-valintaikkunan">
+<!ENTITY printPages2Pdf_mainpopup.openProcessDialog.label "Muunnosikkuna...">
+<!ENTITY printPages2Pdf_mainpopup.openProcessDialog.tooltip "Avaa tyhjän muunnosikkunan, johon voit lisätä verkkosivuja">
+<!ENTITY printPages2Pdf_mainpopup.sidebar.label "Sivupaneeli">
+<!ENTITY printPages2Pdf_mainpopup.sidebar.tooltip "Avaa tai sulkee Tulosta sivut PDF-muodossa Arkistosivupaneelin">
+<!ENTITY printPages2Pdf_mainpopup.printSelection.label "Tulosta valinta">
+<!ENTITY printPages2Pdf_mainpopup.printSelection.tooltip "Valitse alue hiirellä ja muunna valinta PDF-muotoon.">
+<!ENTITY printPages2Pdf_topmenu.sidebar.label "PDF-arkisto">
+<!ENTITY printPages2Pdf_sidebar.sidebar.title "Tulosta sivut PDF-arkistoon">
+<!ENTITY printPages2Pdf_palette.sidebar.label "PDF-arkiston sivupaneeli">

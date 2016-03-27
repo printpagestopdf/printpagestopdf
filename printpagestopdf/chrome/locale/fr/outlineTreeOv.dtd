@@ -1,0 +1,11 @@
+<!ENTITY outlinetree.header "Structure">
+<!ENTITY outlinetree.button.delete.label "Supprimer">
+<!ENTITY outlinetree.button.delete.tooltip "Supprimer les éléments sélectionnés">
+<!ENTITY outlinetree.button.outdent.label "Désindenter">
+<!ENTITY outlinetree.button.outdent.tooltip "Déplace l'indentation des éléments sélectionnés vers la gauche (réduire l'indentation)">
+<!ENTITY outlinetree.button.indent.label "Indenter">
+<!ENTITY outlinetree.button.indent.tooltip "Déplace l'indentation des éléments sélectionnés vers droite (augmenter l'indentation)">
+<!ENTITY outlinetree.button.clear.label "Effacer">
+<!ENTITY outlinetree.button.clear.tooltip "Supprimer tous les éléments de structure">
+<!ENTITY outlinetree.button.settitle.label "Titre">
+<!ENTITY outlinetree.button.settitle.tooltip "Ajoute le titre de la page web comme premier élément de structure">

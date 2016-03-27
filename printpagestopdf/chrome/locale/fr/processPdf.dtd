@@ -1,0 +1,38 @@
+<!ENTITY windowtitle "Print Pages to Pdf (traitement en cours)">
+<!ENTITY maintoolbar.button.processing.label "Démarrer">
+<!ENTITY maintoolbar.button.processing.tooltip "démarre le processus">
+<!ENTITY maintoolbar.button.stopprocessing.label "Arrêt">
+<!ENTITY maintoolbar.button.stopprocessing.tooltip "Interrompt le processus">
+<!ENTITY maintoolbar.button.save.label "Enregistrer">
+<!ENTITY maintoolbar.button.save.tooltip "Enregistre le fichier Pdf sous…">
+<!ENTITY maintoolbar.button.items.up.label "Remonter">
+<!ENTITY maintoolbar.button.items.up.tooltip "Déplace les éléments sélectionnés vers le haut">
+<!ENTITY maintoolbar.button.items.down.label "Descendre">
+<!ENTITY maintoolbar.button.items.down.tooltip "Déplace les éléments sélectionnés vers le bas">
+<!ENTITY maintoolbar.button.items.remove.label "Supprimer">
+<!ENTITY maintoolbar.button.items.remove.tooltip "Supprime les éléments sélectionnés">
+<!ENTITY maintoolbar.button.properties.label "Options">
+<!ENTITY maintoolbar.button.properties.tooltip "Ouvre la fenêtre des options">
+<!ENTITY resultbox.label "Résultat de conversion">
+<!ENTITY resultbox.link.tooltip "Ouvre le Pdf généré ; il est également possible de glisser-déposer le fichier à la souris, par ex. sur le bureau">
+<!ENTITY titlebox.label "Titre du document">
+<!ENTITY titlebox.tooltip "Titre du document Pdf, qui sera également utilisé pour nommer le fichier généré.">
+<!ENTITY tabbox.tab.progress.label "Progression">
+<!ENTITY tabbox.tab.progress.tooltip "Étapes du processus avec barres de progression">
+<!ENTITY tabbox.tab.webpages.label "Pages internet">
+<!ENTITY tabbox.tab.webpages.tooltip "Liste des pages internet et de leurs options spécifiques">
+<!ENTITY webpages.item.edit.button.label "Modifier">
+<!ENTITY webpages.item.edit.button.tooltip "Modifie la page internet (supprimer, insérer, surligner)">
+<!ENTITY webpages.item.button.label "Options">
+<!ENTITY webpages.item.button.tooltip "Options de la page internet…">
+<!ENTITY webpages.item.cb.image.label "Image">
+<!ENTITY webpages.item.cb.image.tooltip "Mettre cette page au format image et non texte dans le document Pdf">
+<!ENTITY webpages.item.cb.textonly.label "Texte seul">
+<!ENTITY webpages.item.cb.textonly.tooltip "Imprimer cette page en texte seul">
+<!ENTITY webpages.item.srcimage.tooltip "Source">
+<!ENTITY maintoolbar.button.progress.clear.label "Effacer">
+<!ENTITY maintoolbar.button.progress.clear.tooltip "Efface toutes les données de l'onglet de progression">
+<!ENTITY objectprefpane.okbutton.label "OK">
+<!ENTITY objectprefpane.okbutton.tooltip "Utiliser ces options pour la page web sélectionnée">
+<!ENTITY objectprefpane.cancelbutton.label "Annuler">
+<!ENTITY objectprefpane.cancelbutton.tooltip "Fermer cette fenêtre sans appliquer les modifications">

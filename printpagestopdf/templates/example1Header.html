@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Header 1 line</title>
+
+<script>
+function subst() {
+var vars={};
+var x=document.location.search.substring(1).split('&');
+for (var i in x) {
+var z=x[i].split('=',2);
+vars[z[0]] = decodeURIComponent(z[1]);
+
+}
+var x=['frompage','topage','page','section','subsection','date','time','title','doctitle'];
+for (var i in x) {
+var y = document.getElementsByName(x[i]);
+for (var j = 0; j < y.length; ++j) {
+y[j].textContent = vars[x[i]];
+}
+}
+}
+</script>
+<style type="text/css"><!--
+.crop { overflow:hidden; white-space:nowrap; text-overflow:ellipsis; width:10px; }
+-->
+</style>
+</head>
+<body onload="subst();" style="font-size: x-small;font-weight:bold;" >
+<table border="1" cellpadding="1" cellspacing="1">
+<tbody>
+<tr>
+<td>
+	<div  style="white-space: nowrap;width:8cm;overflow:hidden" name="doctitle">[doctitle]</div>
+</td>
+<td style="white-space: nowrap; background-color: rgb(204, 204, 204);">
+	<div  style="text-align:center;white-space: nowrap;width:18cm;overflow:hidden"  name="title">[title]</div>
+</td>
+<td>
+	<div style="text-align:right;white-space: nowrap;width:1.5cm;overflow:hidden" >
+		<span name="date">[date]</span>
+	</div>
+</td>
+</tr>
+</tbody>
+</table>
+</body></html>

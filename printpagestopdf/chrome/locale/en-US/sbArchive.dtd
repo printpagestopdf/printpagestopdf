@@ -1,0 +1,20 @@
+<!ENTITY action.openwith.label "Open ....">
+<!ENTITY action.openwith.tooltip "Opens the element with the OS defined Application">
+<!ENTITY action.cut.label "Cut">
+<!ENTITY action.cut.tooltip "Copies the elements to clipboard and removes it here">
+<!ENTITY action.copy.label "Copy">
+<!ENTITY action.copy.tooltip "Copies the elements to clipboard">
+<!ENTITY action.paste.label "Insert">
+<!ENTITY action.paste.tooltip "Inserts the Elements from the Clipboard">
+<!ENTITY action.delete.label "Delete">
+<!ENTITY action.delete.tooltip "Deletes the selected Elements">
+<!ENTITY action.newfolder.label "New Folder">
+<!ENTITY action.newfolder.tooltip "Creates a new Folder">
+<!ENTITY action.newarchive.label "New Archive">
+<!ENTITY action.newarchive.tooltip "Creates a new Archive">
+<!ENTITY action.rename.label "Rename">
+<!ENTITY action.rename.tooltip "Renames the selected Element">
+<!ENTITY action.help.label "Help">
+<!ENTITY action.help.tooltip "Opens online Help for Print pages to PDF Archive Modul">
+<!ENTITY action.fav.label "Favorite">
+<!ENTITY action.fav.tooltip "Adds the selected Folder to the favorite list">

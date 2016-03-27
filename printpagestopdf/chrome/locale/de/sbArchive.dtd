@@ -1,0 +1,20 @@
+<!ENTITY action.openwith.label "Öffnen ....">
+<!ENTITY action.openwith.tooltip "Öffnet die Datei mit der durch das Betriebssystem vorgegebenen Anwendung">
+<!ENTITY action.cut.label "Ausschneiden">
+<!ENTITY action.cut.tooltip "Kopiert die markierten Elemente in die Zwischenablage und löscht sie am bisherigen Ort">
+<!ENTITY action.copy.label "Kopieren">
+<!ENTITY action.copy.tooltip "Kopiert die markierten Elemente in die Zwischenablage">
+<!ENTITY action.paste.label "Einfügen">
+<!ENTITY action.paste.tooltip "Fügt den Inhalt der Zwischenablage ein">
+<!ENTITY action.delete.label "Löschen">
+<!ENTITY action.delete.tooltip "Löscht die ausgewählten Elemente">
+<!ENTITY action.newfolder.label "Neuer Ordner">
+<!ENTITY action.newfolder.tooltip "Erstellt einen neuen Ordner">
+<!ENTITY action.newarchive.label "Neue Ablage">
+<!ENTITY action.newarchive.tooltip "Erstellt eine neue Ablage">
+<!ENTITY action.rename.label "Umbenennen">
+<!ENTITY action.rename.tooltip "Ändert den Namen des selektierten Elementes">
+<!ENTITY action.help.label "Hilfe">
+<!ENTITY action.help.tooltip "Öffnet die online Hilfe für das Print pages to PDF Ablage Modul">
+<!ENTITY action.fav.label "Favorit">
+<!ENTITY action.fav.tooltip "Fügt diesen Ordner der Favoritenliste hinzu.">

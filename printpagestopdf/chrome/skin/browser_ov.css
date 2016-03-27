@@ -1,0 +1,129 @@
+.FieldMark
+{
+	outline-width: 2px;
+	outline-color: aqua;
+	outline-style: dotted;
+	margin: 2px;
+}
+
+.printPages2Pdf_appIcon16
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/printPages2Pdf16x16.png");  
+}
+
+#printPages2Pdf_printFrame
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/frame.png");  
+}
+
+#printPages2Pdf_printDocLink
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/link.png");  
+}
+
+
+.helpmenuitem
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/symbol_help16.png");  
+}
+
+menuitem[observes="printPages2Pdf-bc_printSelection"]
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/selection_rectangular_down.png");  
+}
+
+menuitem[observes="printPages2Pdf-bc_printAllTabs"]
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/tabs-grafik.png");  
+}
+menuitem[observes="printPages2Pdf-bc_printAllTabsText"]
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/tabs-text.png");  
+}
+menuitem[observes="printPages2Pdf-bc_printTab"]
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/tab-grafik.png");  
+}
+menuitem[observes="printPages2Pdf-bc_printTabText"]
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/tab-text.png");  
+}
+menuitem[observes="printPages2Pdf-bc_preferences"]
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/properties.png");  
+}
+menuitem[observes="printPages2Pdf-bc_processdlg"]
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/printPages2Pdf16x16.png");  
+}
+#printPages2Pdf_toolbar_sidebar{
+    list-style-image: url("chrome://printPages2Pdf/skin/sidebarBt.png");  
+}
+
+#printPages2Pdf-men_printSelectedTabs,
+#printPages2Pdf-men_printThisTab
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/printPages2Pdf16x16.png");  
+}
+				
+
+toolbar[iconsize="small"] #printPages2Pdf_toolbarbutton[cui-areatype="toolbar"]
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/printPages2Pdf16x16mono.png");  
+}
+
+#printPages2Pdf_toolbarbutton[cui-areatype="menu-panel"],toolbarpaletteitem[place="palette"] > #printPages2Pdf_toolbarbutton
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/printPages2Pdf32x32mono.png");
+	width: 89px;
+	height: 83px;  
+	margin: 0px;
+	padding: 0px;
+}
+
+#printPages2Pdf_toolbarbutton
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/printPages2Pdf24x24.png");  
+}
+
+toolbar[iconsize="small"] #printPages2Pdf_toolbarbutton
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/printPages2Pdf16x16.png");  
+	-moz-box-orient: horizontal !important;
+	-moz-image-region: rect(0px, 16px, 16px, 0px);
+	margin: 0px;
+	padding: 0px;
+
+}
+
+
+#Identity_reset-Button
+{
+    list-style-image: url("chrome://sb2Pdf/skin/reset_edit.png");  
+}
+
+.tbitem_identity
+{
+    list-style-image: url("chrome://sb2Pdf/skin/defUser.png");  	
+}
+
+.tbitem_group
+{
+    list-style-image: url("chrome://sb2Pdf/skin/defGroup.png");  	
+}
+
+#identitytree_panel {
+	border-style:solid;
+	border-color: transparent;
+	background-color: transparent;
+	border-width:2px;
+	-moz-border-top-colors:none;
+	-moz-border-bottom-colors:none;
+	-moz-border-left-colors:none;
+	-moz-border-right-colors:none;
+	-moz-appearance:none;	
+}
+
+#identitytree_panel resizer {
+	opacity: 0.9;
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css"?>
+<?xml-stylesheet href="chrome://printPages2Pdf/skin/outlineTreeOv.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://printPages2Pdf/locale/outlineTreeOv.dtd" >
+
+<overlay id="printPages2Pdf_outlineTreeOv"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script type="application/x-javascript" src="chrome://printPages2Pdf/content/outlineTreeOv.js" />
+	<broadcasterset>
+	  <broadcaster id="cmd_treeselect" disabled="true" />
+	</broadcasterset>	
+	<vbox   flex="1" id="boxOutlineTree">
+		<tree level="0" flex="1" id="treeOutline" editable="false" 
+				seltype="multiple" 
+				treelines="true" hidecolumnpicker="true" 
+				contextmenu="ctxMentreeOutline" >
+			<treecols>
+				<treecol style="font-weight:bold;margin-bottom:5px;" pack="center" flex="1" id="col_Name" label="&outlinetree.header;" primary="true"  hideheader="true" />
+			</treecols>
+			<treechildren id="treeRoot">
+			</treechildren>
+		</tree>	
+		<toolbox id="outlineToolbox" style="overflow:hidden;" >
+			<toolbar id="outlineToolbar">
+				<toolbarbutton observes="cmd_treeselect" label="&outlinetree.button.delete.label;" tooltiptext="&outlinetree.button.delete.tooltip;" name="btOutlineDelete"    class="imageOnly" />
+				<toolbarbutton observes="cmd_treeselect"  label="&outlinetree.button.outdent.label;" tooltiptext="&outlinetree.button.outdent.tooltip;" name="btOutlineUnindent"    class="imageOnly" />
+				<toolbarbutton observes="cmd_treeselect"  label="&outlinetree.button.indent.label;" tooltiptext="&outlinetree.button.indent.tooltip;" name="btOutlineIndent"    class="imageOnly" />
+				<toolbarseparator/>
+				<toolbarbutton label="&outlinetree.button.clear.label;" tooltiptext="&outlinetree.button.clear.tooltip;"  name="btHdrClear"   class="imageOnly" />
+				<toolbarbutton label="&outlinetree.button.settitle.label;" tooltiptext="&outlinetree.button.settitle.tooltip;"  name="btHdrTitle"   class="imageOnly" />
+			</toolbar>
+		</toolbox>			
+	</vbox>
+	<popupset>
+		<menupopup id="ctxMentreeOutline">
+			<menuitem observes="cmd_treeselect" label="&outlinetree.button.delete.label;" tooltiptext="&outlinetree.button.delete.tooltip;" name="btOutlineDelete"    class="menuitem-iconic" />
+			<menuitem observes="cmd_treeselect"  label="&outlinetree.button.outdent.label;" tooltiptext="&outlinetree.button.outdent.tooltip;" name="btOutlineUnindent"    class="menuitem-iconic" />
+			<menuitem observes="cmd_treeselect"  label="&outlinetree.button.indent.label;" tooltiptext="&outlinetree.button.indent.tooltip;" name="btOutlineIndent"    class="menuitem-iconic" />
+			<menuseparator/>
+			<menuitem label="&outlinetree.button.clear.label;" tooltiptext="&outlinetree.button.clear.tooltip;"  name="btHdrClear"   class="menuitem-iconic" />
+			<menuitem label="&outlinetree.button.settitle.label;" tooltiptext="&outlinetree.button.settitle.tooltip;"  name="btHdrTitle"   class="menuitem-iconic" />
+		</menupopup>
+	</popupset>	 
+</overlay>

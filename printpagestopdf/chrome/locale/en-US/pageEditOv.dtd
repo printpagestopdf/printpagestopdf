@@ -1,0 +1,22 @@
+<!ENTITY pageedit.button.header1.label "Outline1">
+<!ENTITY pageedit.button.header1.tooltip "Add the marked Text to the Outline at level 1">
+<!ENTITY pageedit.button.header2.label "Outline2">
+<!ENTITY pageedit.button.header2.tooltip "Add the marked Text to the Outline at level 2">
+<!ENTITY pageedit.button.header3.label "Outline3">
+<!ENTITY pageedit.button.header3.tooltip "Add the marked Text to the Outline at level 3">
+<!ENTITY pageedit.button.header4.label "Outline4">
+<!ENTITY pageedit.button.header4.tooltip "Add the marked Text to the Outline at level 4">
+<!ENTITY pageedit.button.header5.label "Outline5">
+<!ENTITY pageedit.button.header5.tooltip "Add the marked Text to the Outline at level 5">
+<!ENTITY pageedit.button.header6.label "Outline6">
+<!ENTITY pageedit.button.header6.tooltip "Add the marked Text to the Outline at level 6">
+<!ENTITY pageedit.button.domdelete.label "Delete">
+<!ENTITY pageedit.button.domdelete.tooltip "Deletes Elements of the Document Tree">
+<!ENTITY pageedit.button.addtext.label "Text">
+<!ENTITY pageedit.button.addtext.tooltip "Add Text to the Document">
+<!ENTITY pageedit.button.textonly.label "TextOnly">
+<!ENTITY pageedit.button.textonly.tooltip "Removes all non Text Elements from the Document">
+<!ENTITY pageedit.button.save.label "Save">
+<!ENTITY pageedit.button.save.tooltip "Saves all changes">
+<!ENTITY pageedit.button.reload.label "Reload">
+<!ENTITY pageedit.button.reload.tooltip "Reloads the page, all changes are removed">

@@ -1,0 +1,5 @@
+<!ENTITY printPages2Pdf_sboverlay.label "Print pages to PDF">
+<!ENTITY printPages2Pdf_sboverlay.print.label "ブックマークをプリント">
+<!ENTITY printPages2Pdf_mainpopup.print.tooltip "すべての選択したブックマークを一つのPDF 文書にプリントします">
+<!ENTITY printPages2Pdf_sboverlay.printText.label "ブックマークを印刷(テキスト)">
+<!ENTITY printPages2Pdf_mainpopup.printText.tooltip "すべての選択したブックマークをテキストとして一つのPDF 文書にプリントします">
