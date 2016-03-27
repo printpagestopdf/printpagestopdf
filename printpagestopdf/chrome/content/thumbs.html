@@ -1,0 +1,134 @@
+<html>
+<head>
+<script src="resource://printPages2Pdfscripts/pdfjs/pdf.js" type="text/javascript"></script>
+<script  type="text/javascript">
+	PDFJS.disableWorker = true;
+	
+	
+	var processing = false;
+	var queue = new Array();
+
+	function notifyParent(){
+		parent.document.getElementById("ifrthumb").objProc.frameReady();
+	}
+	
+	//
+	// Fetch the PDF document from the URL using promices
+	//
+	function savePNG(aCanvas, args) {
+
+	  var source=aCanvas.toDataURL("image/png", "");
+	  printPages2Pdf_imgUtils.saveScreenToFile(args.trgFile,source, "png");
+
+	  //try {
+//	  	controller.createFinished(trgFile);
+	  	args.controller.createFinished(args);
+	  //}catch(e){}
+	  
+	  processing=false;
+	  if(queue.length > 0)
+	  	loadPDF(queue.pop());
+	}
+	
+	
+	function loadPDF(args)
+	{
+	
+		if(processing === true){
+			queue.push(args);
+			return;
+		}
+		processing = true;
+		
+	PDFJS.getDocument(args.pdfSrc).then(function(pdf) {
+	  // Using promise to fetch the page
+	  pdf.getPage(1).then(function(page) {
+
+	    var scale = args.scale;
+	    var viewport = page.getViewport(scale);
+	
+	    //
+	    // Prepare canvas using PDF page dimensions
+	    //
+	    var canvas = document.getElementById('the-canvas');
+	    var context = canvas.getContext('2d');
+	    canvas.height = viewport.height;
+	    canvas.width = viewport.width;
+	
+	    //
+	    // Render PDF page into canvas context
+	    //
+	    var renderContext = {
+	      canvasContext: context,
+	      viewport: viewport
+	    };
+		
+	    page.render(renderContext).then(function(){
+			savePNG(canvas, args);
+		});
+		
+	  });
+	});
+	}
+
+var printPages2Pdf_imgUtils = {
+		    
+    saveScreenToFile : function(nsFile, dataUrl, format) {    	
+
+		if (!nsFile.exists()) {
+			nsFile.create(Components.interfaces.nsIFile.NORMAL_FILE_TYPE, 420);
+		} else {
+			return;
+		}
+		
+        if (nsFile != null) {
+            var binaryInputStream = printPages2Pdf_imgUtils.dataUrlToBinaryInputStream(dataUrl);
+            var fileOutputStream = printPages2Pdf_imgUtils.newFileOutputStream(nsFile);
+            printPages2Pdf_imgUtils.writeBinaryInputStreamToFileOutputStream(binaryInputStream, fileOutputStream);
+            fileOutputStream.close();
+        } 
+    },
+    
+    
+    
+    dataUrlToBinaryInputStream : function(dataUrl) {
+        var nsIoService = Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService);
+        var channel = nsIoService.newChannelFromURI(nsIoService.newURI(dataUrl, null, null));
+        
+        var binaryInputStream = Components.classes["@mozilla.org/binaryinputstream;1"].createInstance(Components.interfaces.nsIBinaryInputStream);
+        binaryInputStream.setInputStream(channel.open());
+        return binaryInputStream;
+    },
+    
+    newFileOutputStream : function(nsFile) {
+        var writeFlag = 0x02;
+        var createFlag = 0x08;
+        var truncateFlag = 0x20;
+        var fileOutputStream = Components.classes["@mozilla.org/network/file-output-stream;1"].createInstance(Components.interfaces.nsIFileOutputStream);
+        fileOutputStream.init(nsFile, writeFlag | createFlag | truncateFlag,-1, null);
+        return fileOutputStream;
+    },
+    
+    writeBinaryInputStreamToFileOutputStream : function(binaryInputStream, fileOutputStream) {
+        var numBytes = binaryInputStream.available();
+        var bytes = binaryInputStream.readBytes(numBytes);
+        
+        fileOutputStream.write(bytes, numBytes);
+    },
+    
+};
+
+</script>
+</head>
+<body onload="notifyParent();">
+
+<script type="text/javascript" >
+'use strict';
+</script>
+
+  <div>
+    <canvas  id="the-canvas" style="border:1px solid black"></canvas>
+  </div>
+  
+  </body>
+</html>

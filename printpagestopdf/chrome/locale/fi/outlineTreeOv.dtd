@@ -1,0 +1,11 @@
+<!ENTITY outlinetree.header "Jäsentelyt">
+<!ENTITY outlinetree.button.delete.label "Poista">
+<!ENTITY outlinetree.button.delete.tooltip "Poistaa valitut jäsentelyt">
+<!ENTITY outlinetree.button.outdent.label "Kumoa sisennys">
+<!ENTITY outlinetree.button.outdent.tooltip "Siirtää valittujen jäsentelyiden sisennyksen vasemmalle (kumoaa sisennykset)">
+<!ENTITY outlinetree.button.indent.label "Sisennä">
+<!ENTITY outlinetree.button.indent.tooltip "Siirtää valittujen jäsentelyiden sisennystä oikealle">
+<!ENTITY outlinetree.button.clear.label "Poista kaikki">
+<!ENTITY outlinetree.button.clear.tooltip "Poistaa kaikki jäsentelyt">
+<!ENTITY outlinetree.button.settitle.label "Otsikko">
+<!ENTITY outlinetree.button.settitle.tooltip "Lisää verkkosivun otsikon ensimmäiseksi jäsentelyn kohdaksi">

@@ -1,0 +1,748 @@
+<?xml version="1.0"?>
+
+<!-- skin -->
+<?xml-stylesheet href="chrome://global/skin/global.css"?>
+<?xml-stylesheet href="chrome://mozapps/content/preferences/preferences.css"?>
+<?xml-stylesheet href="chrome://browser/skin/preferences/preferences.css"?>
+<?xml-stylesheet href="chrome://printPages2Pdf/skin/prefs.css"?>
+
+<!--locale-->
+<!DOCTYPE overlay [
+  <!ENTITY % commonDTD SYSTEM "chrome://printPages2Pdf/locale/prefs.dtd">
+  %commonDTD;
+  <!ENTITY % mainwindowDTD SYSTEM "chrome://printPages2Pdf/locale/browser_ov.dtd">
+  %mainwindowDTD;
+  <!ENTITY % generalovDTD SYSTEM "chrome://printPages2Pdf/locale/general_ov.dtd">
+  %generalovDTD;
+]>
+
+
+<prefwindow id="sb2PdfPreferences" 
+			buttons="accept,cancel,help,"
+			ondialoghelp="doHelp(event);"
+			title="&windowtitle;" 
+			label="&windowtitle;" 
+			xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" >
+
+	<script type="application/x-javascript"><![CDATA[
+		/** 
+		 * printPages2Pdf namespace. 
+		 */  
+		 
+		if (typeof printPages2Pdf == "undefined") {  
+		  var printPages2Pdf = {};  
+		};
+		Components.utils.import("resource://printPages2PdfMod/prefsUtils.jsm",printPages2Pdf); 
+		Components.utils.import("resource://printPages2PdfMod/printPages2PdfGlobal.jsm"); 
+		
+		function setValue(event){
+			event.currentTarget.setAttribute("realvalue",event.originalTarget.value);
+		}
+
+		function doHelp(event){
+//			document.getElementById("sb2PdfPreferences").openWindow( "pp2pdf_help", "http://printpages2pdf.hostingsociety.com/","dependent=yes, fullscreen=no");
+			var helpUrl=RRprintPages2Pdf.getHelpUrl("preferences-window");
+			if(helpUrl)
+				window.open(helpUrl, "pp2pdf_help", 
+				"dependent=yes, fullscreen=no,resizable=yes,scrollbars=yes,location=yes,width=860,height=600,toolbar=yes");
+		}
+		
+		function makeHelpVisible(event){
+			if (event.attrName == "hidden" && event.newValue == "true" ) {
+				event.target.setAttribute("hidden","false");
+			}
+		}
+		
+		function setFileButton(event){
+			window.removeEventListener("paneload", setFileButton);
+			var menulist=document.getElementById("id_processing.pdfViewer");
+
+			var bt=menulist.nextSibling;
+			if(!menulist.getAttribute("realvalue")){
+				bt.disabled=false;	
+			}
+			else
+			{
+				bt.disabled=true;	
+			}
+			
+			var helpBt=document.getElementById("sb2PdfPreferences").getButton("help");
+			helpBt.addEventListener("DOMAttrModified",makeHelpVisible,false);
+			window.sizeToContent();
+		}
+		
+		function convSeparateAsk()
+		{
+			document.getElementById("hb_processing.convSeparate.ask").collapsed =
+				!document.getElementById("processing.convSeparate").value;
+		}
+		
+		function closeDlgAfterConversionAsk()
+		{
+			document.getElementById("hb_processing.closeDlgAfterConversion.ask").collapsed =
+				!document.getElementById("processing.closeDlgAfterConversion").value;
+			document.getElementById("hb_processing.closeDlgOnWarning").collapsed =
+				!document.getElementById("processing.closeDlgAfterConversion").value;
+				
+				
+		}
+		
+		function init()
+		{
+			setFileButton();
+			convSeparateAsk();
+			closeDlgAfterConversionAsk();
+		}
+		
+		window.addEventListener("paneload", init, false);
+		
+	]]></script>
+	
+	<broadcasterset>
+		<broadcaster id="bc_gopt_prefchange" onsyncfrompreference="return printPages2Pdf.prefsUtils.onSyncFromPreference(this);" 
+											onsynctopreference="return printPages2Pdf.prefsUtils.onSyncToPreference(this);" />
+		<broadcaster id="bc_gopt_tbpagesizes" hidespinbuttons="false" type="number" increment="1" decimalplaces="2" 
+				onsyncfrompreference="return printPages2Pdf.prefsUtils.onSyncFromPreference(this);"   width="60" dir="reverse" 
+											onsynctopreference="return printPages2Pdf.prefsUtils.onSyncToPreference(this);" />
+		<broadcaster id="bc_gopt_numint" hidespinbuttons="false" type="number" increment="1"  
+				onsyncfrompreference="return printPages2Pdf.prefsUtils.onSyncFromPreference(this);"  width="60" dir="reverse" 
+											onsynctopreference="return printPages2Pdf.prefsUtils.onSyncToPreference(this);" />
+		<broadcaster id="bc_gstd_labelcol" width="120" crop="end" />
+		<broadcaster id="bc_archive_labelcol" width="200" crop="end" />
+		<broadcaster id="bc_sc_header" width="120" crop="end" style="font-weight:bold;" />
+		<broadcaster id="bc_pageunits" value="cm" realvalue="cm" />
+		
+	</broadcasterset>
+
+	
+	<prefpane id="general" label="&prefpane.general;" flex="1"  >
+		<preferences>
+			<preference  name="extensions.RRprintPages2Pdf.processing.openConvertResult" id="processing.openConvertResult" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.processing.startConvImmediately" id="processing.startConvImmediately" type="bool" />
+			<preference onchange="closeDlgAfterConversionAsk();" name="extensions.RRprintPages2Pdf.processing.closeDlgAfterConversion" id="processing.closeDlgAfterConversion" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.processing.closeDlgAfterConversion.ask" id="processing.closeDlgAfterConversion.ask" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.processing.closeDlgOnWarning" id="processing.closeDlgOnWarning" type="bool" />
+			<preference onchange="convSeparateAsk();" name="extensions.RRprintPages2Pdf.processing.convSeparate" id="processing.convSeparate" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.processing.convSeparate.ask" id="processing.convSeparate.ask" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.processing.outputDir" id="processing.outputDir" type="string" />
+			<preference onchange="setFileButton(event);"  name="extensions.RRprintPages2Pdf.processing.pdfViewer" id="processing.pdfViewer" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.toolbarbuttons" id="ui.toolbarbuttons" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showsbmenus" id="ui.showsbmenus" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showplacesmenus" id="ui.showplacesmenus" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showpagemenus" id="ui.showpagemenus" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showpagemenus.printActiveTab" id="ui.showpagemenus.printActiveTab" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showpagemenus.printActiveTabText" id="ui.showpagemenus.printActiveTabText" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showpagemenus.printAllTabs" id="ui.showpagemenus.printAllTabs" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showpagemenus.printAllTabsText" id="ui.showpagemenus.printAllTabsText" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showpagemenus.printSelection" id="ui.showpagemenus.printSelection" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showpagemenus.openProcessDlg" id="ui.showpagemenus.openProcessDlg" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showpagemenus.openPrefsDlg" id="ui.showpagemenus.openPrefsDlg" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showpagemenus.toggleSidebar" id="ui.showpagemenus.toggleSidebar" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showpagemenus.help" id="ui.showpagemenus.help" type="bool" />
+
+			<preference  name="extensions.RRprintPages2Pdf.ui.showextramenus" id="ui.showextramenus" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showextramenus.printActiveTab" id="ui.showextramenus.printActiveTab" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showextramenus.printActiveTabText" id="ui.showextramenus.printActiveTabText" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showextramenus.printAllTabs" id="ui.showextramenus.printAllTabs" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showextramenus.printAllTabsText" id="ui.showextramenus.printAllTabsText" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showextramenus.printSelection" id="ui.showextramenus.printSelection" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showextramenus.openProcessDlg" id="ui.showextramenus.openProcessDlg" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showextramenus.openPrefsDlg" id="ui.showextramenus.openPrefsDlg" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showextramenus.toggleSidebar" id="ui.showextramenus.toggleSidebar" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showextramenus.help" id="ui.showextramenus.help" type="bool" />
+
+			<preference  name="extensions.RRprintPages2Pdf.ui.showtbbmenus" id="ui.showtbbmenus" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showtbbmenus.printActiveTab" id="ui.showtbbmenus.printActiveTab" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showtbbmenus.printActiveTabText" id="ui.showtbbmenus.printActiveTabText" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showtbbmenus.printAllTabs" id="ui.showtbbmenus.printAllTabs" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showtbbmenus.printAllTabsText" id="ui.showtbbmenus.printAllTabsText" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showtbbmenus.printSelection" id="ui.showtbbmenus.printSelection" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showtbbmenus.openProcessDlg" id="ui.showtbbmenus.openProcessDlg" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showtbbmenus.openPrefsDlg" id="ui.showtbbmenus.openPrefsDlg" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showtbbmenus.toggleSidebar" id="ui.showtbbmenus.toggleSidebar" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.showtbbmenus.help" id="ui.showtbbmenus.help" type="bool" />
+			
+			
+			<preference  name="extensions.RRprintPages2Pdf.ui.showtabmenu" id="ui.showtabmenu" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.ui.tbbfunction" id="ui.tbbfunction" type="string" />
+
+
+			<preference  name="extensions.RRprintPages2Pdf.sc.menmain_shift" id="sc.menmain_shift" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.sc.menmain_alt" id="sc.menmain_alt" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.sc.menmain_ctrl" id="sc.menmain_ctrl" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.sc.menmain_key" id="sc.menmain_key" type="string" />
+
+			<preference  name="extensions.RRprintPages2Pdf.sc.prtabs_shift" id="sc.prtabs_shift" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.sc.prtabs_alt" id="sc.prtabs_alt" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.sc.prtabs_ctrl" id="sc.prtabs_ctrl" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.sc.prtabs_key" id="sc.prtabs_key" type="string" />
+
+			<preference  name="extensions.RRprintPages2Pdf.sc.prpage_shift" id="sc.prpage_shift" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.sc.prpage_alt" id="sc.prpage_alt" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.sc.prpage_ctrl" id="sc.prpage_ctrl" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.sc.prpage_key" id="sc.prpage_key" type="string" />
+
+			<preference  name="extensions.RRprintPages2Pdf.sc.sidebar_shift" id="sc.sidebar_shift" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.sc.sidebar_alt" id="sc.sidebar_alt" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.sc.sidebar_ctrl" id="sc.sidebar_ctrl" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.sc.sidebar_key" id="sc.sidebar_key" type="string" />
+
+		</preferences>
+		<tabbox flex="1" orient="vertical" xstyle="overflow:auto;">
+			<tabs>
+				<tab label="&processing.groupbox.processing.title;" tooltiptext="&tab.document.tooltip;"  linkedpanel="panel_processing" />
+				<tab label="&processing.groupbox.menus.title;" tooltiptext="&tab.pagesizes.tooltip;" linkedpanel="panel_menus" />
+				<tab label="&tab.shortcuts.label;" tooltiptext="&tab.shortcuts.tooltip;" linkedpanel="panel_shortcuts"  />
+			</tabs>
+			<tabpanels flex="1" orient="vertical" >
+				<tabpanel  orient="vertical" id="panel_processing" >
+		<groupbox>	
+			<!--<caption label="&processing.groupbox.processing.title;"/>-->
+			<hbox align="center">
+				<label observes="bc_gstd_labelcol" control="tb_processing.openConvertResult" value="&processing.startConvImmediately;" tooltiptext="&processing.startConvImmediately.tooltip;" />
+				<checkbox  preference="processing.startConvImmediately" tooltiptext="&processing.startConvImmediately.tooltip;" id="tb_processing.openConvertResult" /> 
+			</hbox>
+
+			<hbox align="center">
+				<label observes="bc_gstd_labelcol" control="tb_processing.openConvertResult" value="&processing.openConvertResult;" 
+							tooltiptext="&processing.openConvertResult.tooltip;"/>
+				<checkbox  preference="processing.openConvertResult" tooltiptext="&processing.openConvertResult.tooltip;" id="tb_processing.openConvertResult" />
+			</hbox>
+
+			<hbox align="center">
+				<label observes="bc_gstd_labelcol" control="tb_processing.closeDlgAfterConversion" value="&processing.closeDlgAfterConversion;" tooltiptext="&processing.closeDlgAfterConversion.tooltip;" />
+				<checkbox  preference="processing.closeDlgAfterConversion" tooltiptext="&processing.closeDlgAfterConversion.tooltip;" id="tb_processing.closeDlgAfterConversion" />
+			</hbox> 
+			<hbox align="center" style="margin-bottom:3px;" id="hb_processing.closeDlgAfterConversion.ask" >
+				<label observes="bc_gstd_labelcol" />
+				<checkbox  preference="processing.closeDlgAfterConversion.ask" tooltiptext="&processing.closeDlgAfterConversion.ask.tooltip;" id="tb_processing.closeDlgAfterConversion.ask" />
+				<label  id="lbl_processing.convSeparate.ask" control="tb_processing.convSeparate.ask" value="&processing.closeDlgAfterConversion.ask.label;" 
+							tooltiptext="&processing.closeDlgAfterConversion.ask.tooltip;"/>
+			</hbox>
+			
+			<hbox align="center" style="margin-bottom:3px;" id="hb_processing.closeDlgOnWarning" >
+				<label observes="bc_gstd_labelcol" />
+				<checkbox  preference="processing.closeDlgOnWarning" tooltiptext="&processing.closeDlgOnWarning.tooltip;" id="tb_processing.closeDlgOnWarning" />
+				<label  id="lbl_processing.closeDlgOnWarning" control="tb_processing.closeDlgOnWarning" value="&processing.closeDlgOnWarning.label;" 
+							tooltiptext="&processing.closeDlgOnWarning.tooltip;"/>
+			</hbox>			
+
+			<hbox align="center">
+				<label observes="bc_gstd_labelcol" control="tb_processing.convSeparate" value="&processing.convSeparate;" 
+									tooltiptext="&processing.convSeparate.tooltip;"/>
+				<checkbox  preference="processing.convSeparate" tooltiptext="&processing.convSeparate.tooltip;" id="tb_processing.convSeparate" />
+			</hbox>
+
+			<hbox align="center" style="margin-bottom:3px;" id="hb_processing.convSeparate.ask" >
+				<label observes="bc_gstd_labelcol" />
+				<checkbox  preference="processing.convSeparate.ask" tooltiptext="&processing.convSeparate.ask.tooltip;" id="tb_processing.convSeparate.ask" />
+				<label  id="lbl_processing.convSeparate.ask" control="tb_processing.convSeparate.ask" value="&processing.convSeparate.ask.label;" 
+									tooltiptext="&processing.convSeparate.ask.tooltip;"/>
+			</hbox>
+			<hbox align="center">
+				<label observes="bc_gstd_labelcol" control="id_ui.tbbfunction" value="&ui.tbbfunction;" tooltiptext="&ui.tbbfunction.tooltip;" />
+				<menulist preference="ui.tbbfunction" tooltiptext="&ui.tbbfunction.tooltip;"  dir="reverse" id="id_ui.tbbfunction" >
+				  <menupopup>
+					<menuitem label="&ui.tbbfunction.alltabs;" value="alltabs" />
+					<menuitem label="&ui.tbbfunction.activetab;" value="activetab" />
+				  </menupopup>
+				</menulist>												
+			</hbox>
+			<hbox align="center">
+				<label observes="bc_gstd_labelcol" control="id_ui.toolbarbuttons" value="&ui.toolbarbuttons;" tooltiptext="&ui.toolbarbuttons.tooltip;" />
+				<menulist preference="ui.toolbarbuttons" tooltiptext="&ui.toolbarbuttons.tooltip;"  dir="reverse" id="id_ui.toolbarbuttons" >
+				  <menupopup>
+					<menuitem label="&ui.toolbarbuttons.selectvalue.full;" value="full" />
+					<menuitem label="&ui.toolbarbuttons.selectvalue.icons;" value="icons" />
+					<menuitem label="&ui.toolbarbuttons.selectvalue.text;" value="text" />
+				  </menupopup>
+				</menulist>												
+			</hbox>
+			<hbox align="center">
+				<label observes="bc_gstd_labelcol" control="tb_processing.outputDir" value="&processing.outputDir;" tooltiptext="&processing.outputDir.tooltip;" />
+				<textbox flex="1" preference="processing.outputDir" tooltiptext="&processing.outputDir.tooltip;" id="tb_processing.outputDir" /> 
+				<button class="btFileDlg" oncommand="printPages2Pdf.prefsUtils.getExistingDirectory(this,'&processing.outputDir.fileDlg.title;');" />
+			</hbox>
+			<hbox align="center">
+				<label observes="bc_gstd_labelcol" control="id_processing.pdfViewer" value="&processing.pdfViewer;" tooltiptext="&processing.pdfViewer.tooltip;" />
+				<menulist  oncommand="setValue(event);"  observes="bc_gopt_prefchange" editable="true" preference="processing.pdfViewer" tooltiptext="&processing.pdfViewer.tooltip;"  dir="reverse" id="id_processing.pdfViewer" >
+				  <menupopup>
+					<menuitem label="&processing.pdfViewer.selectvalue.os_default;" value="[os_default]"  tooltiptext="&processing.pdfViewer.selectvalue.os_default.tooltip;" />
+					<menuitem label="&processing.pdfViewer.selectvalue.open_browser;" value="[open_browser]" tooltiptext="&processing.pdfViewer.selectvalue.open_browser.tooltip;" />
+					<menuitem label="&processing.pdfViewer.selectvalue.open_directory;" value="[open_directory]" tooltiptext="&processing.pdfViewer.selectvalue.open_directory.tooltip;" />
+					<menuitem label="&processing.pdfViewer.selectvalue.select_app;" value=""  tooltiptext="&processing.pdfViewer.selectvalue.select_app.tooltip;" />
+				  </menupopup>
+				</menulist>												
+				<button class="btFileDlg" id="btPdfViewer" oncommand="printPages2Pdf.prefsUtils.getExistingFileName(this,['exe','&processing.pdfViewer.content.fileDlg.exeTypeDesc;'],'&processing.pdfViewer.content.fileDlg.title;');" />
+			</hbox>
+		</groupbox>
+		</tabpanel>
+		<tabpanel  orient="vertical" id="panel_menus" >
+		<groupbox >	
+			<!--<caption label="&processing.groupbox.menus.title;"/>-->
+			<hbox align="center">
+				<checkbox  preference="ui.showpagemenus" tooltiptext="&ui.showpagemenus.tooltip;" id="cb_ui.showpagemenus" />
+				<menulist readonly="true" disableautoselect="true" oncommand="this.selectedIndex=0;" >
+				  <menupopup>
+				  	<menuitem label="&ui.showpagemenus;"  tooltiptext="&ui.showpagemenus.tooltip;" />
+					<checkbox  label="&printPages2Pdf_mainpopup.printTab.label;" preference="ui.showpagemenus.printActiveTab"  tooltiptext="&printPages2Pdf_mainpopup.printTab.tooltip;" />
+					<checkbox  label="&printPages2Pdf_mainpopup.printTabText.label;" preference="ui.showpagemenus.printActiveTabText" tooltiptext="&printPages2Pdf_mainpopup.printTabText.tooltip;" />
+					<checkbox label="&printPages2Pdf_mainpopup.printAllTabs.label;" preference="ui.showpagemenus.printAllTabs" tooltiptext="&printPages2Pdf_mainpopup.printAllTabs.tooltip;" />
+					<checkbox label="&printPages2Pdf_mainpopup.printAllTabsText.label;" preference="ui.showpagemenus.printAllTabsText"  tooltiptext="&printPages2Pdf_mainpopup.printAllTabsText.tooltip;" />
+					<checkbox label="&printPages2Pdf_mainpopup.printSelection.label;" preference="ui.showpagemenus.printSelection"  tooltiptext="&printPages2Pdf_mainpopup.printSelection.tooltip;" />
+					<checkbox label="&printPages2Pdf_mainpopup.openProcessDialog.label;" preference="ui.showpagemenus.openProcessDlg"  tooltiptext="&printPages2Pdf_mainpopup.openProcessDialog.tooltip;" />
+					<checkbox label="&printPages2Pdf_mainpopup.preferences.label;" preference="ui.showpagemenus.openPrefsDlg"  tooltiptext="&printPages2Pdf_mainpopup.preferences.tooltip;" />
+					<checkbox label="&printPages2Pdf_mainpopup.sidebar.label;" preference="ui.showpagemenus.toggleSidebar"  tooltiptext="&printPages2Pdf_mainpopup.sidebar.tooltip;" />
+					<checkbox label="&printPages2Pdf_menitem.help.label;" preference="ui.showpagemenus.help"  tooltiptext="&printPages2Pdf_menitem.help.tooltip;" />
+				  </menupopup>
+				</menulist>												
+			</hbox>
+			
+			<hbox align="center">
+				<checkbox  preference="ui.showextramenus" tooltiptext="&ui.showextramenus.tooltip;" id="cb_ui.showextramenus" /> 
+				<menulist readonly="true" disableautoselect="true" oncommand="this.selectedIndex=0;" >
+				  <menupopup>
+				  	<menuitem label="&ui.showextramenus;"  tooltiptext="&ui.showextramenus.tooltip;" />
+					<checkbox  label="&printPages2Pdf_mainpopup.printTab.label;" preference="ui.showextramenus.printActiveTab"  tooltiptext="&printPages2Pdf_mainpopup.printTab.tooltip;" />
+					<checkbox  label="&printPages2Pdf_mainpopup.printTabText.label;" preference="ui.showextramenus.printActiveTabText" tooltiptext="&printPages2Pdf_mainpopup.printTabText.tooltip;" />
+					<checkbox label="&printPages2Pdf_mainpopup.printAllTabs.label;" preference="ui.showextramenus.printAllTabs" tooltiptext="&printPages2Pdf_mainpopup.printAllTabs.tooltip;" />
+					<checkbox label="&printPages2Pdf_mainpopup.printAllTabsText.label;" preference="ui.showextramenus.printAllTabsText"  tooltiptext="&printPages2Pdf_mainpopup.printAllTabsText.tooltip;" />
+					<checkbox label="&printPages2Pdf_mainpopup.printSelection.label;" preference="ui.showextramenus.printSelection"  tooltiptext="&printPages2Pdf_mainpopup.printSelection.tooltip;" />
+					<checkbox label="&printPages2Pdf_mainpopup.openProcessDialog.label;" preference="ui.showextramenus.openProcessDlg"  tooltiptext="&printPages2Pdf_mainpopup.openProcessDialog.tooltip;" />
+					<checkbox label="&printPages2Pdf_mainpopup.preferences.label;" preference="ui.showextramenus.openPrefsDlg"  tooltiptext="&printPages2Pdf_mainpopup.preferences.tooltip;" />
+					<checkbox label="&printPages2Pdf_mainpopup.sidebar.label;" preference="ui.showextramenus.toggleSidebar"  tooltiptext="&printPages2Pdf_mainpopup.sidebar.tooltip;" />
+					<checkbox label="&printPages2Pdf_menitem.help.label;" preference="ui.showextramenus.help"  tooltiptext="&printPages2Pdf_menitem.help.tooltip;" />
+				  </menupopup>
+				</menulist>												
+			</hbox>
+			
+			<hbox align="center">
+				<checkbox  preference="ui.showtbbmenus" tooltiptext="&ui.showtbbmenus.tooltip;" id="cb_ui.showtbbmenus" /> 
+				<menulist readonly="true" disableautoselect="true" oncommand="this.selectedIndex=0;" >
+				  <menupopup>
+				  	<menuitem label="&ui.showtbbmenus;"  tooltiptext="&ui.showtbbmenus.tooltip;" />
+					<checkbox  label="&printPages2Pdf_mainpopup.printTab.label;" preference="ui.showtbbmenus.printActiveTab"  tooltiptext="&printPages2Pdf_mainpopup.printTab.tooltip;" />
+					<checkbox  label="&printPages2Pdf_mainpopup.printTabText.label;" preference="ui.showtbbmenus.printActiveTabText" tooltiptext="&printPages2Pdf_mainpopup.printTabText.tooltip;" />
+					<checkbox label="&printPages2Pdf_mainpopup.printAllTabs.label;" preference="ui.showtbbmenus.printAllTabs" tooltiptext="&printPages2Pdf_mainpopup.printAllTabs.tooltip;" />
+					<checkbox label="&printPages2Pdf_mainpopup.printAllTabsText.label;" preference="ui.showtbbmenus.printAllTabsText"  tooltiptext="&printPages2Pdf_mainpopup.printAllTabsText.tooltip;" />
+					<checkbox label="&printPages2Pdf_mainpopup.printSelection.label;" preference="ui.showtbbmenus.printSelection"  tooltiptext="&printPages2Pdf_mainpopup.printSelection.tooltip;" />
+					<checkbox label="&printPages2Pdf_mainpopup.openProcessDialog.label;" preference="ui.showtbbmenus.openProcessDlg"  tooltiptext="&printPages2Pdf_mainpopup.openProcessDialog.tooltip;" />
+					<checkbox label="&printPages2Pdf_mainpopup.preferences.label;" preference="ui.showtbbmenus.openPrefsDlg"  tooltiptext="&printPages2Pdf_mainpopup.preferences.tooltip;" />
+					<checkbox label="&printPages2Pdf_mainpopup.sidebar.label;" preference="ui.showtbbmenus.toggleSidebar"  tooltiptext="&printPages2Pdf_mainpopup.sidebar.tooltip;" />
+					<checkbox label="&printPages2Pdf_menitem.help.label;" preference="ui.showtbbmenus.help"  tooltiptext="&printPages2Pdf_menitem.help.tooltip;" />
+				  </menupopup>
+				</menulist>												
+			</hbox>
+			
+			
+			<hbox align="center" style="margin-top: 2em;">
+				<checkbox  preference="ui.showtabmenu" tooltiptext="&ui.showtabmenu.tooltip;" id="cb_ui.showtabmenu" /> 
+				<label observes="bc_gstd_labelcol" control="cb_ui.showtabmenu" value="&ui.showtabmenu;" tooltiptext="&ui.showtabmenu.tooltip;" />
+			</hbox>
+			<hbox align="center">
+				<checkbox  preference="ui.showplacesmenus" tooltiptext="&ui.showplacesmenus.tooltip;" id="cb_ui.showplacesmenus" /> 
+				<label observes="bc_gstd_labelcol" control="cb_ui.showplacesmenus" value="&ui.showplacesmenus;" tooltiptext="&ui.showplacesmenus.tooltip;" />
+			</hbox>
+			<hbox align="center">
+				<checkbox  preference="ui.showsbmenus" tooltiptext="&ui.showsbmenus.tooltip;" id="cb_ui.showsbmenus" /> 
+				<label observes="bc_gstd_labelcol" control="cb_ui.showsbmenus" value="&ui.showsbmenus;" tooltiptext="&ui.showsbmenus.tooltip;" />
+			</hbox>
+		</groupbox>
+		</tabpanel>
+		<tabpanel  orient="vertical" id="panel_shortcuts" >
+		<groupbox >	
+			<grid>
+				<columns>
+					<column>
+						<label observes="bc_sc_header" control="cb_ui.showpagemenus" value="&ui.shortcut.header.function.label;" tooltiptext="&ui.shortcut.header.function.tooltip;" />
+						<label value=" " />
+						<label observes="bc_gstd_labelcol"  value="&ui.shortcut.popupmenu.label;" tooltiptext="&ui.shortcut.popupmenu.tooltip;" />
+						<label observes="bc_gstd_labelcol"  value="&ui.shortcut.printtab.label;" tooltiptext="&ui.shortcut.printtab.tooltip;" />
+						<label observes="bc_gstd_labelcol"  value="&ui.shortcut.printtabs.label;" tooltiptext="&ui.shortcut.printtabs.tooltip;" />
+						<label observes="bc_gstd_labelcol"  value="&ui.shortcut.sidebar.label;" tooltiptext="&ui.shortcut.sidebar.tooltip;" />
+					</column>
+					<column width="5" >
+						<label observes="bc_sc_header"  value="&ui.shortcut.header.controlkey.label;" tooltiptext="&ui.shortcut.header.controlkey.tooltip;" />
+						<label value=" " />
+						<checkbox  preference="sc.menmain_ctrl" tooltiptext="&ui.shortcut.header.controlkey.tooltip;"  /> 
+						<checkbox  preference="sc.prpage_ctrl" tooltiptext="&ui.shortcut.header.controlkey.tooltip;"  /> 
+						<checkbox  preference="sc.prtabs_ctrl" tooltiptext="&ui.shortcut.header.controlkey.tooltip;"  /> 
+						<checkbox  preference="sc.sidebar_ctrl" tooltiptext="&ui.shortcut.header.controlkey.tooltip;"  /> 
+					</column>
+					<column  width="5">
+						<label observes="bc_sc_header"  value="&ui.shortcut.header.altkey.label;" tooltiptext="&ui.shortcut.header.altkey.tooltip;" />
+						<label value=" " />
+						<checkbox  preference="sc.menmain_alt" tooltiptext="ui.shortcut.header.altkey.tooltip;"  /> 
+						<checkbox  preference="sc.prpage_alt" tooltiptext="ui.shortcut.header.altkey.tooltip;"  /> 
+						<checkbox  preference="sc.prtabs_alt" tooltiptext="ui.shortcut.header.altkey.tooltip;"  /> 
+						<checkbox  preference="sc.sidebar_alt" tooltiptext="ui.shortcut.header.altkey.tooltip;"  /> 
+					</column>
+					<column  width="40">
+						<label observes="bc_sc_header"  value="&ui.shortcut.header.shiftkey.label;" tooltiptext="&ui.shortcut.header.shiftkey.tooltip;" />
+						<label value=" " />
+						<checkbox  preference="sc.menmain_shift" tooltiptext="&ui.shortcut.header.shiftkey.tooltip;"  /> 
+						<checkbox  preference="sc.prpage_shift" tooltiptext="&ui.shortcut.header.shiftkey.tooltip;"  /> 
+						<checkbox  preference="sc.prtabs_shift" tooltiptext="&ui.shortcut.header.shiftkey.tooltip;"  /> 
+						<checkbox  preference="sc.sidebar_shift" tooltiptext="&ui.shortcut.header.shiftkey.tooltip;"  /> 
+					</column>
+					<column width="45">
+						<label observes="bc_sc_header" value="&ui.shortcut.header.key.label;" tooltiptext="&ui.shortcut.header.key.tooltip;" />
+						<label value=" " />
+						<textbox size="1"  maxlength="1" flex="0" preference="sc.menmain_key" tooltiptext="&ui.shortcut.header.key.tooltip;"  /> 
+						<textbox size="1"  maxlength="1" flex="0" preference="sc.prpage_key" tooltiptext="&ui.shortcut.header.key.tooltip;" /> 
+						<textbox size="1" maxlength="1" flex="0" preference="sc.prtabs_key" tooltiptext="&ui.shortcut.header.key.tooltip;"  /> 
+						<textbox size="1" maxlength="1" flex="0" preference="sc.sidebar_key" tooltiptext="&ui.shortcut.header.key.tooltip;"  /> 
+					</column>
+				</columns>	
+			</grid>
+		</groupbox>
+		</tabpanel>
+		</tabpanels>
+		</tabbox>
+	</prefpane>	
+
+	<prefpane id="archive" label="&prefpane.archive;" flex="1"  >
+		<preferences>
+			<preference  name="extensions.RRprintPages2Pdf.archive.preview" id="archive.preview" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.archive.showthumbs" id="archive.showthumbs" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.archive.thumbsquality" id="archive.thumbsquality" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.archive.showMyDocuments" id="archive.showMyDocuments" type="bool" />
+			<preference  name="extensions.RRprintPages2Pdf.archive.showRecent" id="archive.showRecent" type="bool" />
+		</preferences>
+		<groupbox id="archivegroup" >
+		<hbox align="center">
+			<label observes="bc_archive_labelcol" control="tb_archive.preview" value="&archive.preview.label;" tooltiptext="&archive.preview.tooltip;" />
+			<checkbox  preference="archive.preview" tooltiptext="&archive.preview.tooltip;" id="tb_archive.preview" /> 
+		</hbox>
+		<hbox align="center">
+			<label observes="bc_archive_labelcol" control="tb_archive.showthumbs" value="&archive.showthumbs.label;" tooltiptext="&archive.showthumbs.tooltip;" />
+			<checkbox  preference="archive.showthumbs" tooltiptext="&archive.showthumbs.tooltip;" id="tb_archive.showthumbs" /> 
+		</hbox>
+		<hbox align="center">
+			<label observes="bc_archive_labelcol" control="tb_archive.thumbsquality" value="&archive.thumbsquality.label;" tooltiptext="&archive.thumbsquality.tooltip;" />
+			<textbox preference="archive.thumbsquality" tooltiptext="&archive.thumbsquality.tooltip;" id="tb_archive.thumbsquality"  observes="bc_gopt_tbpagesizes" /> 
+			<label value="%" />
+		</hbox>
+		<hbox align="center">
+			<label observes="bc_archive_labelcol" control="tb_archive.showMyDocuments" value="&archive.showMyDocuments.label;" tooltiptext="&archive.showMyDocuments.tooltip;" />
+			<checkbox  preference="archive.showMyDocuments" tooltiptext="&archive.showMyDocuments.tooltip;" id="tb_archive.showMyDocuments" /> 
+		</hbox>
+		<hbox align="center">
+			<label observes="bc_archive_labelcol" control="tb_archive.showRecent" value="&archive.showRecent.label;" tooltiptext="&archive.showRecent.tooltip;" />
+			<checkbox  preference="archive.showRecent" tooltiptext="&archive.showRecent.tooltip;" id="tb_archive.showRecent" /> 
+		</hbox>
+		</groupbox>
+	</prefpane>	
+	
+	<prefpane id="docWkhtmlGlobal" label="&prefpane.docWkhtmlGlobal;" flex="1" >
+		<preferences>
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.gopt.resolution" id="resolution" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.gopt.dpi" id="dpi" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.iopt.useScreenDpi" id="useScreenDpi" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.gopt.guessPageLength" id="guessPageLength" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.gopt.size.pageSize" id="size.pageSize" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.gopt.size.width" id="size.width" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.gopt.size.height" id="size.height" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.gopt.orientation" id="orientation" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.gopt.colorMode" id="colorMode" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.gopt.pageOffset" id="pageOffset" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.gopt.outline" id="outline" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.gopt.outlineDepth" id="outlineDepth" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.gopt.dumpOutline" id="dumpOutline" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.gopt.documentTitle" id="documentTitle" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.gopt.useCompression" id="useCompression" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.gopt.margin.top" id="margin.top" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.gopt.margin.right" id="margin.right" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.gopt.margin.left" id="margin.left" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.gopt.margin.bottom" id="margin.bottom" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.gopt.outputFormat" id="outputFormat" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.gopt.imageDPI" id="imageDPI" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.gopt.imageQuality" id="imageQuality" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.gopt.load.cookieJar" id="load.cookieJar" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.iopt.pageunits" id="pageunits" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.topt.toc.useDottedLines" id="toc.useDottedLines" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.topt.toc.captionText" id="toc.captionText" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.topt.toc.forwardLinks" id="toc.forwardLinks" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.topt.toc.backLinks" id="toc.backLinks" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.topt.toc.indentation" id="toc.indentation" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.topt.toc.fontScale" id="toc.fontScale" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.topt.tocXsl" id="tocXsl" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.iopt.isTableOfContent" id="isTableOfContent" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.iopt.coverFile" id="coverFile" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.iopt.useCover" id="useCover" type="string" />
+		</preferences>	
+		<box hidden="true">
+			<!-- ist das eine Seiteneinstellung oder global? -->
+			<hbox align="center"><label observes="bc_gstd_labelcol" control="symbol" value="pageOffset" /><textbox flex="1" preference="pageOffset" tooltiptext="&pageOffset.tooltip;" id="tb_pageOffset" /> </hbox>
+		</box>
+
+		<tabbox flex="1" orient="vertical" xstyle="overflow:auto;">
+			<tabs>
+				<tab label="&tab.document;" tooltiptext="&tab.document.tooltip;"  linkedpanel="panel_document" />
+				<tab label="&tab.pagesizes;" tooltiptext="&tab.pagesizes.tooltip;" linkedpanel="panel_pagesizes" />
+				<tab label="&tab.outline;" tooltiptext="&tab.outline.tooltip;" linkedpanel="panel_outline"  />
+<!--				<tab label="Lesezeichen" linkedpanel="panel_outline"  />
+				<tab label="Inhaltsverzeichnis" linkedpanel="panel_toc" />-->
+			</tabs>
+			<tabpanels flex="1" orient="vertical" >
+				<tabpanel  orient="vertical" id="panel_pagesizes" >
+					<groupbox>
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="id_size.pageSize" value="&size.pageSize;" tooltiptext="&size.pageSize.tooltip;" />
+							<menulist preference="size.pageSize" tooltiptext="&size.pageSize.tooltip;"  dir="reverse" id="id_size.pageSize" >
+							  <menupopup>
+								<menuitem label="A0" value="A0" />
+								<menuitem label="A1" value="A1" />
+								<menuitem label="A2" value="A2" />
+								<menuitem label="A3" value="A3" />
+								<menuitem label="A4" value="A4" />
+								<menuitem label="A5" value="A5" />
+								<menuitem label="A6" value="A6" />
+								<menuitem label="A7" value="A7" />
+								<menuitem label="A8" value="A8" />
+								<menuitem label="A9" value="A9" />
+								<menuitem label="B0" value="B0" />
+								<menuitem label="B1" value="B1" />
+								<menuitem label="B2" value="B2" />
+								<menuitem label="B3" value="B3" />
+								<menuitem label="B4" value="B4" />
+								<menuitem label="B5" value="B5" />
+								<menuitem label="B6" value="B6" />
+								<menuitem label="B7" value="B7" />
+								<menuitem label="B8" value="B8" />
+								<menuitem label="B9" value="B9" />
+								<menuitem label="B10" value="B10" />
+								<menuitem label="C5E" value="C5E" />
+								<menuitem label="Comm10E" value="Comm10E" />
+								<menuitem label="DLE" value="DLE" />
+								<menuitem label="Executive" value="Executive" />
+								<menuitem label="Folio" value="Folio" />
+								<menuitem label="Ledger" value="Ledger" />
+								<menuitem label="Legal" value="Legal" />
+								<menuitem label="Letter" value="Letter" />
+								<menuitem label="Tabloid" value="Tabloid" />
+							  </menupopup>
+							</menulist>												
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="ml_orientation" value="&orientation;" tooltiptext="&orientation.tooltip;" />
+							<menulist preference="orientation" tooltiptext="&orientation.tooltip;" id="ml_orientation"   dir="reverse" >
+							  <menupopup>
+								<menuitem label="&orientation.content.Protrait;" value="Portrait" />
+								<menuitem label="&orientation.content.Landscape;" value="Landscape" />
+							  </menupopup>
+							</menulist>						
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="cb_guessPageLength" value="&guessPageLength;" tooltiptext="&guessPageLength.tooltip;" />
+							<checkbox  preference="guessPageLength" tooltiptext="&guessPageLength.tooltip;" id="cb_guessPageLength"  observes="bc_gopt_prefchange" /> 
+						</hbox>						
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="ml_pageunits" value="&pageunits;" tooltiptext="&pageunits.tooltip;" />
+							<menulist preference="pageunits" tooltiptext="&pageunits.tooltip;" id="ml_pageunits"  
+								onselect="printPages2Pdf.prefsUtils.onPageUnitsSelect(this);"  dir="reverse" >
+							  <menupopup>
+								<menuitem label="cm" value="cm" />
+								<menuitem label="inch" value="in" />
+							  </menupopup>
+							</menulist>						
+						</hbox>
+						<hbox align="center"><label observes="bc_gstd_labelcol" control="tb_size.width" value="&size.width;" />
+							<textbox  preference="size.width" tooltiptext="&size.width.tooltip;" id="tb_size.width" observes="bc_gopt_tbpagesizes"> 
+								<observes element="bc_pageunits" attribute="realvalue" />
+							</textbox>
+							<label observes="bc_pageunits" />
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="tb_size.height" value="&size.height;" tooltiptext="&size.height.tooltip;" />
+							<textbox  preference="size.height" tooltiptext="&size.height.tooltip;" id="tb_size.height" observes="bc_gopt_tbpagesizes" >
+								<observes element="bc_pageunits" attribute="realvalue" />
+							</textbox>
+							<label observes="bc_pageunits" />
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="tb_margin.top" value="&margin.top;" tooltiptext="&margin.top.tooltip;" />
+							<textbox preference="margin.top" tooltiptext="&margin.top.tooltip;" id="tb_margin.top"  observes="bc_gopt_tbpagesizes" > 
+								<observes element="bc_pageunits" attribute="realvalue" />
+							</textbox>
+							<label observes="bc_pageunits" />
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="tb_margin.bottom" value="&margin.bottom;" tooltiptext="&margin.bottom.tooltip;" />
+							<textbox preference="margin.bottom" tooltiptext="&margin.bottom.tooltip;" id="tb_margin.bottom"  observes="bc_gopt_tbpagesizes" > 
+								<observes element="bc_pageunits" attribute="realvalue" />
+							</textbox>
+							<label observes="bc_pageunits" />
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="tb_margin.left" value="&margin.left;" tooltiptext="&margin.left.tooltip;" />
+							<textbox preference="margin.left" tooltiptext="&margin.left.tooltip;" id="tb_margin.left"  observes="bc_gopt_tbpagesizes" > 
+								<observes element="bc_pageunits" attribute="realvalue" />
+							</textbox>
+							<label observes="bc_pageunits" />
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="tb_margin.right" value="&margin.right;" tooltiptext="&margin.right.tooltip;" />
+							<textbox preference="margin.right" tooltiptext="&margin.right.tooltip;" id="tb_margin.right"  observes="bc_gopt_tbpagesizes" > 
+								<observes element="bc_pageunits" attribute="realvalue" />
+							</textbox>
+							<label observes="bc_pageunits" />
+						</hbox>
+					</groupbox>
+				</tabpanel>
+				<tabpanel  orient="vertical" id="panel_document" >
+					<groupbox>
+						<!--
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="tb_documentTitle" value="&documentTitle;" tooltiptext="&documentTitle.tooltip;" />
+							<textbox flex="1" preference="documentTitle" tooltiptext="&documentTitle.tooltip;" id="tb_documentTitle" /> 
+						</hbox>
+						-->
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="ml_colorMode" value="&colorMode;" tooltiptext="&colorMode.tooltip;" />
+							<menulist preference="colorMode" tooltiptext="&colorMode.tooltip;" id="ml_colorMode"  dir="reverse" >
+							  <menupopup>
+							    <menuitem label="&colorMode.content.color;" value="Color"/>
+							    <menuitem label="&colorMode.content.grayscale;" value="Grayscale"/>
+							  </menupopup>
+							</menulist>						
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="cb_useScreenDpi" value="&useScreenDpi;" tooltiptext="&useScreenDpi.tooltip;" />
+							<checkbox  preference="useScreenDpi" tooltiptext="&useScreenDpi.tooltip;" id="cb_useScreenDpi"  observes="bc_gopt_prefchange" /> 
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="tb_dpi" value="&dpi;" tooltiptext="&dpi.tooltip;" />
+							<textbox  preference="dpi" tooltiptext="&dpi.tooltip;" id="tb_dpi"   observes="bc_gopt_numint" /> 
+							<label value="dpi" />
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="ml_resolution" value="&resolution;" tooltiptext="&resolution.tooltip;" />
+							<!--<textbox flex="1" preference="web.defaultEncoding" tooltiptext="&web.defaultEncoding.tooltip;" id="tb_web.defaultEncoding" />--> 
+							<menulist preference="resolution" tooltiptext="&resolution.tooltip;" id="ml_resolution"  dir="reverse"  >
+							  <menupopup>
+							    <menuitem label="high" value="high"/>
+							    <menuitem label="screen" value="screen"/>
+							  </menupopup>
+							</menulist>						
+						</hbox>						
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="tb_imageDPI" value="&imageDPI;" tooltiptext="&imageDPI.tooltip;" />
+							<textbox  preference="imageDPI" tooltiptext="&imageDPI.tooltip;" id="tb_imageDPI"   observes="bc_gopt_numint" /> 
+							<label value="dpi" />
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="symbol" value="&imageQuality;" tooltiptext="&imageQuality.tooltip;" />
+							<textbox  preference="imageQuality" tooltiptext="&imageQuality.tooltip;" id="tb_imageQuality"    observes="bc_gopt_numint"  > 
+								<!--<observes element="bc_pageunits" attribute="realvalue" />-->
+							</textbox> 
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="cb_useCompression" value="&useCompression;" tooltiptext="&useCompression.tooltip;" />
+							<checkbox  preference="useCompression" tooltiptext="&useCompression.tooltip;" id="cb_useCompression"  observes="bc_gopt_prefchange" /> 
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="ml_outputFormat" value="&outputFormat;" tooltiptext="&outputFormat.tooltip;" />
+							<menulist preference="outputFormat" tooltiptext="&outputFormat.tooltip;" id="ml_outputFormat"  dir="reverse" >
+							  <menupopup>
+								<menuitem label="Pdf" value="pdf" />
+								<menuitem label="Postscript" value="ps" />
+							  </menupopup>
+							</menulist>						
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="tb_load.cookieJar" value="&load.cookieJar;" tooltiptext="&load.cookieJar.tooltip;" />
+							<textbox flex="1" preference="load.cookieJar" tooltiptext="&load.cookieJar.tooltip;" id="tb_load.cookieJar" /> 
+							<button class="btFileDlg" oncommand="printPages2Pdf.prefsUtils.getExistingFileName(this,['jar','&load.cookieJar.content.fileDlg.jarTypeDesc;'],'&load.cookieJar.content.fileDlg.title;');" />
+						</hbox>
+					</groupbox>
+					<groupbox >
+						<caption  >
+							<checkbox  preference="useCover" tooltiptext="&useCover.tooltip;" label="&useCover;"   observes="bc_gopt_prefchange" />
+						</caption>
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="tb_coverFile" value="&coverFile;" tooltiptext="&coverFile.tooltip;" />
+							<textbox flex="1" preference="coverFile" tooltiptext="&coverFile.tooltip;" id="tb_coverFile" /> 
+							<button class="btFileDlg" oncommand="printPages2Pdf.prefsUtils.getExistingFileName(this,['html','&coverFile.content.fileDlg.htmlTypeDesc;',],'&coverFile.content.fileDlg.title;',false);" />
+						</hbox>
+					</groupbox>
+								
+				</tabpanel>
+				<tabpanel  orient="vertical" id="panel_outline" >
+					<groupbox>
+						<caption>
+							<checkbox preference="outline" tooltiptext="&outline.tooltip;" label="&outline;"  observes="bc_gopt_prefchange" />
+						</caption>
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="tb_outlineDepth" value="&outlineDepth;" tooltiptext="&outlineDepth.tooltip;" />
+							<textbox preference="outlineDepth" tooltiptext="&outlineDepth.tooltip;" id="tb_outlineDepth"  type="number" increment="1" width="60" dir="reverse"  > 
+									<observes element="bc_pageunits" attribute="realvalue" />
+							</textbox>
+						</hbox>
+						
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="tb_dumpOutline" value="&dumpOutline;" tooltiptext="&dumpOutline.tooltip;" />
+							<textbox flex="1" preference="dumpOutline" tooltiptext="&dumpOutline.tooltip;" id="tb_dumpOutline" /> 
+							<button class="btFileDlg" oncommand="printPages2Pdf.prefsUtils.getExistingFileName(this,['filterXML',],'&dumpOutline.content.fileDlg.title;',true);" />
+						</hbox>
+					</groupbox>
+					
+
+					<groupbox xdisabled="true" xcollapsed="true">
+						<caption  >
+							<checkbox  preference="isTableOfContent" tooltiptext="&createToc.tooltip;" label="&createToc;"   observes="bc_gopt_prefchange" />
+						</caption>
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="tb_toc.captionText" value="&toc.captionText;" tooltiptext="&toc.captionText.tooltip;" />
+							<textbox flex="1" preference="toc.captionText" tooltiptext="&toc.captionText.tooltip;" id="tb_toc.captionText" /> 
+						</hbox>
+						<!--
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="cb_toc.useDottedLines" value="&toc.useDottedLines;" tooltiptext="&toc.useDottedLines.tooltip;" />
+							<checkbox  preference="toc.useDottedLines" tooltiptext="&toc.useDottedLines.tooltip;" id="cb_toc.useDottedLines"  observes="bc_gopt_prefchange" /> 
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="symbol" value="&toc.indentation;" tooltiptext="&toc.indentation.tooltip;"  /> 
+							<textbox  preference="toc.indentation" tooltiptext="&toc.indentation.tooltip;" id="tb_toc.indentation" observes="bc_gopt_tbpagesizes" > 
+									<observes element="bc_pageunits" attribute="realvalue" />
+							</textbox> 
+							<label observes="bc_pageunits" />
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="symbol" value="&toc.fontScale;" tooltiptext="&toc.fontScale.tooltip;" />
+							<textbox preference="toc.fontScale" tooltiptext="&toc.fontScale.tooltip;" id="tb_toc.fontScale"   observes="bc_gopt_tbpagesizes" > 
+									<observes element="bc_pageunits" attribute="realvalue" />
+							</textbox> 
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="cb_toc.forwardLinks" value="&toc.forwardLinks;" tooltiptext="&toc.forwardLinks.tooltip;" />
+							<checkbox  preference="toc.forwardLinks" tooltiptext="&toc.forwardLinks.tooltip;" id="cb_toc.forwardLinks"  observes="bc_gopt_prefchange" /> 
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="cb_toc.backLinks" value="&toc.backLinks;" tooltiptext="&toc.backLinks.tooltip;" />
+							<checkbox  preference="toc.backLinks" tooltiptext="&toc.backLinks.tooltip;" id="cb_toc.backLinks"  observes="bc_gopt_prefchange" /> 
+						</hbox>
+-->
+						<hbox align="center">
+							<label observes="bc_gstd_labelcol" control="tb_tocXsl" value="&tocXsl;" tooltiptext="&tocXsl.tooltip;" />
+							<textbox flex="1" preference="tocXsl" tooltiptext="&tocXsl.tooltip;" id="tb_tocXsl" /> 
+							<button class="btFileDlg" oncommand="printPages2Pdf.prefsUtils.getExistingFileName(this,['xsl','&tocXsl.content.fileDlg.xslTypeDesc;',],'&tocXsl.content.fileDlg.title;',false);" />
+						</hbox>
+					</groupbox>
+
+				</tabpanel>
+			</tabpanels>
+		</tabbox>
+	
+	</prefpane>	
+	
+	<prefpane src="chrome://printPages2Pdf/content/prefs_wkhOoptOverlay.xul" id="docWkhtmlObject" label="&prefpane.docWkhtmlObject;" flex="1" >
+	</prefpane>
+
+	<prefpane id="about" label="&prefpane.about;" tooltiptext="&prefpane.about.tooltip;" flex="1" >
+		<iframe flex="1" src="chrome://printPages2Pdf/locale/about.html" />
+	</prefpane>		
+
+
+
+</prefwindow>

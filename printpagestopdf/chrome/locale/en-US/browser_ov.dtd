@@ -1,0 +1,28 @@
+<!ENTITY printPages2Pdf_mainmenu.label "Print pages to PDF">
+<!ENTITY printPages2Pdf_mainpopup.printAllTabs.label "Print all Tabs">
+<!ENTITY printPages2Pdf_mainpopup.printAllTabs.tooltip "Print the content of all Tabs into one PDF Document">
+<!ENTITY printPages2Pdf_mainpopup.printAllTabsText.label "Print all Tabs (text)">
+<!ENTITY printPages2Pdf_mainpopup.printAllTabsText.tooltip "Print the content of all Tabs as Text into one PDF Document">
+<!ENTITY printPages2Pdf_mainpopup.printTab.label "Print active Tab">
+<!ENTITY printPages2Pdf_mainpopup.printTab.tooltip "Print the content of the active Tab into one PDF Document">
+<!ENTITY printPages2Pdf_mainpopup.printTabText.label "Print active Tab (text)">
+<!ENTITY printPages2Pdf_mainpopup.printTabText.tooltip "Print the content of the active Tab as Text into one PDF Document">
+<!ENTITY printPages2Pdf_mainpopup.printFrame.label "Print frame">
+<!ENTITY printPages2Pdf_mainpopup.printFrame.tooltip "Print the content of this frame into one PDF Document">
+<!ENTITY printPages2Pdf_mainpopup.printLink.label "Print link">
+<!ENTITY printPages2Pdf_mainpopup.printLink.tooltip "Print the content of this link into one PDF Document">
+<!ENTITY printPages2Pdf_tabpopup.printThisTab.label "Print Tab as Pdf">
+<!ENTITY printPages2Pdf_tabpopup.printThisTab.tooltip "Prints the content of this Tab to Pdf">
+<!ENTITY printPages2Pdf_tabpopup.printSelectedTabs.label "Print Selected Tabs as Pdf">
+<!ENTITY printPages2Pdf_tabpopup.printSelectedTabs.tooltip "Prints the content of all Selected Tabs to Pdf">
+<!ENTITY printPages2Pdf_mainpopup.preferences.label "Preferences ...">
+<!ENTITY printPages2Pdf_mainpopup.preferences.tooltip "Opens the preferences Dialog">
+<!ENTITY printPages2Pdf_mainpopup.openProcessDialog.label "Conversion Window ...">
+<!ENTITY printPages2Pdf_mainpopup.openProcessDialog.tooltip "Opens an empty conversion Window on which you can add Webpages">
+<!ENTITY printPages2Pdf_mainpopup.sidebar.label "Sidebar">
+<!ENTITY printPages2Pdf_mainpopup.sidebar.tooltip "Opens or closes the Print pages to Pdf Archive Sidebar">
+<!ENTITY printPages2Pdf_mainpopup.printSelection.label "Print selection">
+<!ENTITY printPages2Pdf_mainpopup.printSelection.tooltip "Select area with mouse and convert Selection to PDF.">
+<!ENTITY printPages2Pdf_topmenu.sidebar.label "PDF Archive">
+<!ENTITY printPages2Pdf_sidebar.sidebar.title "Print pages to PDF Archives">
+<!ENTITY printPages2Pdf_palette.sidebar.label "PDF Archives Sidebar">

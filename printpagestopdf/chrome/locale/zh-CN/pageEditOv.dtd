@@ -1,0 +1,22 @@
+<!ENTITY pageedit.button.header1.label "书签 1">
+<!ENTITY pageedit.button.header1.tooltip "添加标记的文字到第 1 层书签">
+<!ENTITY pageedit.button.header2.label "书签 2">
+<!ENTITY pageedit.button.header2.tooltip "添加标记的文字到第 2 层书签">
+<!ENTITY pageedit.button.header3.label "书签 3">
+<!ENTITY pageedit.button.header3.tooltip "添加标记的文字到第 3 层书签">
+<!ENTITY pageedit.button.header4.label "书签 4">
+<!ENTITY pageedit.button.header4.tooltip "添加标记的文字到第 4 层书签">
+<!ENTITY pageedit.button.header5.label "书签 5">
+<!ENTITY pageedit.button.header5.tooltip "添加标记的文字到第 5 层书签">
+<!ENTITY pageedit.button.header6.label "书签 6">
+<!ENTITY pageedit.button.header6.tooltip "添加标记的文字到第 6 层书签">
+<!ENTITY pageedit.button.domdelete.label "删除">
+<!ENTITY pageedit.button.domdelete.tooltip "删除文档树的元素">
+<!ENTITY pageedit.button.addtext.label "文本">
+<!ENTITY pageedit.button.addtext.tooltip "添加文本到文档">
+<!ENTITY pageedit.button.textonly.label "仅文本">
+<!ENTITY pageedit.button.textonly.tooltip "移除文档中所有非文本元素">
+<!ENTITY pageedit.button.save.label "保存">
+<!ENTITY pageedit.button.save.tooltip "保存所有更改">
+<!ENTITY pageedit.button.reload.label "重新载入">
+<!ENTITY pageedit.button.reload.tooltip "重新载入网页并移除所有更改">

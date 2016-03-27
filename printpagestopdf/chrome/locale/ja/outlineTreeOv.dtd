@@ -1,0 +1,11 @@
+<!ENTITY outlinetree.header "アウトライン">
+<!ENTITY outlinetree.button.delete.label "削除">
+<!ENTITY outlinetree.button.delete.tooltip "選択したアウトラインを削除">
+<!ENTITY outlinetree.button.outdent.label "インデントを戻す">
+<!ENTITY outlinetree.button.outdent.tooltip "Moves the indentation of the selected Outlines to the left (Unindent)">
+<!ENTITY outlinetree.button.indent.label "インデント">
+<!ENTITY outlinetree.button.indent.tooltip "Moves the indentation of the selected Outlines to the right">
+<!ENTITY outlinetree.button.clear.label "消去">
+<!ENTITY outlinetree.button.clear.tooltip "すべてのアウトラインを削除します">
+<!ENTITY outlinetree.button.settitle.label "タイトル">
+<!ENTITY outlinetree.button.settitle.tooltip "Add the Title of the Webpage as the first Outline item">

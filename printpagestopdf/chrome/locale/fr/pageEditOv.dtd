@@ -1,0 +1,22 @@
+<!ENTITY pageedit.button.header1.label "Niveau 1">
+<!ENTITY pageedit.button.header1.tooltip "Place le texte marqué au 1er niveau de structure">
+<!ENTITY pageedit.button.header2.label "Niveau 2">
+<!ENTITY pageedit.button.header2.tooltip "Place le texte marqué au 2e niveau de structure">
+<!ENTITY pageedit.button.header3.label "Niveau 3">
+<!ENTITY pageedit.button.header3.tooltip "Place le texte marqué au 3e niveau de structure">
+<!ENTITY pageedit.button.header4.label "Niveau 4">
+<!ENTITY pageedit.button.header4.tooltip "Place le texte marqué au 4e niveau de structure">
+<!ENTITY pageedit.button.header5.label "Niveau 5">
+<!ENTITY pageedit.button.header5.tooltip "Place le texte marqué au 5e niveau de structure">
+<!ENTITY pageedit.button.header6.label "Niveau 6">
+<!ENTITY pageedit.button.header6.tooltip "Place le texte marqué au 6e niveau de structure">
+<!ENTITY pageedit.button.domdelete.label "Supprimer">
+<!ENTITY pageedit.button.domdelete.tooltip "Supprime les éléments de la structure du document">
+<!ENTITY pageedit.button.addtext.label "Texte">
+<!ENTITY pageedit.button.addtext.tooltip "Ajoute du texte au document">
+<!ENTITY pageedit.button.textonly.label "Texte seul">
+<!ENTITY pageedit.button.textonly.tooltip "Supprime tous les éléments non textuels du document">
+<!ENTITY pageedit.button.save.label "Enregistrer">
+<!ENTITY pageedit.button.save.tooltip "Enregistrer les modifications">
+<!ENTITY pageedit.button.reload.label "Recharger">
+<!ENTITY pageedit.button.reload.tooltip "Recharge la page et annule toutes les modifications">

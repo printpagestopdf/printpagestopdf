@@ -1,0 +1,28 @@
+<!ENTITY printPages2Pdf_mainmenu.label "打印页面为 PDF">
+<!ENTITY printPages2Pdf_mainpopup.printAllTabs.label "打印所有标签">
+<!ENTITY printPages2Pdf_mainpopup.printAllTabs.tooltip "将所有标签的内容打印到一个 PDF 文档中">
+<!ENTITY printPages2Pdf_mainpopup.printAllTabsText.label "打印所有标签(文本)">
+<!ENTITY printPages2Pdf_mainpopup.printAllTabsText.tooltip "将所有标签的内容作为文本打印到一个 PDF 文档">
+<!ENTITY printPages2Pdf_mainpopup.printTab.label "打印活动的标签">
+<!ENTITY printPages2Pdf_mainpopup.printTab.tooltip "将活动标签的内容打印到一个 PDF 文档">
+<!ENTITY printPages2Pdf_mainpopup.printTabText.label "打印活动的标签(文本)">
+<!ENTITY printPages2Pdf_mainpopup.printTabText.tooltip "将活动标签的内容作为文本打印到一个 PDF 文档">
+<!ENTITY printPages2Pdf_mainpopup.printFrame.label "打印此框架">
+<!ENTITY printPages2Pdf_mainpopup.printFrame.tooltip "将此框架的内容打印到一个 PDF 文档">
+<!ENTITY printPages2Pdf_mainpopup.printLink.label "打印链接">
+<!ENTITY printPages2Pdf_mainpopup.printLink.tooltip "将链接的内容打印到一个 PDF 文档">
+<!ENTITY printPages2Pdf_tabpopup.printThisTab.label "打印标签为 PDF">
+<!ENTITY printPages2Pdf_tabpopup.printThisTab.tooltip "将此标签的内容打印为 PDF">
+<!ENTITY printPages2Pdf_tabpopup.printSelectedTabs.label "打印选中标签为 PDF">
+<!ENTITY printPages2Pdf_tabpopup.printSelectedTabs.tooltip "将所有选中标签的内容打印到一个 PDF 文档">
+<!ENTITY printPages2Pdf_mainpopup.preferences.label "首选项...">
+<!ENTITY printPages2Pdf_mainpopup.preferences.tooltip "打开首选项对话">
+<!ENTITY printPages2Pdf_mainpopup.openProcessDialog.label "转换窗口 ...">
+<!ENTITY printPages2Pdf_mainpopup.openProcessDialog.tooltip "打开一个空的转换窗口用来添加网页">
+<!ENTITY printPages2Pdf_mainpopup.sidebar.label "侧边栏">
+<!ENTITY printPages2Pdf_mainpopup.sidebar.tooltip "打开或关闭打印的页面到 PDF 文档侧边栏">
+<!ENTITY printPages2Pdf_mainpopup.printSelection.label "选择打印范围">
+<!ENTITY printPages2Pdf_mainpopup.printSelection.tooltip "使用鼠标选择区域并转化选中区域为 PDF。">
+<!ENTITY printPages2Pdf_topmenu.sidebar.label "PDF 文档">
+<!ENTITY printPages2Pdf_sidebar.sidebar.title "打印页面到 PDF 文档">
+<!ENTITY printPages2Pdf_palette.sidebar.label "PDF 文档侧边栏">

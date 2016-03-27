@@ -1,0 +1,38 @@
+<!ENTITY windowtitle "Tulosta sivut PDF-muodossa (käynnissä)">
+<!ENTITY maintoolbar.button.processing.label "Käynnistä">
+<!ENTITY maintoolbar.button.processing.tooltip "Käynnistää käsittelyn">
+<!ENTITY maintoolbar.button.stopprocessing.label "Pysäytä">
+<!ENTITY maintoolbar.button.stopprocessing.tooltip "Pysäyttää käsittelyn">
+<!ENTITY maintoolbar.button.save.label "Tallenna">
+<!ENTITY maintoolbar.button.save.tooltip "Tallentaa PDF-tiedoston...">
+<!ENTITY maintoolbar.button.items.up.label "Ylös">
+<!ENTITY maintoolbar.button.items.up.tooltip "Siirtää valitut kohteet ylöspäin">
+<!ENTITY maintoolbar.button.items.down.label "Alas">
+<!ENTITY maintoolbar.button.items.down.tooltip "Siirtää valitut kohteet alaspäin">
+<!ENTITY maintoolbar.button.items.remove.label "Poista">
+<!ENTITY maintoolbar.button.items.remove.tooltip "Poistaa valitut kohteet">
+<!ENTITY maintoolbar.button.properties.label "Ominaisuudet">
+<!ENTITY maintoolbar.button.properties.tooltip "Avaa yleiset ominaisuudet...">
+<!ENTITY resultbox.label "Muunnoksen eteneminen">
+<!ENTITY resultbox.link.tooltip "Avaa PDF tästä; tai vedä se tästä hiirellä vaikka työpöydälle">
+<!ENTITY titlebox.label "Asiakirjan otsikko">
+<!ENTITY titlebox.tooltip "PDF-asiakirjan otsikko, jota käytetään myös tulostustiedoston nimenä">
+<!ENTITY tabbox.tab.progress.label "Eteneminen">
+<!ENTITY tabbox.tab.progress.tooltip "Käsittelyvaiheet etenemispalkein">
+<!ENTITY tabbox.tab.webpages.label "Verkkosivut">
+<!ENTITY tabbox.tab.webpages.tooltip "Verkkosivujen luettelo yksittäisine asetuksineen">
+<!ENTITY webpages.item.edit.button.label "Muokkaa">
+<!ENTITY webpages.item.edit.button.tooltip "Verkkosivun muokkaus (poista, lisää, jäsentely)">
+<!ENTITY webpages.item.button.label "Ominaisuudet">
+<!ENTITY webpages.item.button.tooltip "Verkkosivukohtaiset ominaisuudet...">
+<!ENTITY webpages.item.cb.image.label "Grafiikkana">
+<!ENTITY webpages.item.cb.image.tooltip "Sisällytä tämä verkkosivu grafiikkana eikä tekstinä PDF-asiakirjaan">
+<!ENTITY webpages.item.cb.textonly.label "Vain teksti">
+<!ENTITY webpages.item.cb.textonly.tooltip "Tulosta tämä verkkosivu vain tekstinä">
+<!ENTITY webpages.item.srcimage.tooltip "Lähde">
+<!ENTITY maintoolbar.button.progress.clear.label "Tyhjennä">
+<!ENTITY maintoolbar.button.progress.clear.tooltip "Poista kaikki kohdat Eteneminen-välilehdestä">
+<!ENTITY objectprefpane.okbutton.label "OK">
+<!ENTITY objectprefpane.okbutton.tooltip "Käytä näitä asetuksia valitulle verkkosivulle">
+<!ENTITY objectprefpane.cancelbutton.label "Peruuta">
+<!ENTITY objectprefpane.cancelbutton.tooltip "Sulkee tämän ikkunan muutoksia tekemättä">

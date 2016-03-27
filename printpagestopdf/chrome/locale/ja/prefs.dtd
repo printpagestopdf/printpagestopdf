@@ -1,0 +1,306 @@
+<!ENTITY windowtitle "Print Pages to Pdf のプロパティ">
+<!ENTITY prefpane.general "一般">
+<!ENTITY prefpane.general.tooltip "このアドオンの一般設定">
+<!ENTITY prefpane.docWkhtmlGlobal "Pdf (全体)">
+<!ENTITY prefpane.docWkhtmlGlobal.tooltip "Pdf ドキュメント全体に関する設定">
+<!ENTITY prefpane.docWkhtmlObject "Pdf (Web ページ)">
+<!ENTITY prefpane.docWkhtmlObject.tooltip "個々の Web ページごとに変更可能な設定">
+<!ENTITY prefpane.about "Print Pages to Pdf について">
+<!ENTITY prefpane.about.tooltip "このアドオンについての情報">
+<!ENTITY prefpane.archive "アーカイブ">
+<!ENTITY prefpane.archive.tooltip "Preferences for Pdf Archivemanagement">
+<!ENTITY tab.document "ドキュメント設定">
+<!ENTITY tab.document.tooltip "Preferences for the whole Pdf Result File">
+<!ENTITY tab.pagesizes "サイズとマージン">
+<!ENTITY tab.pagesizes.tooltip "用紙の書式, 用紙のサイズ, マージン">
+<!ENTITY tab.outline "アウトライン">
+<!ENTITY tab.outline.tooltip "アウトラインの設定">
+<!ENTITY tab.styling "スタイル">
+<!ENTITY tab.styling.tooltip "Pdf ページのスタイル">
+<!ENTITY tab.pageinfo "Web ページ情報">
+<!ENTITY tab.pageinfo.tooltip "Pdf ドキュメントで使用される Web ページ情報の設定">
+<!ENTITY tab.header "ヘッダー">
+<!ENTITY tab.header.tooltip "ヘッダーの設定">
+<!ENTITY tab.footer "フッター">
+<!ENTITY tab.footer.tooltip "フッターの設定">
+<!ENTITY tab.javascript "Javascript">
+<!ENTITY tab.javascript.tooltip "Web ページが Javascript を含んでいた場合の変換の振る舞い">
+<!ENTITY tab.tec "テクニカル設定">
+<!ENTITY tab.tec.tooltip "一般的な技術設定です">
+<!ENTITY processing.openConvertResult "PDF を開く">
+<!ENTITY processing.openConvertResult.tooltip "変換の成功後 PDF 文章を開く">
+<!ENTITY processing.startConvImmediately "自動開始">
+<!ENTITY processing.startConvImmediately.tooltip "変換ダイアログを開いた後に自動的に変換を開始します">
+<!ENTITY processing.convSeparate "Pdf を分離させる">
+<!ENTITY processing.convSeparate.tooltip "各 Web ページ毎に Pdf ファイルを作成します">
+<!ENTITY size.pageSize "用紙の書式">
+<!ENTITY size.pageSize.tooltip "Selecting the used Paperformat">
+<!ENTITY size.width "幅">
+<!ENTITY size.width.tooltip "Pdf ページの幅">
+<!ENTITY size.height "高さ">
+<!ENTITY size.height.tooltip "Pdf ページの高さ">
+<!ENTITY orientation "用紙方向">
+<!ENTITY orientation.tooltip "縦長/横長印刷">
+<!ENTITY orientation.content.Protrait "縦">
+<!ENTITY orientation.content.Landscape "横">
+<!ENTITY colorMode "カラーリング">
+<!ENTITY colorMode.tooltip "カラー/グレースケール印刷">
+<!ENTITY colorMode.content.color "カラー">
+<!ENTITY colorMode.content.grayscale "グレースケール">
+<!ENTITY pageOffset "スタートページ">
+<!ENTITY pageOffset.tooltip "Gives the starting number for page counting">
+<!ENTITY outline "アウトライン">
+<!ENTITY outline.tooltip "Create an outline for this Page in the Pdf Document.">
+<!ENTITY outlineDepth "Outlinelevels">
+<!ENTITY outlineDepth.tooltip "Maximum number of Outline levels.">
+<!ENTITY dumpOutline "Outlinefile">
+<!ENTITY dumpOutline.tooltip "Filename where the Outline XML is written to (only for Debugging)">
+<!ENTITY dumpOutline.content.fileDlg.title "XML ファイルでアウトラインを保存">
+<!ENTITY documentTitle "ドキュメントのタイトル">
+<!ENTITY documentTitle.tooltip "Pdf ドキュメントのタイトル">
+<!ENTITY useCompression "圧縮">
+<!ENTITY useCompression.tooltip "Pdfの圧縮についての設定です">
+<!ENTITY margin.top "上マージン">
+<!ENTITY margin.top.tooltip "ページの上マージンの高さ">
+<!ENTITY margin.right "右マージン">
+<!ENTITY margin.right.tooltip "ページの右マージンの幅">
+<!ENTITY margin.left "左マージン">
+<!ENTITY margin.left.tooltip "ページの左マージンの幅">
+<!ENTITY margin.bottom "下マージン">
+<!ENTITY margin.bottom.tooltip "ページの下マージンの高さ">
+<!ENTITY outputFormat "出力フォーマット">
+<!ENTITY outputFormat.tooltip "Format of the output (Remark postscript only for special uses)">
+<!ENTITY dpi "DPI (Document)">
+<!ENTITY dpi.tooltip "Resolution of PDF File; -1 = Default.">
+<!ENTITY useScreenDpi "Screenresolution">
+<!ENTITY useScreenDpi.tooltip "Use Screenresolution for PDF Resolution.">
+<!ENTITY imageDPI "グラフィックの解像度">
+<!ENTITY imageDPI.tooltip "Maximum resolution in dpi that is used for Graphics in the Pdf Document">
+<!ENTITY imageQuality "グラフィックの圧縮">
+<!ENTITY imageQuality.tooltip "The Factor of Compression that is used for Graphics (e.g. '92'). Large Compression == smaller Fileszize BUT lesser Quality">
+<!ENTITY load.cookieJar "クッキー ファイル">
+<!ENTITY load.cookieJar.tooltip "Path to a file (jar) that contains the Cookies to send">
+<!ENTITY load.cookieJar.content.fileDlg.title "Jar ファイル (Cookies)を開く">
+<!ENTITY load.cookieJar.content.fileDlg.jarTypeDesc "jar ファイル (*.jar)">
+<!ENTITY pageunits "単位">
+<!ENTITY pageunits.tooltip "ページサイズの単位">
+<!ENTITY createToc "目次">
+<!ENTITY createToc.tooltip "目次を作成します">
+<!ENTITY toc.useDottedLines "Dotted Lines">
+<!ENTITY toc.useDottedLines.tooltip "Empty spaces will be printed as dotted lines">
+<!ENTITY toc.captionText "見出し">
+<!ENTITY toc.captionText.tooltip "Headline of the Table of Content">
+<!ENTITY toc.forwardLinks "Use Links">
+<!ENTITY toc.forwardLinks.tooltip "Create Links from the Table of Content to the Pdf Page">
+<!ENTITY toc.backLinks "Backlinks">
+<!ENTITY toc.backLinks.tooltip "Create Links from the Page to the Table of Content">
+<!ENTITY toc.indentation "インデント">
+<!ENTITY toc.indentation.tooltip "Width of indentation for the next level of the Table of Content">
+<!ENTITY toc.fontScale "Fontscaling">
+<!ENTITY toc.fontScale.tooltip "Factor that will be used to reduce the Fontsize of the next level of the Table of Content (e. g. '0,8')">
+<!ENTITY tocXsl "Stylefile">
+<!ENTITY tocXsl.tooltip "Path of an existing XSL File that will be used for styling of the Table of Contetn">
+<!ENTITY tocXsl.content.fileDlg.xslTypeDesc "スタイルシート(*.xsl)">
+<!ENTITY tocXsl.content.fileDlg.title "スタイルシートの選択">
+<!ENTITY useCover "Cover">
+<!ENTITY useCover.tooltip "Use Coverpage">
+<!ENTITY coverFile "Cover Template">
+<!ENTITY coverFile.tooltip "Path to HTML Template for Cover Page (if emty use default).">
+<!ENTITY coverFile.content.fileDlg.htmlTypeDesc "HTML File (*.html)">
+<!ENTITY coverFile.content.fileDlg.title "Choose Cover Template">
+<!ENTITY guessPageLength "Opt. Pagelength">
+<!ENTITY guessPageLength.tooltip "Guess pagelength to cover only one page (not possible with multiple Webpages!)">
+<!ENTITY resolution "PDF Resolution">
+<!ENTITY resolution.tooltip "Screen uses screen resolution for pdf, high tries to use highest resolution.">
+<!ENTITY useExternalLinks "外部リンク">
+<!ENTITY useExternalLinks.tooltip "Pdf ドキュメントに外部リンクを設置します">
+<!ENTITY useLocalLinks "ローカル リンク">
+<!ENTITY useLocalLinks.tooltip "Create local links inside the Pdf Document (Remarks: not very reliable)">
+<!ENTITY produceForms "Formular">
+<!ENTITY produceForms.tooltip "Creates a Pdf Formula from a Web Formula  (Remarks: not very reliable)">
+<!ENTITY includeInOutline "Outline+">
+<!ENTITY includeInOutline.tooltip "Show this Webpage in the Outline">
+<!ENTITY pagesCount "Count pages">
+<!ENTITY pagesCount.tooltip "Takes this pages in account for pagenumbers of Outline and Table of Contents">
+<!ENTITY web.background "背景">
+<!ENTITY web.background.tooltip "Web ページの背景をプリントします">
+<!ENTITY web.loadImages "グラフィック">
+<!ENTITY web.loadImages.tooltip "Web ページのグラフィックをプリントします">
+<!ENTITY web.enableJavascript "Javascript">
+<!ENTITY web.enableJavascript.tooltip "ページの Javascript を許可">
+<!ENTITY web.enableIntelligentShrinking "Smartformatting">
+<!ENTITY web.enableIntelligentShrinking.tooltip "Tries an intelligent formatting to get more content on one Page">
+<!ENTITY web.minimumFontSize "最小フォントサイズ">
+<!ENTITY web.minimumFontSize.tooltip "The smalles Fontsize that is used in the Pdf Document (e. g. '6')">
+<!ENTITY web.printMediaType "PrintMedia">
+<!ENTITY web.printMediaType.tooltip "Uses printMedia instead of screenMedia">
+<!ENTITY web.defaultEncoding "エンコーディング">
+<!ENTITY web.defaultEncoding.tooltip "If there is no encoding on the Webpage, this default Encoding will be used">
+<!ENTITY web.userStyleSheet "スタイルシート">
+<!ENTITY web.userStyleSheet.tooltip "Path to a userdefined Stylesheet, that will be used for all printed Webpages">
+<!ENTITY web.userStyleSheet.content.fileDlg.fileTypeName "スタイルシート">
+<!ENTITY web.userStyleSheet.content.fileDlg.title "スタイルシートを開く">
+<!ENTITY web.enablePlugins "プラグイン">
+<!ENTITY web.enablePlugins.tooltip "Usage of Plugins for the Pdf Library (Remarks: probably ugly results).">
+<!ENTITY load.username "ユーザー名">
+<!ENTITY load.username.tooltip "If Webpage needs authtication, this will be used as Username">
+<!ENTITY load.password "パスワード">
+<!ENTITY load.password.tooltip "If Webpage needs authtication, this will be used as password">
+<!ENTITY load.jsdelay "JS Delay">
+<!ENTITY load.jsdelay.tooltip "Waits this amount of time (ms) before starting conversion (normally to give Javascripts a chance).">
+<!ENTITY load.zoomFactor "拡大/縮小率">
+<!ENTITY load.zoomFactor.tooltip "Content will be scaled by this Factor.">
+<!ENTITY load.repeatCustomHeaders "HTTP Header repeat">
+<!ENTITY load.repeatCustomHeaders.tooltip "Repeat user defined HTTP headers">
+<!ENTITY load.blockLocalFileAccess "Disallow Fileaccess">
+<!ENTITY load.blockLocalFileAccess.tooltip "Prevents access to local Files for the Pdf Library">
+<!ENTITY load.stopSlowScript "Stop slow scripts">
+<!ENTITY load.stopSlowScript.tooltip "Breaks long running Javascripts">
+<!ENTITY load.debugJavascript "JS デバッグ">
+<!ENTITY load.debugJavascript.tooltip "Prints javascript errormessages">
+<!ENTITY load.loadErrorHandling "読み込みエラー">
+<!ENTITY load.loadErrorHandling.tooltip "変換中に読み込みエラーが発生した場合の動作を設定します">
+<!ENTITY load.loadErrorHandling.content.skip "スキップ">
+<!ENTITY load.loadErrorHandling.content.skip.tooltip "Does not add this (partially loaded) Page to the result but is processing the other webpages.">
+<!ENTITY load.loadErrorHandling.content.abort "中止">
+<!ENTITY load.loadErrorHandling.content.abort.tooltip "Aborts the whole conversion process">
+<!ENTITY load.loadErrorHandling.content.ignore "無視">
+<!ENTITY load.loadErrorHandling.content.ignore.tooltip "Tries to add the (partially loaded) Webpage to the output and is processing the other webpages">
+<!ENTITY header.fontSize "フォント サイズ">
+<!ENTITY header.fontSize.tooltip "見出しのフォントサイズ">
+<!ENTITY header.fontName "フォント名">
+<!ENTITY header.fontName.tooltip "Fontname for headline.">
+<!ENTITY header.left "テキストの左揃え">
+<!ENTITY header.left.tooltip "見出しのテキストを左揃えにします">
+<!ENTITY header.center "テキストの中央揃え">
+<!ENTITY header.center.tooltip "見出しのテキストを中央揃えにします">
+<!ENTITY header.right "テキストの右揃え">
+<!ENTITY header.right.tooltip "見出しのテキストを右揃えにします">
+<!ENTITY header.line "区切り線">
+<!ENTITY header.line.tooltip "Prints a separation line between the headline and the body of the Pdf Document">
+<!ENTITY header.space "Textmargin">
+<!ENTITY header.space.tooltip "Distance betwenn the headline and the body Text (Remarks: perhaps you have to fix the upper margin).">
+<!ENTITY header.htmlUrl "Headerfile (Html)">
+<!ENTITY header.htmlUrl.tooltip "Url/Pathname of an HTML File that will be used as header.">
+<!ENTITY header.htmlUrl.content.fileDlg.title "Html File for Header">
+<!ENTITY footer.fontSize "フォント サイズ">
+<!ENTITY footer.fontSize.tooltip "フッターのフォント サイズ">
+<!ENTITY footer.fontName "フォント名">
+<!ENTITY footer.fontName.tooltip "Fontname for footer.">
+<!ENTITY footer.left "テキストの左揃え">
+<!ENTITY footer.left.tooltip "フッターのテキストを左揃えにします">
+<!ENTITY footer.center "テキストの中央揃え">
+<!ENTITY footer.center.tooltip "フッターのテキストを中央揃えにします">
+<!ENTITY footer.right "テキストの右揃え">
+<!ENTITY footer.right.tooltip "フッターのテキストを右揃えにします">
+<!ENTITY footer.line "区切り線">
+<!ENTITY footer.line.tooltip "Prints a separation line between the footer and the body of the Pdf Document">
+<!ENTITY footer.space "テキストマージン">
+<!ENTITY footer.space.tooltip "Distance betwenn the footer and the body Text (Remarks: perhaps you have to fix the bottom margin).">
+<!ENTITY footer.htmlUrl "footerfile (Html)">
+<!ENTITY footer.htmlUrl.tooltip "Url/Pathname of an HTML File that will be used as footer.">
+<!ENTITY footer.htmlUrl.content.fileDlg.title "Html File for footer">
+<!ENTITY outline.titleOnly.title "Title for Outline">
+<!ENTITY outline.titleOnly.tooltip "Disables the automatic outline creation (sometimes confusing) and only the Webpage title will be used for outline">
+<!ENTITY pageload.timeout "Loadtimeout">
+<!ENTITY pageload.timeout.tooltip "Time in ms that the system on loading of a webpage is waiting before it reports an timeout error.">
+<!ENTITY pageload.minLocal "Optimized storing">
+<!ENTITY pageload.minLocal.tooltip "Stores only minimal Information for Webpage">
+<!ENTITY ui.toolbarbuttons "ツールバー">
+<!ENTITY ui.toolbarbuttons.tooltip "Select the kind of toolbars used in the conversion window">
+<!ENTITY ui.showsbmenus "Scrapbook メニュー">
+<!ENTITY ui.showsbmenus.tooltip "If Scrapbook(plus) installed the Contextmenu for Pdf Print will be shown">
+<!ENTITY ui.showplacesmenus "ブックマーク メニュー">
+<!ENTITY ui.showplacesmenus.tooltip "If selected, Pdf Print Submenu will be shown in the Bookmarks Contextmenu (restart necessary)">
+<!ENTITY ui.showpagemenus "Web ページ メニュー">
+<!ENTITY ui.showpagemenus.tooltip "If selected, Pdf Print Submenu will be shown in Webpages Contextmenu (restart necessary)">
+<!ENTITY ui.showextramenus "Extras menu">
+<!ENTITY ui.showextramenus.tooltip "If selected, Pdf Print Submenu will be shown in Mainmenu-&gt;Extras (restart necessary)">
+<!ENTITY ui.showtbbmenus "Toolbarbutton menu">
+<!ENTITY ui.showtbbmenus.tooltip "If selected, Pdf Print Submenu will be shown on the toolbarbutton (restart necessary)">
+<!ENTITY ui.showtabmenu "タブ メニュー">
+<!ENTITY ui.showtabmenu.tooltip "タブ コンテキストメニューに「タブを Pdf としてプリント」を表示します">
+<!ENTITY ui.tbbfunction "Toolbarbutton prints...">
+<!ENTITY ui.tbbfunction.tooltip "Decides if a push to the toolbarbutton prints all tabs or only the active tab.">
+<!ENTITY ui.tbbfunction.alltabs "すべてのタブ">
+<!ENTITY ui.tbbfunction.activetab "アクティブ タブ">
+<!ENTITY ui.toolbarbuttons.selectvalue.full "アイコンとテキスト">
+<!ENTITY ui.toolbarbuttons.selectvalue.icons "アイコン">
+<!ENTITY ui.toolbarbuttons.selectvalue.text "テキスト">
+<!ENTITY processing.closeDlgAfterConversion "ダイアログを閉じる">
+<!ENTITY processing.closeDlgAfterConversion.tooltip "Closes the conversion Dialog automatically after successfull conversion">
+<!ENTITY hdrftr.variables.menu.label "Variables">
+<!ENTITY hdrftr.variables.menu.tooltip "Inserts a variable, that will be replaced by the actual value during conversion">
+<!ENTITY hdrftr.variables.page.label "ページ番号">
+<!ENTITY hdrftr.variables.page.tooltip "Replaced by the number of the pages currently being printed ('[page]')">
+<!ENTITY hdrftr.variables.frompage.label "Frompage">
+<!ENTITY hdrftr.variables.frompage.tooltip "Replaced by the number of the first page to be printed ('[frompage]')">
+<!ENTITY hdrftr.variables.topage.label "Topage">
+<!ENTITY hdrftr.variables.topage.tooltip "Replaced by the number of the last page to be printed ('[topage]')">
+<!ENTITY hdrftr.variables.webpage.label "Web ページ">
+<!ENTITY hdrftr.variables.webpage.tooltip "Replaced by the URL of the page being printed ('[webpage]')">
+<!ENTITY hdrftr.variables.section.label "Section">
+<!ENTITY hdrftr.variables.section.tooltip "Replaced by the name of the current section ('[section]')">
+<!ENTITY hdrftr.variables.subsection.label "Subsection">
+<!ENTITY hdrftr.variables.subsection.tooltip "Replaced by the name of the current subsection ('[subsection]')">
+<!ENTITY hdrftr.variables.date.label "日付">
+<!ENTITY hdrftr.variables.date.tooltip "Replaced by the current date ('[date]')">
+<!ENTITY hdrftr.variables.time.label "時間">
+<!ENTITY hdrftr.variables.time.tooltip "Replaced by the current time ('[time]')">
+<!ENTITY hdrftr.variables.title.label "タイトル">
+<!ENTITY hdrftr.variables.title.tooltip "Replaced by the title of the of the current webpage ('[title]')">
+<!ENTITY hdrftr.variables.doctitle.label "Documenttitle">
+<!ENTITY hdrftr.variables.doctitle.tooltip "Replaced by the title of the output document ('[doctitle]')">
+<!ENTITY processing.outputDir "出力ディレクトリ">
+<!ENTITY processing.outputDir.tooltip "Sets the directory where the result Pdf Files will be stored">
+<!ENTITY processing.outputDir.fileDlg.title "出力ディレクトリ">
+<!ENTITY processing.pdfViewer "開く…">
+<!ENTITY processing.pdfViewer.tooltip "Choose the application that is used as the Pdf Viewer for the resulting Document">
+<!ENTITY processing.pdfViewer.selectvalue.os_default "既定">
+<!ENTITY processing.pdfViewer.selectvalue.os_default.tooltip "The Document will be opened with the OS default Application for .pdf">
+<!ENTITY processing.pdfViewer.selectvalue.open_browser "Firefox">
+<!ENTITY processing.pdfViewer.selectvalue.open_browser.tooltip "Firefox のタブでPdf ドキュメントを開きます">
+<!ENTITY processing.pdfViewer.selectvalue.open_directory "ディレクトリ">
+<!ENTITY processing.pdfViewer.selectvalue.open_directory.tooltip "Pdf ドキュメントが保存されているディレクトリを開きます">
+<!ENTITY processing.pdfViewer.selectvalue.select_app "開く…">
+<!ENTITY processing.pdfViewer.selectvalue.select_app.tooltip "Pdf ドキュメントを開くアプリケーションを手動で設定します">
+<!ENTITY processing.pdfViewer.content.fileDlg.exeTypeDesc "アプリケーション(*.exe)">
+<!ENTITY processing.pdfViewer.content.fileDlg.title "アプリケーションの選択">
+<!ENTITY processing.groupbox.menus.title "メニュー">
+<!ENTITY processing.groupbox.processing.title "Processing">
+<!ENTITY archive.showMyDocuments.label "Show Folder 'My Documents'">
+<!ENTITY archive.showMyDocuments.tooltip "Displays folder 'My Documents' in archive Sidebar.">
+<!ENTITY archive.showRecent.label "Show Folder 'Recent'">
+<!ENTITY archive.showRecent.tooltip "Displays folder 'Recent' in archive Sidebar.">
+<!ENTITY archive.preview.label "Preview (Convert.)">
+<!ENTITY archive.preview.tooltip "Displays a preview of the PDF after conversion in the processing window.">
+<!ENTITY archive.showthumbs.label "Preview (Archive)">
+<!ENTITY archive.showthumbs.tooltip "Displays a thumb image of the Pdf if entry hoovered by mouse.">
+<!ENTITY archive.thumbsquality.label "Quality thumb preview">
+<!ENTITY archive.thumbsquality.tooltip "Quality of the generated preview image (better quality = larger file).">
+<!ENTITY processing.closeDlgAfterConversion.ask.label "Show 'Save as'Dialog">
+<!ENTITY processing.closeDlgAfterConversion.ask.tooltip "Always open 'Save as'Dialog after conversion">
+<!ENTITY processing.closeDlgOnWarning.label "close on Warnings">
+<!ENTITY processing.closeDlgOnWarning.tooltip "Dialog will be closed although if there are conversion warnings.">
+<!ENTITY processing.convSeparate.ask.label "separate Folders">
+<!ENTITY processing.convSeparate.ask.tooltip "Open 'Save as'Dialog for every converted PDF">
+<!ENTITY tab.shortcuts.label "Shortcuts">
+<!ENTITY tab.shortcuts.tooltip "Konfiguration for Shortcuts">
+<!ENTITY ui.shortcut.header.function.label "Functionality">
+<!ENTITY ui.shortcut.header.function.tooltip "The Task that is started by this Shortcut">
+<!ENTITY ui.shortcut.header.controlkey.label "Ctrl">
+<!ENTITY ui.shortcut.header.controlkey.tooltip "Ctrl Key (Control)">
+<!ENTITY ui.shortcut.header.altkey.label "Alt">
+<!ENTITY ui.shortcut.header.altkey.tooltip "Alt Key">
+<!ENTITY ui.shortcut.header.shiftkey.label "Shift">
+<!ENTITY ui.shortcut.header.shiftkey.tooltip "Uppercase Key">
+<!ENTITY ui.shortcut.header.key.label "Key">
+<!ENTITY ui.shortcut.header.key.tooltip "Keyboard Character for Shortcut">
+<!ENTITY ui.shortcut.popupmenu.label "Show Popup">
+<!ENTITY ui.shortcut.popupmenu.tooltip "Opens the AddOn's popup menu with main items">
+<!ENTITY ui.shortcut.printtab.label "Print Tab">
+<!ENTITY ui.shortcut.printtab.tooltip "Starts the conversion of actual tab">
+<!ENTITY ui.shortcut.printtabs.label "Print all Tabs">
+<!ENTITY ui.shortcut.printtabs.tooltip "Starts conversion for all Tabs">
+<!ENTITY ui.shortcut.sidebar.label "Open/close Sidebar">
+<!ENTITY ui.shortcut.sidebar.tooltip "Opens or closes the Archive Sidebar">

@@ -1,0 +1,20 @@
+<!ENTITY action.openwith.label "開く…">
+<!ENTITY action.openwith.tooltip "要素をユーザー定義のアプリケーションで開きます">
+<!ENTITY action.cut.label "切り取り">
+<!ENTITY action.cut.tooltip "選択した要素を削除し、削除した要素をクリップボードにコピーします">
+<!ENTITY action.copy.label "コピー">
+<!ENTITY action.copy.tooltip "クリップボードに要素をコピーします">
+<!ENTITY action.paste.label "挿入">
+<!ENTITY action.paste.tooltip "クリップボードから要素を挿入します">
+<!ENTITY action.delete.label "削除">
+<!ENTITY action.delete.tooltip "選択した要素を削除します">
+<!ENTITY action.newfolder.label "新しいフォルダー">
+<!ENTITY action.newfolder.tooltip "新しいフォルダーを作成します">
+<!ENTITY action.newarchive.label "新しいアーカイブ">
+<!ENTITY action.newarchive.tooltip "新しいアーカイブを作成します">
+<!ENTITY action.rename.label "名前の変更">
+<!ENTITY action.rename.tooltip "選択した要素の名前を変更します">
+<!ENTITY action.help.label "ヘルプ">
+<!ENTITY action.help.tooltip "Opens online Help for Print pages to PDF Archive Modul">
+<!ENTITY action.fav.label "お気に入り">
+<!ENTITY action.fav.tooltip "選択したフォルダーをお気に入りリストに追加します">

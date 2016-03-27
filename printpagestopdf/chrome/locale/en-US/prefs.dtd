@@ -1,0 +1,306 @@
+<!ENTITY windowtitle "Print Pages to Pdf Properties">
+<!ENTITY prefpane.general "General">
+<!ENTITY prefpane.general.tooltip "General Preferences of this AddOn">
+<!ENTITY prefpane.docWkhtmlGlobal "Pdf (global)">
+<!ENTITY prefpane.docWkhtmlGlobal.tooltip "Preferences, that are related to the whole Pdf Document">
+<!ENTITY prefpane.docWkhtmlObject "Pdf (Webpage)">
+<!ENTITY prefpane.docWkhtmlObject.tooltip "Preferences that can be changed for individual Webpages">
+<!ENTITY prefpane.about "About">
+<!ENTITY prefpane.about.tooltip "Informations about this AddOn">
+<!ENTITY prefpane.archive "Archive">
+<!ENTITY prefpane.archive.tooltip "Preferences for Pdf Archivemanagement">
+<!ENTITY tab.document "Documentpreferences">
+<!ENTITY tab.document.tooltip "Preferences for the whole Pdf Result File">
+<!ENTITY tab.pagesizes "Sizes and Margins">
+<!ENTITY tab.pagesizes.tooltip "Paperformat, Papersize, Margins">
+<!ENTITY tab.outline "Outlines">
+<!ENTITY tab.outline.tooltip "Preferences for Outlines">
+<!ENTITY tab.styling "Styling">
+<!ENTITY tab.styling.tooltip "Styling of the Pdf Page">
+<!ENTITY tab.pageinfo "Webinformations">
+<!ENTITY tab.pageinfo.tooltip "Preferences how Wepbape informations are used in the Pdf Document">
+<!ENTITY tab.header "Header">
+<!ENTITY tab.header.tooltip "Headerpreferences">
+<!ENTITY tab.footer "Footer">
+<!ENTITY tab.footer.tooltip "Footerpreferences">
+<!ENTITY tab.javascript "Javascript">
+<!ENTITY tab.javascript.tooltip "Behaviour of the Converter if the Weppage contains Javascript">
+<!ENTITY tab.tec "Techn. Prefs.">
+<!ENTITY tab.tec.tooltip "General technical Preferences">
+<!ENTITY processing.openConvertResult "open PDF">
+<!ENTITY processing.openConvertResult.tooltip "Opens the PDF Document afer successfull conversion">
+<!ENTITY processing.startConvImmediately "Autom. start">
+<!ENTITY processing.startConvImmediately.tooltip "Starts the conversion automatically after opening the conversion Dialog">
+<!ENTITY processing.convSeparate "Separate Pdf's">
+<!ENTITY processing.convSeparate.tooltip "Creates a separate Pdf file for every webpage">
+<!ENTITY size.pageSize "Paperformat">
+<!ENTITY size.pageSize.tooltip "Selecting the used Paperformat">
+<!ENTITY size.width "Width">
+<!ENTITY size.width.tooltip "Width of the Pdfpage">
+<!ENTITY size.height "Height">
+<!ENTITY size.height.tooltip "Height of the Pdfpage">
+<!ENTITY orientation "Orientation">
+<!ENTITY orientation.tooltip "Portrait or Landscape printing">
+<!ENTITY orientation.content.Protrait "Portrait">
+<!ENTITY orientation.content.Landscape "Landscape">
+<!ENTITY colorMode "Coloring">
+<!ENTITY colorMode.tooltip "Coloured or grayscale printing">
+<!ENTITY colorMode.content.color "Color">
+<!ENTITY colorMode.content.grayscale "Grayscale">
+<!ENTITY pageOffset "Startpage">
+<!ENTITY pageOffset.tooltip "Gives the starting number for page counting">
+<!ENTITY outline "Outline">
+<!ENTITY outline.tooltip "Create an outline for this Page in the Pdf Document.">
+<!ENTITY outlineDepth "Outlinelevels">
+<!ENTITY outlineDepth.tooltip "Maximum number of Outline levels.">
+<!ENTITY dumpOutline "Outlinefile">
+<!ENTITY dumpOutline.tooltip "Filename where the Outline XML is written to (only for Debugging)">
+<!ENTITY dumpOutline.content.fileDlg.title "Save Outline in XML File">
+<!ENTITY documentTitle "Documenttitle">
+<!ENTITY documentTitle.tooltip "Title for the Pdf Document.">
+<!ENTITY useCompression "Compress">
+<!ENTITY useCompression.tooltip "Preference if the Pdf should be compressed or not">
+<!ENTITY margin.top "Upper margin">
+<!ENTITY margin.top.tooltip "Height of the upper Page margin">
+<!ENTITY margin.right "Right margin">
+<!ENTITY margin.right.tooltip "Width of the right page margin">
+<!ENTITY margin.left "Left margin">
+<!ENTITY margin.left.tooltip "Width of the left page margin">
+<!ENTITY margin.bottom "Bottom margin">
+<!ENTITY margin.bottom.tooltip "Height of the bottom page margin">
+<!ENTITY outputFormat "Outputformat">
+<!ENTITY outputFormat.tooltip "Format of the output (Remark postscript only for special uses)">
+<!ENTITY dpi "DPI (Document)">
+<!ENTITY dpi.tooltip "Resolution of PDF File; -1 = Default.">
+<!ENTITY useScreenDpi "Screenresolution">
+<!ENTITY useScreenDpi.tooltip "Use Screenresolution for PDF Resolution.">
+<!ENTITY imageDPI "Graphicresolution">
+<!ENTITY imageDPI.tooltip "Maximum resolution in dpi that is used for Graphics in the Pdf Document">
+<!ENTITY imageQuality "Graphiccompression">
+<!ENTITY imageQuality.tooltip "The Factor of Compression that is used for Graphics (e.g. '92'). Large Compression == smaller Fileszize BUT lesser Quality">
+<!ENTITY load.cookieJar "Cookiefile">
+<!ENTITY load.cookieJar.tooltip "Path to a file (jar) that contains the Cookies to send">
+<!ENTITY load.cookieJar.content.fileDlg.title "Open jar File (Cookies)">
+<!ENTITY load.cookieJar.content.fileDlg.jarTypeDesc "jar File (*.jar)">
+<!ENTITY pageunits "Units">
+<!ENTITY pageunits.tooltip "Units for the page Sizes.">
+<!ENTITY createToc "Table of Content">
+<!ENTITY createToc.tooltip "create a Table of Content">
+<!ENTITY toc.useDottedLines "Dotted Lines">
+<!ENTITY toc.useDottedLines.tooltip "Empty spaces will be printed as dotted lines">
+<!ENTITY toc.captionText "Headline">
+<!ENTITY toc.captionText.tooltip "Headline of the Table of Content">
+<!ENTITY toc.forwardLinks "Use Links">
+<!ENTITY toc.forwardLinks.tooltip "Create Links from the Table of Content to the Pdf Page">
+<!ENTITY toc.backLinks "Backlinks">
+<!ENTITY toc.backLinks.tooltip "Create Links from the Page to the Table of Content">
+<!ENTITY toc.indentation "Indentation">
+<!ENTITY toc.indentation.tooltip "Width of indentation for the next level of the Table of Content">
+<!ENTITY toc.fontScale "Fontscaling">
+<!ENTITY toc.fontScale.tooltip "Factor that will be used to reduce the Fontsize of the next level of the Table of Content (e. g. '0,8')">
+<!ENTITY tocXsl "Stylefile">
+<!ENTITY tocXsl.tooltip "Path of an existing XSL File that will be used for styling of the Table of Contetn">
+<!ENTITY tocXsl.content.fileDlg.xslTypeDesc "Stylesheet (*.xsl)">
+<!ENTITY tocXsl.content.fileDlg.title "Select Stylesheet">
+<!ENTITY useCover "Cover">
+<!ENTITY useCover.tooltip "Use Coverpage">
+<!ENTITY coverFile "Cover Template">
+<!ENTITY coverFile.tooltip "Path to HTML Template for Cover Page (if emty use default).">
+<!ENTITY coverFile.content.fileDlg.htmlTypeDesc "HTML File (*.html)">
+<!ENTITY coverFile.content.fileDlg.title "Choose Cover Template">
+<!ENTITY guessPageLength "Opt. Pagelength">
+<!ENTITY guessPageLength.tooltip "Guess pagelength to cover only one page (not possible with multiple Webpages!)">
+<!ENTITY resolution "PDF Resolution">
+<!ENTITY resolution.tooltip "Screen uses screen resolution for pdf, high tries to use highest resolution.">
+<!ENTITY useExternalLinks "External Links">
+<!ENTITY useExternalLinks.tooltip "Put external Links into the Pdf Document">
+<!ENTITY useLocalLinks "Local Links">
+<!ENTITY useLocalLinks.tooltip "Create local links inside the Pdf Document (Remarks: not very reliable)">
+<!ENTITY produceForms "Formular">
+<!ENTITY produceForms.tooltip "Creates a Pdf Formula from a Web Formula  (Remarks: not very reliable)">
+<!ENTITY includeInOutline "Outline+">
+<!ENTITY includeInOutline.tooltip "Show this Webpage in the Outline">
+<!ENTITY pagesCount "Count pages">
+<!ENTITY pagesCount.tooltip "Takes this pages in account for pagenumbers of Outline and Table of Contents">
+<!ENTITY web.background "Background">
+<!ENTITY web.background.tooltip "Print the Background of a Webpage">
+<!ENTITY web.loadImages "Graphics">
+<!ENTITY web.loadImages.tooltip "Print Graphics on a Webpage">
+<!ENTITY web.enableJavascript "Javascript">
+<!ENTITY web.enableJavascript.tooltip "Allow Javascript on the Page">
+<!ENTITY web.enableIntelligentShrinking "Smartformatting">
+<!ENTITY web.enableIntelligentShrinking.tooltip "Tries an intelligent formatting to get more content on one Page">
+<!ENTITY web.minimumFontSize "Min. Fontsize">
+<!ENTITY web.minimumFontSize.tooltip "The smalles Fontsize that is used in the Pdf Document (e. g. '6')">
+<!ENTITY web.printMediaType "PrintMedia">
+<!ENTITY web.printMediaType.tooltip "Uses printMedia instead of screenMedia">
+<!ENTITY web.defaultEncoding "Encoding">
+<!ENTITY web.defaultEncoding.tooltip "If there is no encoding on the Webpage, this default Encoding will be used">
+<!ENTITY web.userStyleSheet "Stylesheet">
+<!ENTITY web.userStyleSheet.tooltip "Path to a userdefined Stylesheet, that will be used for all printed Webpages">
+<!ENTITY web.userStyleSheet.content.fileDlg.fileTypeName "Stylesheet">
+<!ENTITY web.userStyleSheet.content.fileDlg.title "Open stylesheet">
+<!ENTITY web.enablePlugins "Plugins">
+<!ENTITY web.enablePlugins.tooltip "Usage of Plugins for the Pdf Library (Remarks: probably ugly results).">
+<!ENTITY load.username "Username">
+<!ENTITY load.username.tooltip "If Webpage needs authtication, this will be used as Username">
+<!ENTITY load.password "Password">
+<!ENTITY load.password.tooltip "If Webpage needs authtication, this will be used as password">
+<!ENTITY load.jsdelay "JS Delay">
+<!ENTITY load.jsdelay.tooltip "Waits this amount of time (ms) before starting conversion (normally to give Javascripts a chance).">
+<!ENTITY load.zoomFactor "Zoomfactor">
+<!ENTITY load.zoomFactor.tooltip "Content will be scaled by this Factor.">
+<!ENTITY load.repeatCustomHeaders "HTTP Header repeat">
+<!ENTITY load.repeatCustomHeaders.tooltip "Repeat user defined HTTP headers">
+<!ENTITY load.blockLocalFileAccess "Disallow Fileaccess">
+<!ENTITY load.blockLocalFileAccess.tooltip "Prevents access to local Files for the Pdf Library">
+<!ENTITY load.stopSlowScript "Stop slow scripts">
+<!ENTITY load.stopSlowScript.tooltip "Breaks long running Javascripts">
+<!ENTITY load.debugJavascript "JS Debug">
+<!ENTITY load.debugJavascript.tooltip "Prints javascript errormessages">
+<!ENTITY load.loadErrorHandling "Loaderrors">
+<!ENTITY load.loadErrorHandling.tooltip "Behaviour if there is a load error during conversion.">
+<!ENTITY load.loadErrorHandling.content.skip "Skip">
+<!ENTITY load.loadErrorHandling.content.skip.tooltip "Does not add this (partially loaded) Page to the result but is processing the other webpages.">
+<!ENTITY load.loadErrorHandling.content.abort "Abort">
+<!ENTITY load.loadErrorHandling.content.abort.tooltip "Aborts the whole conversion process">
+<!ENTITY load.loadErrorHandling.content.ignore "Ignore">
+<!ENTITY load.loadErrorHandling.content.ignore.tooltip "Tries to add the (partially loaded) Webpage to the output and is processing the other webpages">
+<!ENTITY header.fontSize "Fontsize">
+<!ENTITY header.fontSize.tooltip "Fontsize for headline">
+<!ENTITY header.fontName "Fontname">
+<!ENTITY header.fontName.tooltip "Fontname for headline.">
+<!ENTITY header.left "Text left">
+<!ENTITY header.left.tooltip "Left aligned Text for headline">
+<!ENTITY header.center "Text centered">
+<!ENTITY header.center.tooltip "Centered Text for headline">
+<!ENTITY header.right "Text right">
+<!ENTITY header.right.tooltip "Right aligned Text for headline">
+<!ENTITY header.line "Separator">
+<!ENTITY header.line.tooltip "Prints a separation line between the headline and the body of the Pdf Document">
+<!ENTITY header.space "Textmargin">
+<!ENTITY header.space.tooltip "Distance betwenn the headline and the body Text (Remarks: perhaps you have to fix the upper margin).">
+<!ENTITY header.htmlUrl "Headerfile (Html)">
+<!ENTITY header.htmlUrl.tooltip "Url/Pathname of an HTML File that will be used as header.">
+<!ENTITY header.htmlUrl.content.fileDlg.title "Html File for Header">
+<!ENTITY footer.fontSize "Fontsize">
+<!ENTITY footer.fontSize.tooltip "Fontsize for footer">
+<!ENTITY footer.fontName "Fontname">
+<!ENTITY footer.fontName.tooltip "Fontname for footer.">
+<!ENTITY footer.left "Text left">
+<!ENTITY footer.left.tooltip "Left aligned Text for footer">
+<!ENTITY footer.center "Text centered">
+<!ENTITY footer.center.tooltip "Centered Text for footer">
+<!ENTITY footer.right "Text right">
+<!ENTITY footer.right.tooltip "Right aligned Text for footer">
+<!ENTITY footer.line "Separator">
+<!ENTITY footer.line.tooltip "Prints a separation line between the footer and the body of the Pdf Document">
+<!ENTITY footer.space "Textmargin">
+<!ENTITY footer.space.tooltip "Distance betwenn the footer and the body Text (Remarks: perhaps you have to fix the bottom margin).">
+<!ENTITY footer.htmlUrl "footerfile (Html)">
+<!ENTITY footer.htmlUrl.tooltip "Url/Pathname of an HTML File that will be used as footer.">
+<!ENTITY footer.htmlUrl.content.fileDlg.title "Html File for footer">
+<!ENTITY outline.titleOnly.title "Title for Outline">
+<!ENTITY outline.titleOnly.tooltip "Disables the automatic outline creation (sometimes confusing) and only the Webpage title will be used for outline">
+<!ENTITY pageload.timeout "Loadtimeout">
+<!ENTITY pageload.timeout.tooltip "Time in ms that the system on loading of a webpage is waiting before it reports an timeout error.">
+<!ENTITY pageload.minLocal "Optimized storing">
+<!ENTITY pageload.minLocal.tooltip "Stores only minimal Information for Webpage">
+<!ENTITY ui.toolbarbuttons "Toolbars">
+<!ENTITY ui.toolbarbuttons.tooltip "Select the kind of toolbars used in the conversion window">
+<!ENTITY ui.showsbmenus "Scrapbook menu">
+<!ENTITY ui.showsbmenus.tooltip "If Scrapbook(plus) installed the Contextmenu for Pdf Print will be shown">
+<!ENTITY ui.showplacesmenus "Bookmarks menu">
+<!ENTITY ui.showplacesmenus.tooltip "If selected, Pdf Print Submenu will be shown in the Bookmarks Contextmenu (restart necessary)">
+<!ENTITY ui.showpagemenus "Webpages menu">
+<!ENTITY ui.showpagemenus.tooltip "If selected, Pdf Print Submenu will be shown in Webpages Contextmenu (restart necessary)">
+<!ENTITY ui.showextramenus "Extras menu">
+<!ENTITY ui.showextramenus.tooltip "If selected, Pdf Print Submenu will be shown in Mainmenu-&gt;Extras (restart necessary)">
+<!ENTITY ui.showtbbmenus "Toolbarbutton menu">
+<!ENTITY ui.showtbbmenus.tooltip "If selected, Pdf Print Submenu will be shown on the toolbarbutton (restart necessary)">
+<!ENTITY ui.showtabmenu "Tab Menu">
+<!ENTITY ui.showtabmenu.tooltip "Shows the menuitem 'Print tab as Pdf' at the Tab Contextmenu">
+<!ENTITY ui.tbbfunction "Toolbarbutton prints...">
+<!ENTITY ui.tbbfunction.tooltip "Decides if a push to the toolbarbutton prints all tabs or only the active tab.">
+<!ENTITY ui.tbbfunction.alltabs "All tabs">
+<!ENTITY ui.tbbfunction.activetab "Active tab">
+<!ENTITY ui.toolbarbuttons.selectvalue.full "Icons and Text">
+<!ENTITY ui.toolbarbuttons.selectvalue.icons "Icons">
+<!ENTITY ui.toolbarbuttons.selectvalue.text "Text">
+<!ENTITY processing.closeDlgAfterConversion "Close Dialog">
+<!ENTITY processing.closeDlgAfterConversion.tooltip "Closes the conversion Dialog automatically after successfull conversion">
+<!ENTITY hdrftr.variables.menu.label "Variables">
+<!ENTITY hdrftr.variables.menu.tooltip "Inserts a variable, that will be replaced by the actual value during conversion">
+<!ENTITY hdrftr.variables.page.label "Pagenumber">
+<!ENTITY hdrftr.variables.page.tooltip "Replaced by the number of the pages currently being printed ('[page]')">
+<!ENTITY hdrftr.variables.frompage.label "Frompage">
+<!ENTITY hdrftr.variables.frompage.tooltip "Replaced by the number of the first page to be printed ('[frompage]')">
+<!ENTITY hdrftr.variables.topage.label "Topage">
+<!ENTITY hdrftr.variables.topage.tooltip "Replaced by the number of the last page to be printed ('[topage]')">
+<!ENTITY hdrftr.variables.webpage.label "Webpage">
+<!ENTITY hdrftr.variables.webpage.tooltip "Replaced by the URL of the page being printed ('[webpage]')">
+<!ENTITY hdrftr.variables.section.label "Section">
+<!ENTITY hdrftr.variables.section.tooltip "Replaced by the name of the current section ('[section]')">
+<!ENTITY hdrftr.variables.subsection.label "Subsection">
+<!ENTITY hdrftr.variables.subsection.tooltip "Replaced by the name of the current subsection ('[subsection]')">
+<!ENTITY hdrftr.variables.date.label "Date">
+<!ENTITY hdrftr.variables.date.tooltip "Replaced by the current date ('[date]')">
+<!ENTITY hdrftr.variables.time.label "Time">
+<!ENTITY hdrftr.variables.time.tooltip "Replaced by the current time ('[time]')">
+<!ENTITY hdrftr.variables.title.label "Title">
+<!ENTITY hdrftr.variables.title.tooltip "Replaced by the title of the of the current webpage ('[title]')">
+<!ENTITY hdrftr.variables.doctitle.label "Documenttitle">
+<!ENTITY hdrftr.variables.doctitle.tooltip "Replaced by the title of the output document ('[doctitle]')">
+<!ENTITY processing.outputDir "Output Directory">
+<!ENTITY processing.outputDir.tooltip "Sets the directory where the result Pdf Files will be stored">
+<!ENTITY processing.outputDir.fileDlg.title "Output Directory">
+<!ENTITY processing.pdfViewer "Open with...">
+<!ENTITY processing.pdfViewer.tooltip "Choose the application that is used as the Pdf Viewer for the resulting Document">
+<!ENTITY processing.pdfViewer.selectvalue.os_default "Default">
+<!ENTITY processing.pdfViewer.selectvalue.os_default.tooltip "The Document will be opened with the OS default Application for .pdf">
+<!ENTITY processing.pdfViewer.selectvalue.open_browser "Firefox">
+<!ENTITY processing.pdfViewer.selectvalue.open_browser.tooltip "Opens the Pdf Document in a Firefox tab">
+<!ENTITY processing.pdfViewer.selectvalue.open_directory "Directory">
+<!ENTITY processing.pdfViewer.selectvalue.open_directory.tooltip "Opens the directory that contains the Pdf Document">
+<!ENTITY processing.pdfViewer.selectvalue.select_app "Open with...">
+<!ENTITY processing.pdfViewer.selectvalue.select_app.tooltip "Manually set the Application to open the Pdf Document">
+<!ENTITY processing.pdfViewer.content.fileDlg.exeTypeDesc "Application (*.exe)">
+<!ENTITY processing.pdfViewer.content.fileDlg.title "Select Application">
+<!ENTITY processing.groupbox.menus.title "Menus">
+<!ENTITY processing.groupbox.processing.title "Processing">
+<!ENTITY archive.showMyDocuments.label "Show Folder 'My Documents'">
+<!ENTITY archive.showMyDocuments.tooltip "Displays folder 'My Documents' in archive Sidebar.">
+<!ENTITY archive.showRecent.label "Show Folder 'Recent'">
+<!ENTITY archive.showRecent.tooltip "Displays folder 'Recent' in archive Sidebar.">
+<!ENTITY archive.preview.label "Preview (Convert.)">
+<!ENTITY archive.preview.tooltip "Displays a preview of the PDF after conversion in the processing window.">
+<!ENTITY archive.showthumbs.label "Preview (Archive)">
+<!ENTITY archive.showthumbs.tooltip "Displays a thumb image of the Pdf if entry hoovered by mouse.">
+<!ENTITY archive.thumbsquality.label "Quality thumb preview">
+<!ENTITY archive.thumbsquality.tooltip "Quality of the generated preview image (better quality = larger file).">
+<!ENTITY processing.closeDlgAfterConversion.ask.label "Show 'Save as'Dialog">
+<!ENTITY processing.closeDlgAfterConversion.ask.tooltip "Always open 'Save as'Dialog after conversion">
+<!ENTITY processing.closeDlgOnWarning.label "close on Warnings">
+<!ENTITY processing.closeDlgOnWarning.tooltip "Dialog will be closed although if there are conversion warnings.">
+<!ENTITY processing.convSeparate.ask.label "separate Folders">
+<!ENTITY processing.convSeparate.ask.tooltip "Open 'Save as'Dialog for every converted PDF">
+<!ENTITY tab.shortcuts.label "Shortcuts">
+<!ENTITY tab.shortcuts.tooltip "Konfiguration for Shortcuts">
+<!ENTITY ui.shortcut.header.function.label "Functionality">
+<!ENTITY ui.shortcut.header.function.tooltip "The Task that is started by this Shortcut">
+<!ENTITY ui.shortcut.header.controlkey.label "Ctrl">
+<!ENTITY ui.shortcut.header.controlkey.tooltip "Ctrl Key (Control)">
+<!ENTITY ui.shortcut.header.altkey.label "Alt">
+<!ENTITY ui.shortcut.header.altkey.tooltip "Alt Key">
+<!ENTITY ui.shortcut.header.shiftkey.label "Shift">
+<!ENTITY ui.shortcut.header.shiftkey.tooltip "Uppercase Key">
+<!ENTITY ui.shortcut.header.key.label "Key">
+<!ENTITY ui.shortcut.header.key.tooltip "Keyboard Character for Shortcut">
+<!ENTITY ui.shortcut.popupmenu.label "Show Popup">
+<!ENTITY ui.shortcut.popupmenu.tooltip "Opens the AddOn's popup menu with main items">
+<!ENTITY ui.shortcut.printtab.label "Print Tab">
+<!ENTITY ui.shortcut.printtab.tooltip "Starts the conversion of actual tab">
+<!ENTITY ui.shortcut.printtabs.label "Print all Tabs">
+<!ENTITY ui.shortcut.printtabs.tooltip "Starts conversion for all Tabs">
+<!ENTITY ui.shortcut.sidebar.label "Open/close Sidebar">
+<!ENTITY ui.shortcut.sidebar.tooltip "Opens or closes the Archive Sidebar">

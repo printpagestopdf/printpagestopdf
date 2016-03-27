@@ -1,0 +1,22 @@
+<!ENTITY pageedit.button.header1.label "Jäsentelytasolle 1">
+<!ENTITY pageedit.button.header1.tooltip "Lisää merkityn tekstin jäsentelytasolle 1">
+<!ENTITY pageedit.button.header2.label "Jäsentelytasolle 2">
+<!ENTITY pageedit.button.header2.tooltip "Lisää merkityn tekstin jäsentelytasolle 2">
+<!ENTITY pageedit.button.header3.label "Jäsentelytasolle 3">
+<!ENTITY pageedit.button.header3.tooltip "Lisää merkityn tekstin jäsentelytasolle 3">
+<!ENTITY pageedit.button.header4.label "Jäsentelytasolle 4">
+<!ENTITY pageedit.button.header4.tooltip "Lisää merkityn tekstin jäsentelytasolle 4">
+<!ENTITY pageedit.button.header5.label "Jäsentelytasolle 5">
+<!ENTITY pageedit.button.header5.tooltip "Lisää merkityn tekstin jäsentelytasolle 5">
+<!ENTITY pageedit.button.header6.label "Jäsentelytasolle 6">
+<!ENTITY pageedit.button.header6.tooltip "Lisää merkityn tekstin jäsentelytasolle 6">
+<!ENTITY pageedit.button.domdelete.label "Poista">
+<!ENTITY pageedit.button.domdelete.tooltip "Poistaa asiakirjapuun osia">
+<!ENTITY pageedit.button.addtext.label "Tekstiä">
+<!ENTITY pageedit.button.addtext.tooltip "Lisää tekstiä asiakirjaan">
+<!ENTITY pageedit.button.textonly.label "Vain tekstiä">
+<!ENTITY pageedit.button.textonly.tooltip "Poistaa kaikki muut paitsi tekstiosat asiakirjasta">
+<!ENTITY pageedit.button.save.label "Tallenna">
+<!ENTITY pageedit.button.save.tooltip "Tallentaa kaikki muutokset">
+<!ENTITY pageedit.button.reload.label "Lataa alkuperäinen">
+<!ENTITY pageedit.button.reload.tooltip "Lataa sivun uudelleen ilman muutoksia">

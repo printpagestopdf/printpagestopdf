@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>-->
+<window xonload="printPages2Pdf.hiddenBrowser.onLoad();"  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" xmlns:html="http://www.w3.org/1999/xhtml">
+	<deck selectedindex="0" flex="1">
+		<box height="11" flex="1" />
+		<groupbox xheight="11" flex="1" style="overflow:scroll" id="browserParent"  orient="horizontal" >
+			<!--<browser src=""  autoscroll="false"  width="1024" height="1024"  type="content" id="contentbrowser" xflex="1"/>-->
+		</groupbox>
+	</deck>
+</window>	

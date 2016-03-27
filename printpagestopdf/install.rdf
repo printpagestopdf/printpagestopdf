@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>printPages2Pdf@reinhold.ripper</em:id>
+    <em:version>0.5.0.5</em:version>
+    <em:type>2</em:type>
+    <em:unpack>true</em:unpack>
+
+    <em:optionsURL>chrome://printPages2Pdf/content/prefs.xul</em:optionsURL>
+
+    <!-- Target Application this extension can install into, 
+         with minimum and maximum supported versions. -->
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>18.*</em:minVersion>
+        <em:maxVersion>44.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+    <em:targetPlatform>WINNT</em:targetPlatform>
+	<!--<em:bootstrap>true</em:bootstrap>-->
+
+    <!-- Front End MetaData -->
+    <em:name>Print pages to PDF</em:name>
+    <em:description>Creates PDF from Tabs,Bookmarks, Scrapbook(Plus)</em:description>
+    <em:creator>Reinhold Ripper</em:creator>
+    <em:homepageURL>http://printpagestopdf.de.vu/</em:homepageURL>
+    <em:iconURL>chrome://printPages2Pdf/skin/printPages2Pdf32x32.png</em:iconURL>
+    <em:contributor>Jakob Truelsen (wkhtmltopdf)</em:contributor>
+    <em:contributor>haselnuss (ScrapbookPlus)</em:contributor>
+    <em:contributor>Gomita (Scrapbook)</em:contributor>
+    <em:contributor>Andy M (Screengrab)</em:contributor>
+	<em:translator>Wang.H.K</em:translator>
+	<em:translator>Bigpapa</em:translator>
+	<em:translator>Goofy</em:translator>
+	<em:translator>Käännös: Kari Eveli, http://www.lexitec.fi/</em:translator>
+
+    <!-- Localised descriptions -->
+    <em:localized>
+      <Description>
+        <em:locale>en-US</em:locale>
+	    <em:name>Print pages to PDF</em:name>
+	    <em:description>Creates PDF from Tabs,Bookmarks, Scrapbook(Plus)</em:description>
+	    <em:creator>Reinhold Ripper</em:creator>
+	    <em:homepageURL>http://printpagestopdf.de.vu/</em:homepageURL>
+	    <em:iconURL>chrome://printPages2Pdf/skin/printPages2Pdf32x32.png</em:iconURL>
+	    <em:contributor>Jakob Truelsen (wkhtmltopdf)</em:contributor>
+	    <em:contributor>haselnuss (ScrapbookPlus)</em:contributor>
+	    <em:contributor>Gomita (Scrapbook)</em:contributor>
+	    <em:contributor>Andy M (Screengrab)</em:contributor>
+		<em:translator>Wang.H.K</em:translator>
+		<em:translator>Bigpapa</em:translator>
+		<em:translator>Goofy</em:translator>
+		<em:translator>Käännös: Kari Eveli, http://www.lexitec.fi/</em:translator>
+      </Description>
+    </em:localized>
+    <em:localized>
+      <Description>
+        <em:locale>en-GB</em:locale>
+	    <em:name>Print pages to PDF</em:name>
+	    <em:description>Creates PDF from Tabs,Bookmarks, Scrapbook(Plus)</em:description>
+	    <em:creator>Reinhold Ripper</em:creator>
+	    <em:homepageURL>http://printpagestopdf.de.vu/</em:homepageURL>
+	    <em:iconURL>chrome://printPages2Pdf/skin/printPages2Pdf32x32.png</em:iconURL>
+	    <em:contributor>Jakob Truelsen (wkhtmltopdf)</em:contributor>
+	    <em:contributor>haselnuss (ScrapbookPlus)</em:contributor>
+	    <em:contributor>Gomita (Scrapbook)</em:contributor>
+	    <em:contributor>Andy M (Screengrab)</em:contributor>
+		<em:translator>Wang.H.K</em:translator>
+		<em:translator>Bigpapa</em:translator>
+		<em:translator>Goofy</em:translator>
+		<em:translator>Käännös: Kari Eveli, http://www.lexitec.fi/</em:translator>
+      </Description>
+    </em:localized>
+    <em:localized>
+      <Description>
+        <em:locale>de</em:locale>
+	    <em:name>Print pages to PDF</em:name>
+	    <em:description>Erstellt ein PDF aus Tabs,Bookmarks, Scrapbook(Plus)</em:description>
+	    <em:creator>Reinhold Ripper</em:creator>
+	    <em:homepageURL>http://printpagestopdf.de.vu/</em:homepageURL>
+	    <em:iconURL>chrome://printPages2Pdf/skin/printPages2Pdf32x32.png</em:iconURL>
+	    <em:contributor>Jakob Truelsen (wkhtmltopdf)</em:contributor>
+	    <em:contributor>haselnuss (ScrapbookPlus)</em:contributor>
+	    <em:contributor>Gomita (Scrapbook)</em:contributor>
+	    <em:contributor>Andy M (Screengrab)</em:contributor>
+		<em:translator>Wang.H.K</em:translator>
+		<em:translator>Bigpapa</em:translator>
+		<em:translator>Goofy</em:translator>
+		<em:translator>Käännös: Kari Eveli, http://www.lexitec.fi/</em:translator>
+      </Description>
+    </em:localized>
+
+    <em:localized>
+      <Description>
+        <em:locale>zh-CN</em:locale>
+        <em:name>Print pages to PDF</em:name>
+        <em:description>从标签、书签、Scrapbook(Plus)创建 PDF</em:description>
+        <em:creator>Reinhold Ripper</em:creator>
+        <em:homepageURL>http://printpagestopdf.de.vu/</em:homepageURL>
+        <em:translator>Wang.H.K</em:translator>
+        <em:contributor>Jakob Truelsen (wkhtmltopdf)</em:contributor>
+      </Description>
+    </em:localized>
+
+    <em:localized>
+      <Description>
+        <em:locale>fr</em:locale>
+        <em:name>Print pages to PDF</em:name>
+        <em:description>Crée des PDF à partir d'onglets, de marque-pages, de Scrapbook (+)</em:description>
+        <em:creator>Reinhold Ripper</em:creator>
+	    <em:homepageURL>http://printpagestopdf.de.vu/</em:homepageURL>
+	    <em:iconURL>chrome://printPages2Pdf/skin/printPages2Pdf32x32.png</em:iconURL>
+	    <em:contributor>Jakob Truelsen (wkhtmltopdf)</em:contributor>
+	    <em:contributor>haselnuss (ScrapbookPlus)</em:contributor>
+	    <em:contributor>Gomita (Scrapbook)</em:contributor>
+	    <em:contributor>Andy M (Screengrab)</em:contributor>
+		<em:translator>Wang.H.K</em:translator>
+		<em:translator>Bigpapa</em:translator>
+		<em:translator>Goofy</em:translator>
+		<em:translator>Käännös: Kari Eveli, http://www.lexitec.fi/</em:translator>
+      </Description>
+    </em:localized>
+
+    <em:localized>
+      <Description>
+        <em:locale>fi</em:locale>
+        <em:name>Print pages to PDF</em:name>
+        <em:description>Luo PDF-tiedostoja välilehdistä, kirjanmerkeistä tai Scrapbookista sekä Scrapbook Plussasta</em:description>
+        <em:creator>Reinhold Ripper</em:creator>
+	    <em:homepageURL>http://printpagestopdf.de.vu/</em:homepageURL>
+	    <em:iconURL>chrome://printPages2Pdf/skin/printPages2Pdf32x32.png</em:iconURL>
+	    <em:contributor>Jakob Truelsen (wkhtmltopdf)</em:contributor>
+	    <em:contributor>haselnuss (ScrapbookPlus)</em:contributor>
+	    <em:contributor>Gomita (Scrapbook)</em:contributor>
+	    <em:contributor>Andy M (Screengrab)</em:contributor>
+		<em:translator>Wang.H.K</em:translator>
+		<em:translator>Bigpapa</em:translator>
+		<em:translator>Goofy</em:translator>
+		<em:translator>Käännös: Kari Eveli, http://www.lexitec.fi/</em:translator>
+      </Description>
+    </em:localized>
+
+  </Description>
+</RDF>

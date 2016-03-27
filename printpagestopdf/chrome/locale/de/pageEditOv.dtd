@@ -1,0 +1,22 @@
+<!ENTITY pageedit.button.header1.label "Ebene1">
+<!ENTITY pageedit.button.header1.tooltip "Markierten Text als Lesezeichen der Ebene 1 in die Lesezeichenliste aufnehmen">
+<!ENTITY pageedit.button.header2.label "Ebene2">
+<!ENTITY pageedit.button.header2.tooltip "Markierten Text als Lesezeichen der Ebene 2 in die Lesezeichenliste aufnehmen">
+<!ENTITY pageedit.button.header3.label "Ebene3">
+<!ENTITY pageedit.button.header3.tooltip "Markierten Text als Lesezeichen der Ebene 3 in die Lesezeichenliste aufnehmen">
+<!ENTITY pageedit.button.header4.label "Ebene4">
+<!ENTITY pageedit.button.header4.tooltip "Markierten Text als Lesezeichen der Ebene 4 in die Lesezeichenliste aufnehmen">
+<!ENTITY pageedit.button.header5.label "Ebene5">
+<!ENTITY pageedit.button.header5.tooltip "Markierten Text als Lesezeichen der Ebene 5 in die Lesezeichenliste aufnehmen">
+<!ENTITY pageedit.button.header6.label "Ebene6">
+<!ENTITY pageedit.button.header6.tooltip "Markierten Text als Lesezeichen der Ebene 6 in die Lesezeichenliste aufnehmen">
+<!ENTITY pageedit.button.domdelete.label "Löschen">
+<!ENTITY pageedit.button.domdelete.tooltip "Einzelne Elemente aus dem Dokument löschen">
+<!ENTITY pageedit.button.addtext.label "Text">
+<!ENTITY pageedit.button.addtext.tooltip "Text zum Dokument hinzufügen">
+<!ENTITY pageedit.button.textonly.label "TextOnly">
+<!ENTITY pageedit.button.textonly.tooltip "Alle nichttextuellen Elemente aus dem Dokument löschen">
+<!ENTITY pageedit.button.save.label "Speichern">
+<!ENTITY pageedit.button.save.tooltip "Änderungen speichern">
+<!ENTITY pageedit.button.reload.label "neu Laden">
+<!ENTITY pageedit.button.reload.tooltip "Seite neu laden und alle Änderungen verwerfen">

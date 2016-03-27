@@ -1,0 +1,38 @@
+<!ENTITY windowtitle "Print Pages to Pdf (处理中)">
+<!ENTITY maintoolbar.button.processing.label "开始">
+<!ENTITY maintoolbar.button.processing.tooltip "开始处理">
+<!ENTITY maintoolbar.button.stopprocessing.label "停止">
+<!ENTITY maintoolbar.button.stopprocessing.tooltip "停止处理">
+<!ENTITY maintoolbar.button.save.label "保存">
+<!ENTITY maintoolbar.button.save.tooltip "保存 PDF 文件为....">
+<!ENTITY maintoolbar.button.items.up.label "上移">
+<!ENTITY maintoolbar.button.items.up.tooltip "上移选中的项目">
+<!ENTITY maintoolbar.button.items.down.label "下移">
+<!ENTITY maintoolbar.button.items.down.tooltip "下移选中的项目">
+<!ENTITY maintoolbar.button.items.remove.label "移除">
+<!ENTITY maintoolbar.button.items.remove.tooltip "移除选中的项目">
+<!ENTITY maintoolbar.button.properties.label "属性">
+<!ENTITY maintoolbar.button.properties.tooltip "打开全局属性...">
+<!ENTITY resultbox.label "转换结果">
+<!ENTITY resultbox.link.tooltip "打开 PDF 结果；也可以用鼠标将文件拖动到桌面等位置">
+<!ENTITY titlebox.label "文档标题">
+<!ENTITY titlebox.tooltip "PDF 文档的标题，也会被用来生成文件名">
+<!ENTITY tabbox.tab.progress.label "进度">
+<!ENTITY tabbox.tab.progress.tooltip "处理步骤和进度条">
+<!ENTITY tabbox.tab.webpages.label "网页">
+<!ENTITY tabbox.tab.webpages.tooltip "可独立设置选项的网页列表">
+<!ENTITY webpages.item.edit.button.label "编辑">
+<!ENTITY webpages.item.edit.button.tooltip "编辑网页 (删除、插入、书签)">
+<!ENTITY webpages.item.button.label "属性">
+<!ENTITY webpages.item.button.tooltip "网页的具体属性...">
+<!ENTITY webpages.item.cb.image.label "图像">
+<!ENTITY webpages.item.cb.image.tooltip "将网页作为图像而不是文本插入到 PDF 文档">
+<!ENTITY webpages.item.cb.textonly.label "仅文本">
+<!ENTITY webpages.item.cb.textonly.tooltip "仅将此网页作为文本打印">
+<!ENTITY webpages.item.srcimage.tooltip "源">
+<!ENTITY maintoolbar.button.progress.clear.label "清除">
+<!ENTITY maintoolbar.button.progress.clear.tooltip "清除处理标签的所有网页">
+<!ENTITY objectprefpane.okbutton.label "确定">
+<!ENTITY objectprefpane.okbutton.tooltip "为选中的网页使用此属性">
+<!ENTITY objectprefpane.cancelbutton.label "取消">
+<!ENTITY objectprefpane.cancelbutton.tooltip "关闭窗口而不应用更改">

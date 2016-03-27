@@ -1,0 +1,38 @@
+<!ENTITY windowtitle "Print Pages to Pdf (Processing)">
+<!ENTITY maintoolbar.button.processing.label "Start">
+<!ENTITY maintoolbar.button.processing.tooltip "Start processing">
+<!ENTITY maintoolbar.button.stopprocessing.label "Stop">
+<!ENTITY maintoolbar.button.stopprocessing.tooltip "Stop processing">
+<!ENTITY maintoolbar.button.save.label "Save">
+<!ENTITY maintoolbar.button.save.tooltip "Save Pdf File as ....">
+<!ENTITY maintoolbar.button.items.up.label "Up">
+<!ENTITY maintoolbar.button.items.up.tooltip "Move selected items up">
+<!ENTITY maintoolbar.button.items.down.label "Down">
+<!ENTITY maintoolbar.button.items.down.tooltip "Move selected items down">
+<!ENTITY maintoolbar.button.items.remove.label "Remove">
+<!ENTITY maintoolbar.button.items.remove.tooltip "Remove selected items">
+<!ENTITY maintoolbar.button.properties.label "Properties">
+<!ENTITY maintoolbar.button.properties.tooltip "Open global properties ...">
+<!ENTITY resultbox.label "Conversionresult">
+<!ENTITY resultbox.link.tooltip "Opens the Pdf Result; its although possible to Drag the File by Mouse e.g. to Desktop">
+<!ENTITY titlebox.label "Documenttitel">
+<!ENTITY titlebox.tooltip "Titel of the Pdf Document, will be although used for Filename generation">
+<!ENTITY tabbox.tab.progress.label "Progress">
+<!ENTITY tabbox.tab.progress.tooltip "Processing steps with Progress indicators">
+<!ENTITY tabbox.tab.webpages.label "Webpages">
+<!ENTITY tabbox.tab.webpages.tooltip "List of Webpages with individual Prefrerences">
+<!ENTITY webpages.item.edit.button.label "Edit">
+<!ENTITY webpages.item.edit.button.tooltip "Editing Webpage (Delete, Insert, Outline)">
+<!ENTITY webpages.item.button.label "Propterties">
+<!ENTITY webpages.item.button.tooltip "Webpage specific Properties ...">
+<!ENTITY webpages.item.cb.image.label "Graphic">
+<!ENTITY webpages.item.cb.image.tooltip "Put this Webpage as Graphic and not as Text into the Pdf Document">
+<!ENTITY webpages.item.cb.textonly.label "Text only">
+<!ENTITY webpages.item.cb.textonly.tooltip "Print this Webpage as text only">
+<!ENTITY webpages.item.srcimage.tooltip "Source">
+<!ENTITY maintoolbar.button.progress.clear.label "Clear">
+<!ENTITY maintoolbar.button.progress.clear.tooltip "Clear all entries in the progress Tab">
+<!ENTITY objectprefpane.okbutton.label "OK">
+<!ENTITY objectprefpane.okbutton.tooltip "Use this preferences for the selected Webpage">
+<!ENTITY objectprefpane.cancelbutton.label "Cancel">
+<!ENTITY objectprefpane.cancelbutton.tooltip "Closes this window without applying the changes">

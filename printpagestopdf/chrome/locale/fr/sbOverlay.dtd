@@ -1,0 +1,5 @@
+<!ENTITY printPages2Pdf_sboverlay.label "Imprimer en PDF">
+<!ENTITY printPages2Pdf_sboverlay.print.label "Imprimer les marque-pages">
+<!ENTITY printPages2Pdf_mainpopup.print.tooltip "Imprime les marque-pages sélectionnés dans un document PDF">
+<!ENTITY printPages2Pdf_sboverlay.printText.label "Imprimer les marque-pages (texte seul)">
+<!ENTITY printPages2Pdf_mainpopup.printText.tooltip "Imprime uniquement le texte des marque-pages sélectionnés dans un document PDF">

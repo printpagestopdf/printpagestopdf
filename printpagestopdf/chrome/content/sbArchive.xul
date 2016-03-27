@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://printPages2Pdf/skin/sbArchive.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://printPages2Pdf/locale/sbArchive.dtd" >
+
+<window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" 
+   		xmlns:html="http://www.w3.org/1999/xhtml"
+		onload="printPages2Pdf.sbArchive.init()"
+		onunload="printPages2Pdf.sbArchive.uninit()"
+		onmouseleave="printPages2Pdf.sbArchive.onMouseLeave()"
+		>
+
+<!--	<script src="resource://pdf.js/build/pdf.js" type="text/javascript"></script>-->
+	<script type="application/x-javascript" src="chrome://printPages2Pdf/content/sbArchive.js"/>
+	
+	
+	<stringbundleset>
+		<stringbundle id="sbArchiveStrings" src="chrome://printPages2Pdf/locale/sbArchive.properties"/>
+	</stringbundleset>
+	
+	<panel panel.fade="slow" style="background-color:white;border-style: solid;border-width:2px;margin: 0;padding: 0;" id="thumb-popup" noautohide="true" >
+	  	<image validate="always" id="thumb-image" src="chrome://printPages2Pdf/skin/icon_loading_75x75.gif"/>
+	</panel>
+
+ <broadcasterset> 
+    <broadcaster id="printPages2Pdf-bc_arc_open" 
+                 label="&action.openwith.label;"
+				 class="menuitem-iconic printPages2Pdf-bc_arc_open"
+				 tooltiptext="&action.openwith.tooltip;"
+                 oncommand="printPages2Pdf.sbArchive.onOpen(event);event.stopPropagation();" />
+    <broadcaster id="printPages2Pdf-bc_arc_cut" 
+                 label="&action.cut.label;"
+				 class="menuitem-iconic printPages2Pdf-bc_arc_cut"
+				 tooltiptext="&action.cut.tooltip;"
+                 oncommand="printPages2Pdf.sbArchive.onCut(event);event.stopPropagation();" />
+    <broadcaster id="printPages2Pdf-bc_arc_copy" 
+                 label="&action.copy.label;"
+				 class="menuitem-iconic printPages2Pdf-bc_arc_copy"
+				 tooltiptext="&action.copy.tooltip;"
+                 oncommand="printPages2Pdf.sbArchive.onCopy(event);event.stopPropagation();" />
+    <broadcaster id="printPages2Pdf-bc_arc_paste" 
+                 label="&action.paste.label;"
+				 class="menuitem-iconic printPages2Pdf-bc_arc_paste"
+				 tooltiptext="&action.paste.tooltip;"
+                 oncommand="printPages2Pdf.sbArchive.onPaste(event);event.stopPropagation();" />
+    <broadcaster id="printPages2Pdf-bc_arc_delete" 
+                 label="&action.delete.label;"
+				 class="menuitem-iconic printPages2Pdf-bc_arc_delete"
+				 tooltiptext="&action.delete.tooltip;"
+                 oncommand="printPages2Pdf.sbArchive.onDelete(event);event.stopPropagation();" />
+    <broadcaster id="printPages2Pdf-bc_arc_rename" 
+                 label="&action.rename.label;"
+				 class="menuitem-iconic printPages2Pdf-bc_arc_delete"
+				 tooltiptext="&action.rename.tooltip;"
+                 oncommand="printPages2Pdf.sbArchive.onRename(event);event.stopPropagation();" />
+    <broadcaster id="printPages2Pdf-bc_arc_newfolder" 
+                 label="&action.newfolder.label;"
+				 class="menuitem-iconic printPages2Pdf-bc_arc_newfolder"
+				 tooltiptext="&action.newfolder.tooltip;"
+                 oncommand="printPages2Pdf.sbArchive.onCreateFolder();event.stopPropagation();" />
+    <broadcaster id="printPages2Pdf-bc_arc_newarchive" 
+                 label="&action.newarchive.label;"
+				 class="menuitem-iconic printPages2Pdf-bc_arc_newarchive"
+				 tooltiptext="&action.newarchive.tooltip;"				 
+                 oncommand="printPages2Pdf.sbArchive.onCreateArchive();event.stopPropagation();" />
+    <broadcaster id="printPages2Pdf-bc_arc_help" 
+                 label="&action.help.label;"
+				 class="menuitem-iconic printPages2Pdf-bc_arc_help"
+				 tooltiptext="&action.help.tooltip;"				 
+                 oncommand="printPages2Pdf.sbArchive.onHelp();event.stopPropagation();" />
+    <broadcaster id="printPages2Pdf-bc_arc_fav" 
+                 label="&action.fav.label;"
+				 class="menuitem-iconic printPages2Pdf-bc_arc_fav"
+				 tooltiptext="&action.fav.tooltip;"				 
+                 oncommand="printPages2Pdf.sbArchive.onSetFavorite();event.stopPropagation();" />
+ </broadcasterset>
+
+	<keyset>
+		<key id="key_delete" keycode="VK_DELETE"	observes="printPages2Pdf-bc_arc_delete" />
+		<key id="key_cut" modifiers="accel" key="X"	observes="printPages2Pdf-bc_arc_cut" />
+		<key id="key_copy" modifiers="accel" key="C"	observes="printPages2Pdf-bc_arc_copy" />
+		<key  modifiers="accel" key="V"	observes="printPages2Pdf-bc_arc_paste" />
+		<key id="key_paste" keycode="VK_INSERT"	observes="printPages2Pdf-bc_arc_paste" />
+	</keyset>
+
+	<popupset>
+	  <menupopup id="clipmenu" onpopupshowing="printPages2Pdf.sbArchive.onPopupShowing(event);event.stopPropagation();">
+	    <menuitem  key="key_cut" observes="printPages2Pdf-bc_arc_cut" />
+	    <menuitem  key="key_copy" observes="printPages2Pdf-bc_arc_copy" />
+	    <menuseparator />
+	    <menuitem  key="key_paste" observes="printPages2Pdf-bc_arc_paste" />
+	    <menuseparator />
+	    <menuitem key="key_delete" observes="printPages2Pdf-bc_arc_delete"/>
+	    <menuseparator />
+	    <menuitem observes="printPages2Pdf-bc_arc_newfolder" />
+	    <menuitem observes="printPages2Pdf-bc_arc_newarchive" />
+	    <menuseparator />
+	    <menuitem id="men_fav" autocheck="true" type="checkbox" observes="printPages2Pdf-bc_arc_fav" />
+	    <menuseparator />
+	    <menuitem observes="printPages2Pdf-bc_arc_open" />
+		
+	  </menupopup>
+	</popupset>	
+	<toolbox>
+		<toolbar>
+			<toolbarbutton observes="printPages2Pdf-bc_arc_cut" />
+			<toolbarbutton observes="printPages2Pdf-bc_arc_copy" />
+			<toolbarbutton observes="printPages2Pdf-bc_arc_paste" />
+    		<toolbarseparator />
+			<toolbarbutton observes="printPages2Pdf-bc_arc_delete" />
+		    <toolbarseparator />
+			<toolbarbutton observes="printPages2Pdf-bc_arc_newfolder" />
+			<toolbarbutton observes="printPages2Pdf-bc_arc_newarchive" />
+    		<toolbarseparator />
+			<toolbarbutton observes="printPages2Pdf-bc_arc_open" />
+    		<toolbarseparator />
+			<toolbarbutton observes="printPages2Pdf-bc_arc_help" />
+    		<toolbarseparator />
+		</toolbar>
+	</toolbox>	
+	<box flex="1">
+		<tree id="printPages2Pdf.fsTree" flex="1" context="clipmenu" 
+			xeditable="true"
+			xoncontextmenu="printPages2Pdf.sbArchive.onContextMenu(event)" 
+			onselect="printPages2Pdf.sbArchive.selectionChanged(event)" 
+			onmousemove="printPages2Pdf.sbArchive.onMouseMove(event)" 
+			onmouseleave="printPages2Pdf.sbArchive.onMouseLeave(event)" 
+			ondragstart="printPages2Pdf.sbArchive.onDragStart(event)" 
+			xondragover="printPages2Pdf.sbArchive.onDragOver(event)" 
+			xondrop="printPages2Pdf.sbArchive.onDrop(event)" 
+			ondragend="printPages2Pdf.sbArchive.onDragEnd(event)" 
+			onclick="printPages2Pdf.sbArchive.onClick(event)" 
+			 >
+				
+		  <treecols>
+		    <treecol id="name" label="Name" primary="true" flex="1"/>
+		  </treecols>
+		  <treechildren/>
+		 </tree>
+		
+	</box>
+ <div>
+    <iframe id="ifrthumb" style="visibility: collapse;" ></iframe>
+  </div>	
+</window>

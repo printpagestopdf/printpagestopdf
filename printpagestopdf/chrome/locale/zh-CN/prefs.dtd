@@ -1,0 +1,306 @@
+<!ENTITY windowtitle "Print Pages to Pdf 属性">
+<!ENTITY prefpane.general "常规">
+<!ENTITY prefpane.general.tooltip "此附加组件的常规选项">
+<!ENTITY prefpane.docWkhtmlGlobal "PDF (全局)">
+<!ENTITY prefpane.docWkhtmlGlobal.tooltip "关于所有 PDF 文档的选项">
+<!ENTITY prefpane.docWkhtmlObject "PDF (网页)">
+<!ENTITY prefpane.docWkhtmlObject.tooltip "可对网页单独设置的选项">
+<!ENTITY prefpane.about "关于">
+<!ENTITY prefpane.about.tooltip "此附加组件的相关信息">
+<!ENTITY prefpane.archive "文档">
+<!ENTITY prefpane.archive.tooltip "PDF 文档管理首选项">
+<!ENTITY tab.document "文档选项">
+<!ENTITY tab.document.tooltip "关于所有生成的 PDF 文件的选项">
+<!ENTITY tab.pagesizes "尺寸和边距">
+<!ENTITY tab.pagesizes.tooltip "纸张格式、大小、边距">
+<!ENTITY tab.outline "书签">
+<!ENTITY tab.outline.tooltip "书签的选项">
+<!ENTITY tab.styling "样式">
+<!ENTITY tab.styling.tooltip "PDF 页面的样式">
+<!ENTITY tab.pageinfo "网页信息">
+<!ENTITY tab.pageinfo.tooltip "关于如何在 PDF 文档中使用网页信息的选项">
+<!ENTITY tab.header "页眉">
+<!ENTITY tab.header.tooltip "页眉的选项">
+<!ENTITY tab.footer "页脚">
+<!ENTITY tab.footer.tooltip "页脚的选项">
+<!ENTITY tab.javascript "Javascript">
+<!ENTITY tab.javascript.tooltip "网页包含 Javascript 时转换器的行为">
+<!ENTITY tab.tec "技术性选项">
+<!ENTITY tab.tec.tooltip "常规的技术性选项">
+<!ENTITY processing.openConvertResult "打开 PDF">
+<!ENTITY processing.openConvertResult.tooltip "成功转换后打开 PDF 文档">
+<!ENTITY processing.startConvImmediately "自动开始">
+<!ENTITY processing.startConvImmediately.tooltip "打开转换窗口后自动开始转换">
+<!ENTITY processing.convSeparate "独立的 PDF">
+<!ENTITY processing.convSeparate.tooltip "为每个网页创建一个独立的 PDF 文件">
+<!ENTITY size.pageSize "纸张格式">
+<!ENTITY size.pageSize.tooltip "选择使用的纸张格式">
+<!ENTITY size.width "宽度">
+<!ENTITY size.width.tooltip "PDF 页面的宽度">
+<!ENTITY size.height "高度">
+<!ENTITY size.height.tooltip "PDF 页面的高度">
+<!ENTITY orientation "方向">
+<!ENTITY orientation.tooltip "横向或竖向打印">
+<!ENTITY orientation.content.Protrait "竖向">
+<!ENTITY orientation.content.Landscape "横向">
+<!ENTITY colorMode "着色">
+<!ENTITY colorMode.tooltip "彩色或灰度打印">
+<!ENTITY colorMode.content.color "彩色">
+<!ENTITY colorMode.content.grayscale "灰度">
+<!ENTITY pageOffset "起始页面">
+<!ENTITY pageOffset.tooltip "给出起始页数">
+<!ENTITY outline "边框">
+<!ENTITY outline.tooltip "为此页面在 PDF 文档中创建边框。">
+<!ENTITY outlineDepth "边框宽度">
+<!ENTITY outlineDepth.tooltip "最大书签层数。">
+<!ENTITY dumpOutline "书签文件">
+<!ENTITY dumpOutline.tooltip "保存书签 XML 的文件名 (仅用作调试)">
+<!ENTITY dumpOutline.content.fileDlg.title "保存书签到 XML 文件">
+<!ENTITY documentTitle "文档标题">
+<!ENTITY documentTitle.tooltip "PDF 文档的标题。">
+<!ENTITY useCompression "压缩">
+<!ENTITY useCompression.tooltip "设置 PDF 是否要压缩">
+<!ENTITY margin.top "上边距">
+<!ENTITY margin.top.tooltip "页面上边距高度">
+<!ENTITY margin.right "右边距">
+<!ENTITY margin.right.tooltip "页面右边距宽度">
+<!ENTITY margin.left "左边距">
+<!ENTITY margin.left.tooltip "页面左边距宽度">
+<!ENTITY margin.bottom "下边距">
+<!ENTITY margin.bottom.tooltip "页面下边距高度">
+<!ENTITY outputFormat "输出格式">
+<!ENTITY outputFormat.tooltip "输出的格式 (注意：postscript 仅用作特殊用途)">
+<!ENTITY dpi "DPI (文档)">
+<!ENTITY dpi.tooltip "PDF 文件的分辨率；-1 表示默认值。">
+<!ENTITY useScreenDpi "屏幕分辨率">
+<!ENTITY useScreenDpi.tooltip "使用屏幕分辨率作为 PDF 的分辨率。">
+<!ENTITY imageDPI "图像分辨率">
+<!ENTITY imageDPI.tooltip "PDF 文档中图像的最大分辨率，以 dpi(每英寸点数)为单位">
+<!ENTITY imageQuality "图像压缩">
+<!ENTITY imageQuality.tooltip "图像压缩使用的因数 (比如'92')。压缩度越高，文件越小但质量也越差。">
+<!ENTITY load.cookieJar "Cookie 文件">
+<!ENTITY load.cookieJar.tooltip "包含要发送的 Cookie 的文件(jar)路径">
+<!ENTITY load.cookieJar.content.fileDlg.title "打开 jar 文件(Cookie)">
+<!ENTITY load.cookieJar.content.fileDlg.jarTypeDesc "jar 文件 (*.jar)">
+<!ENTITY pageunits "单位">
+<!ENTITY pageunits.tooltip "页面大小的单位。">
+<!ENTITY createToc "目录">
+<!ENTITY createToc.tooltip "创建目录">
+<!ENTITY toc.useDottedLines "虚线">
+<!ENTITY toc.useDottedLines.tooltip "空白会被打印为虚线">
+<!ENTITY toc.captionText "页眉">
+<!ENTITY toc.captionText.tooltip "目录的页眉">
+<!ENTITY toc.forwardLinks "使用链接">
+<!ENTITY toc.forwardLinks.tooltip "创建从目录到 PDF 页面的链接">
+<!ENTITY toc.backLinks "返回链接">
+<!ENTITY toc.backLinks.tooltip "创建从页面到目录的链接">
+<!ENTITY toc.indentation "缩进">
+<!ENTITY toc.indentation.tooltip "下一层目录缩进的宽度">
+<!ENTITY toc.fontScale "字体缩放">
+<!ENTITY toc.fontScale.tooltip "下一层目录字体缩放的因数 (例如'0.8')">
+<!ENTITY tocXsl "样式文件">
+<!ENTITY tocXsl.tooltip "用作目录样式的 XSL 文件的路径">
+<!ENTITY tocXsl.content.fileDlg.xslTypeDesc "样式表 (*.xsl)">
+<!ENTITY tocXsl.content.fileDlg.title "选择样式表">
+<!ENTITY useCover "封面">
+<!ENTITY useCover.tooltip "使用封面">
+<!ENTITY coverFile "封面模板">
+<!ENTITY coverFile.tooltip "封面 HTML 模板路径 (如果为空使用默认值)。">
+<!ENTITY coverFile.content.fileDlg.htmlTypeDesc "HTML 文件 (*.html)">
+<!ENTITY coverFile.content.fileDlg.title "选择封面模板">
+<!ENTITY guessPageLength "自适应页面长度">
+<!ENTITY guessPageLength.tooltip "为单页文件猜测页面长度 (在多页情况下不可用！)">
+<!ENTITY resolution "PDF 分辨率">
+<!ENTITY resolution.tooltip "选择屏幕为 PDF 使用屏幕分辨率，选择高分辨率尝试使用最高分辨率。">
+<!ENTITY useExternalLinks "外部链接">
+<!ENTITY useExternalLinks.tooltip "将外部链接放入 PDF 文档">
+<!ENTITY useLocalLinks "本地链接">
+<!ENTITY useLocalLinks.tooltip "在 PDF 文档中创建本地链接(注意：不是很可靠)">
+<!ENTITY produceForms "模板">
+<!ENTITY produceForms.tooltip "用网络模板来创建 PDF 模板 (注意：不是很可靠)">
+<!ENTITY includeInOutline "书签">
+<!ENTITY includeInOutline.tooltip "在书签中显示此网页">
+<!ENTITY pagesCount "页面计数">
+<!ENTITY pagesCount.tooltip "计算书签和目录时计入此页面">
+<!ENTITY web.background "背景">
+<!ENTITY web.background.tooltip "打印网页背景">
+<!ENTITY web.loadImages "图像">
+<!ENTITY web.loadImages.tooltip "打印网页中的图像">
+<!ENTITY web.enableJavascript "Javascript">
+<!ENTITY web.enableJavascript.tooltip "允许页面中的 Javascript">
+<!ENTITY web.enableIntelligentShrinking "智能格式化">
+<!ENTITY web.enableIntelligentShrinking.tooltip "尝试智能格式化获取页面中的更多内容">
+<!ENTITY web.minimumFontSize "最小字体">
+<!ENTITY web.minimumFontSize.tooltip "PDF 文档中使用的最小字体(例如'6')">
+<!ENTITY web.printMediaType "打印媒体">
+<!ENTITY web.printMediaType.tooltip "使用打印媒体而不是媒体截屏">
+<!ENTITY web.defaultEncoding "字符编码">
+<!ENTITY web.defaultEncoding.tooltip "如果网页没有设置字符编码，将使用此默认字符编码">
+<!ENTITY web.userStyleSheet "样式表">
+<!ENTITY web.userStyleSheet.tooltip "用户自定义样式表路径，将被用于所有打印的网页">
+<!ENTITY web.userStyleSheet.content.fileDlg.fileTypeName "样式表">
+<!ENTITY web.userStyleSheet.content.fileDlg.title "打开样式表">
+<!ENTITY web.enablePlugins "插件">
+<!ENTITY web.enablePlugins.tooltip "使用 PDF 库的插件(注意：结果可能很难看)。">
+<!ENTITY load.username "用户名">
+<!ENTITY load.username.tooltip "如果网页需要认证，将使用此用户名">
+<!ENTITY load.password "密码">
+<!ENTITY load.password.tooltip "如果网页需要认证，将使用此密码">
+<!ENTITY load.jsdelay "JS 延迟">
+<!ENTITY load.jsdelay.tooltip "开始转换前等待的时间(毫秒)(通常用来给 Javascript 时间执行)。">
+<!ENTITY load.zoomFactor "缩放比例">
+<!ENTITY load.zoomFactor.tooltip "内容将被按此比例缩放。">
+<!ENTITY load.repeatCustomHeaders "重复 HTTP 头">
+<!ENTITY load.repeatCustomHeaders.tooltip "重复发送用户定义的 HTTP 头">
+<!ENTITY load.blockLocalFileAccess "不允许文件访问">
+<!ENTITY load.blockLocalFileAccess.tooltip "阻止 PDF 库访问本地文件">
+<!ENTITY load.stopSlowScript "停止慢速脚本">
+<!ENTITY load.stopSlowScript.tooltip "停止长时间运行的 Javascript">
+<!ENTITY load.debugJavascript "JS 调试">
+<!ENTITY load.debugJavascript.tooltip "打印 javascript 错误信息">
+<!ENTITY load.loadErrorHandling "载入错误">
+<!ENTITY load.loadErrorHandling.tooltip "转换时载入发生错误的行为。">
+<!ENTITY load.loadErrorHandling.content.skip "跳过">
+<!ENTITY load.loadErrorHandling.content.skip.tooltip "不把此部分载入的网页添加到结果页面并继续处理其它网页。">
+<!ENTITY load.loadErrorHandling.content.abort "放弃">
+<!ENTITY load.loadErrorHandling.content.abort.tooltip "放弃整个转换操作">
+<!ENTITY load.loadErrorHandling.content.ignore "忽略">
+<!ENTITY load.loadErrorHandling.content.ignore.tooltip "尝试添加此部分载入的网页到输出文件并继续处理其它网页。">
+<!ENTITY header.fontSize "字体大小">
+<!ENTITY header.fontSize.tooltip "页眉的字体大小">
+<!ENTITY header.fontName "字体">
+<!ENTITY header.fontName.tooltip "页眉的字体。">
+<!ENTITY header.left "左侧文本">
+<!ENTITY header.left.tooltip "页眉中左对齐的文本">
+<!ENTITY header.center "居中文本">
+<!ENTITY header.center.tooltip "页眉中居中的文本">
+<!ENTITY header.right "右侧文本">
+<!ENTITY header.right.tooltip "页眉中右对齐的文本">
+<!ENTITY header.line "分割线">
+<!ENTITY header.line.tooltip "在 PDF 文档的页眉和正文间添加分割线">
+<!ENTITY header.space "文本边距">
+<!ENTITY header.space.tooltip "页眉和正文文本间的距离(注意：可能需要调整上边距)。">
+<!ENTITY header.htmlUrl "页眉文件 (Html)">
+<!ENTITY header.htmlUrl.tooltip "用作页眉的 HTML 文件的 URL/路径。">
+<!ENTITY header.htmlUrl.content.fileDlg.title "用作页眉的 HTML 文件">
+<!ENTITY footer.fontSize "字体大小">
+<!ENTITY footer.fontSize.tooltip "页脚的字体大小">
+<!ENTITY footer.fontName "字体">
+<!ENTITY footer.fontName.tooltip "页脚的字体。">
+<!ENTITY footer.left "左侧文本">
+<!ENTITY footer.left.tooltip "页脚中左对齐的文本">
+<!ENTITY footer.center "居中文本">
+<!ENTITY footer.center.tooltip "页脚中居中的文本">
+<!ENTITY footer.right "右侧文本">
+<!ENTITY footer.right.tooltip "页脚中右对齐的文本">
+<!ENTITY footer.line "分割线">
+<!ENTITY footer.line.tooltip "在 PDF 文档的页脚和正文间添加分割线">
+<!ENTITY footer.space "文本边距">
+<!ENTITY footer.space.tooltip "页脚和正文文本间的距离(注意：可能需要调整下边距)。">
+<!ENTITY footer.htmlUrl "页脚文件 (Html)">
+<!ENTITY footer.htmlUrl.tooltip "用作页脚的 HTML 文件的 URL/路径。">
+<!ENTITY footer.htmlUrl.content.fileDlg.title "用作页脚的 HTML 文件">
+<!ENTITY outline.titleOnly.title "书签标题">
+<!ENTITY outline.titleOnly.tooltip "禁用自动生成书签(有时会导致混乱)，仅使用网页标题作为书签">
+<!ENTITY pageload.timeout "载入超时">
+<!ENTITY pageload.timeout.tooltip "系统报告网页载入超时前等待的时间，单位毫秒。">
+<!ENTITY pageload.minLocal "最优化存储">
+<!ENTITY pageload.minLocal.tooltip "仅存储网页的最少信息">
+<!ENTITY ui.toolbarbuttons "工具栏">
+<!ENTITY ui.toolbarbuttons.tooltip "选择转换窗口中使用的工具栏的样式">
+<!ENTITY ui.showsbmenus "Scrapbook 菜单">
+<!ENTITY ui.showsbmenus.tooltip "如果安装了 Scrapbook(plus)，它将会在 PDF 打印的上下文菜单中显示">
+<!ENTITY ui.showplacesmenus "书签菜单">
+<!ENTITY ui.showplacesmenus.tooltip "如果选中，将在书签的上下文菜单中显示 PDF 打印子菜单(需重启)">
+<!ENTITY ui.showpagemenus "网页菜单">
+<!ENTITY ui.showpagemenus.tooltip "如果选中，将在网页的上下文菜单中显示 PDF 打印子菜单(需重启)">
+<!ENTITY ui.showextramenus "其它菜单">
+<!ENTITY ui.showextramenus.tooltip "如果选中，将在主菜单 -&gt; 其它 中显示 PDF 打印子菜单(需重启)">
+<!ENTITY ui.showtbbmenus "工具栏按钮菜单">
+<!ENTITY ui.showtbbmenus.tooltip "选中后，工具栏按钮菜单中会显示 PDF 打印子菜单(需重启)">
+<!ENTITY ui.showtabmenu "标签菜单">
+<!ENTITY ui.showtabmenu.tooltip "在标签上下文菜单中显示'打印标签为 PDF'项">
+<!ENTITY ui.tbbfunction "工具栏按钮打印...">
+<!ENTITY ui.tbbfunction.tooltip "设置按下工具栏按钮打开所有标签还是仅活动标签。">
+<!ENTITY ui.tbbfunction.alltabs "所有标签">
+<!ENTITY ui.tbbfunction.activetab "活动标签">
+<!ENTITY ui.toolbarbuttons.selectvalue.full "图标和文字">
+<!ENTITY ui.toolbarbuttons.selectvalue.icons "图标">
+<!ENTITY ui.toolbarbuttons.selectvalue.text "文字">
+<!ENTITY processing.closeDlgAfterConversion "关闭对话">
+<!ENTITY processing.closeDlgAfterConversion.tooltip "成功转换后自动关闭转换对话">
+<!ENTITY hdrftr.variables.menu.label "变量">
+<!ENTITY hdrftr.variables.menu.tooltip "插入变量，将在转换时替换为实际值">
+<!ENTITY hdrftr.variables.page.label "页数">
+<!ENTITY hdrftr.variables.page.tooltip "替换为当前打印的页数('[page]')">
+<!ENTITY hdrftr.variables.frompage.label "起始页数">
+<!ENTITY hdrftr.variables.frompage.tooltip "替换为开始打印的页数('[frompage]')">
+<!ENTITY hdrftr.variables.topage.label "终止页数">
+<!ENTITY hdrftr.variables.topage.tooltip "替换为要停止打印的页数('[topage]')">
+<!ENTITY hdrftr.variables.webpage.label "网页">
+<!ENTITY hdrftr.variables.webpage.tooltip "替换为正在打印的网页的 URL('[webpage]')">
+<!ENTITY hdrftr.variables.section.label "章节">
+<!ENTITY hdrftr.variables.section.tooltip "替换为当前章节名 ('[section]')">
+<!ENTITY hdrftr.variables.subsection.label "段落">
+<!ENTITY hdrftr.variables.subsection.tooltip "替换为当前段落名 ('[subsection]')">
+<!ENTITY hdrftr.variables.date.label "日期">
+<!ENTITY hdrftr.variables.date.tooltip "替换为当前日期('[date]')">
+<!ENTITY hdrftr.variables.time.label "时间">
+<!ENTITY hdrftr.variables.time.tooltip "替换为当前时间('[time]')">
+<!ENTITY hdrftr.variables.title.label "标题">
+<!ENTITY hdrftr.variables.title.tooltip "替换为当前网页的标题('[title]')">
+<!ENTITY hdrftr.variables.doctitle.label "文档标题">
+<!ENTITY hdrftr.variables.doctitle.tooltip "替换为输出文档的标题('[doctitle]')">
+<!ENTITY processing.outputDir "输出目录">
+<!ENTITY processing.outputDir.tooltip "设置输出 PDF 文件的存储目录">
+<!ENTITY processing.outputDir.fileDlg.title "输出目录">
+<!ENTITY processing.pdfViewer "打开方式...">
+<!ENTITY processing.pdfViewer.tooltip "选择输出文档使用的 PDF 浏览器应用程序">
+<!ENTITY processing.pdfViewer.selectvalue.os_default "默认">
+<!ENTITY processing.pdfViewer.selectvalue.os_default.tooltip "文档将使用操作系统打开 .pdf 文件默认的应用程序">
+<!ENTITY processing.pdfViewer.selectvalue.open_browser "Firefox">
+<!ENTITY processing.pdfViewer.selectvalue.open_browser.tooltip "在 Firefox 标签中打开 PDF 文档">
+<!ENTITY processing.pdfViewer.selectvalue.open_directory "目录">
+<!ENTITY processing.pdfViewer.selectvalue.open_directory.tooltip "打开 PDF 文档所在的目录">
+<!ENTITY processing.pdfViewer.selectvalue.select_app "打开方式...">
+<!ENTITY processing.pdfViewer.selectvalue.select_app.tooltip "手动设置打开 PDF 文档的应用程序">
+<!ENTITY processing.pdfViewer.content.fileDlg.exeTypeDesc "应用程序 (*.exe)">
+<!ENTITY processing.pdfViewer.content.fileDlg.title "选择应用程序">
+<!ENTITY processing.groupbox.menus.title "菜单">
+<!ENTITY processing.groupbox.processing.title "处理">
+<!ENTITY archive.showMyDocuments.label "显示“我的文档”文件夹">
+<!ENTITY archive.showMyDocuments.tooltip "在文档侧边栏中显示“我的文档”文件夹。">
+<!ENTITY archive.showRecent.label "显示“最近访问”文件夹">
+<!ENTITY archive.showRecent.tooltip "在文档侧边栏中显示“最近访问”文件夹。">
+<!ENTITY archive.preview.label "预览(转换)">
+<!ENTITY archive.preview.tooltip "在处理窗口中显示转换后的 PDF 预览。">
+<!ENTITY archive.showthumbs.label "预览(文档)">
+<!ENTITY archive.showthumbs.tooltip "鼠标悬停在条目上时，显示 PDF 缩略图。">
+<!ENTITY archive.thumbsquality.label "缩略图预览质量">
+<!ENTITY archive.thumbsquality.tooltip "生成的预览图像质量(质量越高文件越大)。">
+<!ENTITY processing.closeDlgAfterConversion.ask.label "显示“另存为”对话">
+<!ENTITY processing.closeDlgAfterConversion.ask.tooltip "转换后总是打开“另存为”对话">
+<!ENTITY processing.closeDlgOnWarning.label "警告时关闭">
+<!ENTITY processing.closeDlgOnWarning.tooltip "出现转换警告时关闭对话。">
+<!ENTITY processing.convSeparate.ask.label "独立的文件夹">
+<!ENTITY processing.convSeparate.ask.tooltip "为每个转换的 PDF 打开“另存为”对话">
+<!ENTITY tab.shortcuts.label "快捷方式">
+<!ENTITY tab.shortcuts.tooltip "快捷方式配置">
+<!ENTITY ui.shortcut.header.function.label "功能">
+<!ENTITY ui.shortcut.header.function.tooltip "此快捷方式启动的任务">
+<!ENTITY ui.shortcut.header.controlkey.label "Ctrl">
+<!ENTITY ui.shortcut.header.controlkey.tooltip "Ctrl 键(Control)">
+<!ENTITY ui.shortcut.header.altkey.label "Alt">
+<!ENTITY ui.shortcut.header.altkey.tooltip "Alt 键">
+<!ENTITY ui.shortcut.header.shiftkey.label "Shift">
+<!ENTITY ui.shortcut.header.shiftkey.tooltip "上档键">
+<!ENTITY ui.shortcut.header.key.label "按键">
+<!ENTITY ui.shortcut.header.key.tooltip "快捷方式对应的字符">
+<!ENTITY ui.shortcut.popupmenu.label "显示弹出菜单">
+<!ENTITY ui.shortcut.popupmenu.tooltip "打开附加组件的弹出菜单">
+<!ENTITY ui.shortcut.printtab.label "打印标签">
+<!ENTITY ui.shortcut.printtab.tooltip "开始转换当前标签">
+<!ENTITY ui.shortcut.printtabs.label "打印全部标签">
+<!ENTITY ui.shortcut.printtabs.tooltip "开始转换所有标签">
+<!ENTITY ui.shortcut.sidebar.label "打开/关闭侧边栏">
+<!ENTITY ui.shortcut.sidebar.tooltip "打开或关闭文档侧边栏">
