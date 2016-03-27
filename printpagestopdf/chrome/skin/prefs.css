@@ -1,0 +1,45 @@
+
+radio[pane="general"] {
+	list-style-image: url("chrome://printPages2Pdf/skin/prefGeneral.png");
+}
+
+radio[pane="archive"] {
+	list-style-image: url("chrome://printPages2Pdf/skin/drawer32.png");
+}
+
+radio[pane="docWkhtmlGlobal"] {
+	list-style-image: url("chrome://printPages2Pdf/skin/prefPdfGlobal.png");
+}
+
+radio[pane="docWkhtmlObject"] {
+	list-style-image: url("chrome://printPages2Pdf/skin/prefPdfDoc.png");
+}
+
+radio[pane="about"] {
+	list-style-image: url("chrome://printPages2Pdf/skin/prefAbout.png");
+}
+
+
+radio[pane="help"] {
+	list-style-image: url("chrome://printPages2Pdf/skin/help32.png");
+}
+
+button.btFileDlg {
+	border-width:2px;
+	margin: 0px;
+	min-width:0px;
+	padding: 0px;
+	-moz-appearance:none;
+	-moz-border-radius:15%;
+	list-style-image: url("chrome://printPages2Pdf/skin/folder.png");
+}
+
+button.btFileDlg > hbox {
+	padding: 1px;
+	
+}
+
+checkbox {
+	margin-left: -1px;
+}
+

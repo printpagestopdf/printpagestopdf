@@ -1,0 +1,20 @@
+content printPages2Pdf chrome/content/
+
+overlay	chrome://browser/content/browser.xul	chrome://printPages2Pdf/content/browser_ov.xul
+overlay	chrome://scrapbook/content/tree.xul	chrome://printPages2Pdf/content/sbTreeOverlay.xul
+overlay	chrome://scrapbook/content/scrapbook.xul	chrome://printPages2Pdf/content/sbOverlay.xul
+overlay	chrome://browser/content/places/placesOverlay.xul	chrome://printPages2Pdf/content/placesOverlay.xul
+
+skin printPages2Pdf classic/1.0 chrome/skin/
+
+resource printPages2PdfMod modules/
+resource printPages2Pdfscripts chrome/content/
+
+style chrome://global/content/customizeToolbar.xul chrome://printPages2Pdf/skin/browser_ov.css
+
+locale printPages2Pdf en-US chrome/locale/en-US/
+locale printPages2Pdf de chrome/locale/de/
+locale printPages2Pdf fi chrome/locale/fi/
+locale printPages2Pdf fr chrome/locale/fr/
+locale printPages2Pdf zh-CN chrome/locale/zh-CN/
+

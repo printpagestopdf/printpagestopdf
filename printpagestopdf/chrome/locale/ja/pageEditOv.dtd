@@ -1,0 +1,22 @@
+<!ENTITY pageedit.button.header1.label "Outline1">
+<!ENTITY pageedit.button.header1.tooltip "Add the marked Text to the Outline at level 1">
+<!ENTITY pageedit.button.header2.label "Outline2">
+<!ENTITY pageedit.button.header2.tooltip "Add the marked Text to the Outline at level 2">
+<!ENTITY pageedit.button.header3.label "Outline3">
+<!ENTITY pageedit.button.header3.tooltip "Add the marked Text to the Outline at level 3">
+<!ENTITY pageedit.button.header4.label "Outline4">
+<!ENTITY pageedit.button.header4.tooltip "Add the marked Text to the Outline at level 4">
+<!ENTITY pageedit.button.header5.label "Outline5">
+<!ENTITY pageedit.button.header5.tooltip "Add the marked Text to the Outline at level 5">
+<!ENTITY pageedit.button.header6.label "Outline6">
+<!ENTITY pageedit.button.header6.tooltip "Add the marked Text to the Outline at level 6">
+<!ENTITY pageedit.button.domdelete.label "削除">
+<!ENTITY pageedit.button.domdelete.tooltip "Deletes Elements of the Document Tree">
+<!ENTITY pageedit.button.addtext.label "テキスト">
+<!ENTITY pageedit.button.addtext.tooltip "ドキュメントにテキストを追加します">
+<!ENTITY pageedit.button.textonly.label "テキストのみ">
+<!ENTITY pageedit.button.textonly.tooltip "ドキュメントからすべての非テキスト要素を削除">
+<!ENTITY pageedit.button.save.label "保存">
+<!ENTITY pageedit.button.save.tooltip "すべての変更を保存します">
+<!ENTITY pageedit.button.reload.label "再読み込み">
+<!ENTITY pageedit.button.reload.tooltip "ページを再読み込みします。すべての変更は破棄されます">

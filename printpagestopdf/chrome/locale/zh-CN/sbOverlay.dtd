@@ -1,0 +1,5 @@
+<!ENTITY printPages2Pdf_sboverlay.label "打印页面为 PDF">
+<!ENTITY printPages2Pdf_sboverlay.print.label "打印书签">
+<!ENTITY printPages2Pdf_mainpopup.print.tooltip "将所有选中的书签的内容打印到一个 PDF 文档">
+<!ENTITY printPages2Pdf_sboverlay.printText.label "打印书签 (文本)">
+<!ENTITY printPages2Pdf_mainpopup.printText.tooltip "将所有选中的书签的内容作为文本打印到一个 PDF 文档">

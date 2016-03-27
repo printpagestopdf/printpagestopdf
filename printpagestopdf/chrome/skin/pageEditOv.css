@@ -1,0 +1,55 @@
+#btH1
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/h1.svg");  
+}
+
+#btH2
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/h2.svg");  
+}
+
+#btH3
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/h3.svg");  
+}
+
+#btH4
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/h4.svg");  
+}
+
+#btH5
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/h5.svg");  
+}
+
+#btH6
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/h6.svg");  
+}
+
+#btSaveEditWin
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/save.png");  
+}
+
+#btReload
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/edit_undo.png");  
+}
+
+#btDeleteSel
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/deleteDom.png");  
+}
+
+#btUndo
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/btUndo.png");  
+}
+
+
+#btTextOnly
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/text.png");  
+}

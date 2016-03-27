@@ -1,0 +1,28 @@
+<!ENTITY printPages2Pdf_mainmenu.label "Imprimer en PDF">
+<!ENTITY printPages2Pdf_mainpopup.printAllTabs.label "Imprimer tous les onglets">
+<!ENTITY printPages2Pdf_mainpopup.printAllTabs.tooltip "Imprime le contenu de tous les onglets dans un document PDF">
+<!ENTITY printPages2Pdf_mainpopup.printAllTabsText.label "Imprimer tous les onglets (texte seul)">
+<!ENTITY printPages2Pdf_mainpopup.printAllTabsText.tooltip "Imprime uniquement le texte de tous les onglets dans un document PDF">
+<!ENTITY printPages2Pdf_mainpopup.printTab.label "Imprimer l'onglet actif">
+<!ENTITY printPages2Pdf_mainpopup.printTab.tooltip "Imprime le contenu de l'onglet actif dans un document PDF">
+<!ENTITY printPages2Pdf_mainpopup.printTabText.label "Imprimer l'onglet actif (texte seul)">
+<!ENTITY printPages2Pdf_mainpopup.printTabText.tooltip "Imprime uniquement le texte de l'onglet actif dans un document PDF">
+<!ENTITY printPages2Pdf_mainpopup.printFrame.label "Imprimer le cadre">
+<!ENTITY printPages2Pdf_mainpopup.printFrame.tooltip "Imprime le contenu du cadre dans un document PDF">
+<!ENTITY printPages2Pdf_mainpopup.printLink.label "Imprimer le lien">
+<!ENTITY printPages2Pdf_mainpopup.printLink.tooltip "Imprime le contenu du lien dans un document PDF">
+<!ENTITY printPages2Pdf_tabpopup.printThisTab.label "Imprimer l'onglet en PDF">
+<!ENTITY printPages2Pdf_tabpopup.printThisTab.tooltip "Imprime le contenu de l'onglet en PDF">
+<!ENTITY printPages2Pdf_tabpopup.printSelectedTabs.label "Imprimer les onglets sélectionnés en Pdf">
+<!ENTITY printPages2Pdf_tabpopup.printSelectedTabs.tooltip "Imprime le contenu de tous les onglets sélectionnés en Pdf">
+<!ENTITY printPages2Pdf_mainpopup.preferences.label "Options…">
+<!ENTITY printPages2Pdf_mainpopup.preferences.tooltip "Ouvre la fenêtre des options">
+<!ENTITY printPages2Pdf_mainpopup.openProcessDialog.label "Fenêtre de conversion…">
+<!ENTITY printPages2Pdf_mainpopup.openProcessDialog.tooltip "Ouvre une fenêtre de conversion dans laquelle vous pouvez ajouter des pages internet">
+<!ENTITY printPages2Pdf_mainpopup.sidebar.label "Panneau latéral">
+<!ENTITY printPages2Pdf_mainpopup.sidebar.tooltip "Ouvre/ferme le panneau latéral de Pdf archives pour l'extension">
+<!ENTITY printPages2Pdf_mainpopup.printSelection.label "Print selection">
+<!ENTITY printPages2Pdf_mainpopup.printSelection.tooltip "Select area with mouse and convert Selection to PDF.">
+<!ENTITY printPages2Pdf_topmenu.sidebar.label "Archive PDF">
+<!ENTITY printPages2Pdf_sidebar.sidebar.title "Imprimer les pages vers Archives PDF">
+<!ENTITY printPages2Pdf_palette.sidebar.label "Panneau latéral Archives PDF">

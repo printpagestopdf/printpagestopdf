@@ -1,0 +1,46 @@
+.printPages2Pdf-bc_arc_help
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/symbol_help16.png");  
+}
+.printPages2Pdf-bc_arc_cut
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/cut16.png");  
+}
+.printPages2Pdf-bc_arc_copy
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/CopyToClipboard.png");  
+}
+.printPages2Pdf-bc_arc_fav
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/bookmark.png");  
+}
+.printPages2Pdf-bc_arc_paste
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/Paste.png");  
+}
+.printPages2Pdf-bc_arc_delete
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/Delete.png");  
+}
+.printPages2Pdf-bc_arc_newfolder
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/FolderNew.png");  
+}
+.printPages2Pdf-bc_arc_newarchive
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/drawerNew16.png");  
+}
+.printPages2Pdf-bc_arc_open
+{
+    list-style-image: url("chrome://printPages2Pdf/skin/processing.png");  
+}
+
+#thumb-image{
+	width:15em;
+	height:22em;
+}
+
+toolbarbutton > label {
+  display: none;
+}
+

@@ -1,0 +1,38 @@
+<!ENTITY windowtitle "Print Pages to Pdf (Verarbeitung)">
+<!ENTITY maintoolbar.button.processing.label "Start">
+<!ENTITY maintoolbar.button.processing.tooltip "Verarbeitung starten">
+<!ENTITY maintoolbar.button.stopprocessing.label "Stop">
+<!ENTITY maintoolbar.button.stopprocessing.tooltip "Verarbeitung abbrechen">
+<!ENTITY maintoolbar.button.save.label "Speichern">
+<!ENTITY maintoolbar.button.save.tooltip "Pdf Datei speichern unter ....">
+<!ENTITY maintoolbar.button.items.up.label "Auf">
+<!ENTITY maintoolbar.button.items.up.tooltip "Ausgewählte Elemente nach oben verschieben">
+<!ENTITY maintoolbar.button.items.down.label "Ab">
+<!ENTITY maintoolbar.button.items.down.tooltip "Ausgewählte Elemente nach unten verschieben">
+<!ENTITY maintoolbar.button.items.remove.label "Entfernen">
+<!ENTITY maintoolbar.button.items.remove.tooltip "Ausgewählte Elemente entfernen">
+<!ENTITY maintoolbar.button.properties.label "Einstellungen">
+<!ENTITY maintoolbar.button.properties.tooltip "Globale Einstellungen öffnen ...">
+<!ENTITY resultbox.label "Konvertierungsergebnis">
+<!ENTITY resultbox.link.tooltip "Öffnet das Pdf Ergebnis; es kann auch mit der Maus z. B. auf den Desktop gezogen werden.">
+<!ENTITY titlebox.label "Dokumenttitel">
+<!ENTITY titlebox.tooltip "Titel des Pdf Dokumentes, wird auch für den Dateinamensvorschlag verwendet">
+<!ENTITY tabbox.tab.progress.label "Fortschrittsanzeige">
+<!ENTITY tabbox.tab.progress.tooltip "Schritte der Verarbeitung und der jeweilige Fortschritt">
+<!ENTITY tabbox.tab.webpages.label "Webseiten">
+<!ENTITY tabbox.tab.webpages.tooltip "Zu verarbeitende Webseiten und individuelle Einstellungen">
+<!ENTITY webpages.item.edit.button.label "Bearbeiten">
+<!ENTITY webpages.item.edit.button.tooltip "Webseite bearbeiten (Entfernen, Einfügen, Lesezeichen)">
+<!ENTITY webpages.item.button.label "Einstellungen">
+<!ENTITY webpages.item.button.tooltip "Seitenspezifische Einstellungen bearbeiten ...">
+<!ENTITY webpages.item.cb.image.label "Grafik">
+<!ENTITY webpages.item.cb.image.tooltip "Diese Webpage als Grafik und nicht als Pdf Text erzeugen">
+<!ENTITY webpages.item.cb.textonly.label "Nur Text">
+<!ENTITY webpages.item.cb.textonly.tooltip "Diese Webpage als reinen Text ausgeben.">
+<!ENTITY webpages.item.srcimage.tooltip "Quelle">
+<!ENTITY maintoolbar.button.progress.clear.label "Löschen">
+<!ENTITY maintoolbar.button.progress.clear.tooltip "Einträge der Fortschrittsanzeige zurücksetzen">
+<!ENTITY objectprefpane.okbutton.label "OK">
+<!ENTITY objectprefpane.okbutton.tooltip "Diese Einstellungen für die ausgewählte Webseite übernehmen">
+<!ENTITY objectprefpane.cancelbutton.label "Abbruch">
+<!ENTITY objectprefpane.cancelbutton.tooltip "Schliesst dieses Fenster ohne die Änderungen zu übernehmen">

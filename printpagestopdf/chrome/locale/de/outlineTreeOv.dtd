@@ -1,0 +1,11 @@
+<!ENTITY outlinetree.header "Lesezeichen">
+<!ENTITY outlinetree.button.delete.label "Löschen">
+<!ENTITY outlinetree.button.delete.tooltip "Markierte Lesezeichen löschen">
+<!ENTITY outlinetree.button.outdent.label "Ausrücken">
+<!ENTITY outlinetree.button.outdent.tooltip "Einrückungsebene markierter Lesezeichen eine Ebene nach links verschieben">
+<!ENTITY outlinetree.button.indent.label "Einrücken">
+<!ENTITY outlinetree.button.indent.tooltip "Einrückungsebene markierter Lesezeichen eine Ebene nach rechts verschieben">
+<!ENTITY outlinetree.button.clear.label "Entfernen">
+<!ENTITY outlinetree.button.clear.tooltip "Alle Lesezeichen entfernen">
+<!ENTITY outlinetree.button.settitle.label "Titel">
+<!ENTITY outlinetree.button.settitle.tooltip "Den Titel der Webseite als erstes Lesezeichen hinzufügen">

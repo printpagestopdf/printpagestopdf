@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://printPages2Pdf/skin/browser_ov.css" type="text/css"?>
+
+<!DOCTYPE overlay [
+  <!ENTITY % commonDTD SYSTEM "chrome://printPages2Pdf/locale/general_ov.dtd">
+  %commonDTD;
+  <!ENTITY % mainwindowDTD SYSTEM "chrome://printPages2Pdf/locale/browser_ov.dtd">
+  %mainwindowDTD;
+]>
+
+<overlay id="printPages2PdfOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" >
+
+  
+	<script type="application/x-javascript" src="chrome://printPages2Pdf/content/browser_ov.js" /> 
+	
+
+  <commandset>
+    <command id="printPages2Pdf_showpagemenu" hidden="false" />
+    <command id="printPages2Pdf_showextramenu" hidden="false" />
+  </commandset>
+
+  <broadcasterset> 
+    <broadcaster id="printPages2Pdf-bc_printAllTabs" 
+                 label="&printPages2Pdf_mainpopup.printAllTabs.label;"
+				 class="menuitem-iconic"
+				 tooltiptext="&printPages2Pdf_mainpopup.printAllTabs.tooltip;"
+                 oncommand="printPages2Pdf.UI.printAllTabs({g_textOnly:false,});event.stopPropagation();" />
+    <broadcaster id="printPages2Pdf-bc_printAllTabsText" 
+                 label="&printPages2Pdf_mainpopup.printAllTabsText.label;"
+				 class="menuitem-iconic"
+				 tooltiptext="&printPages2Pdf_mainpopup.printAllTabsText.tooltip;"
+                 oncommand="printPages2Pdf.UI.printAllTabs({g_textOnly:true,});event.stopPropagation();" />
+    <broadcaster id="printPages2Pdf-bc_printTab" 
+                 label="&printPages2Pdf_mainpopup.printTab.label;"
+				 class="menuitem-iconic"
+				 tooltiptext="&printPages2Pdf_mainpopup.printTab.tooltip;"
+                 oncommand="printPages2Pdf.UI.printActiveTab({g_textOnly:false,});event.stopPropagation();" />
+    <broadcaster id="printPages2Pdf-bc_printTabText" 
+                 label="&printPages2Pdf_mainpopup.printTabText.label;"
+				 class="menuitem-iconic"
+				 tooltiptext="&printPages2Pdf_mainpopup.printTabText.tooltip;"
+                 oncommand="printPages2Pdf.UI.printActiveTab({g_textOnly:true,});event.stopPropagation();" />
+    <broadcaster id="printPages2Pdf-bc_preferences" 
+                 label="&printPages2Pdf_mainpopup.preferences.label;"
+				 class="menuitem-iconic"
+				 tooltiptext="&printPages2Pdf_mainpopup.preferences.tooltip;"
+                 oncommand="printPages2Pdf.UI.openPreferences(event);event.stopPropagation();" />
+    <broadcaster id="printPages2Pdf-bc_processdlg" 
+                 label="&printPages2Pdf_mainpopup.openProcessDialog.label;"
+				 class="menuitem-iconic"
+				 tooltiptext="&printPages2Pdf_mainpopup.openProcessDialog.tooltip;"
+                 oncommand="printPages2Pdf.UI.openProcessDialog(event);event.stopPropagation();" />
+    <broadcaster id="printPages2Pdf-bc_sidebar" 
+                 label="&printPages2Pdf_mainpopup.sidebar.label;"
+                 autoCheck="false"
+                 type="checkbox"
+				 class="menuitem-iconic"
+                 group="sidebar"
+                 sidebarurl="chrome://printPages2Pdf/content/sbArchive.xul"
+                 sidebartitle="&printPages2Pdf_sidebar.sidebar.title;"
+				 tooltiptext="&printPages2Pdf_mainpopup.sidebar.tooltip;"
+                 oncommand="printPages2Pdf.UI.toggleSidebar('printPages2Pdf-bc_sidebar');event.stopPropagation();" />
+    <broadcaster id="printPages2Pdf-bc_printSelection" 
+                 label="&printPages2Pdf_mainpopup.printSelection.label;"
+				 class="menuitem-iconic"
+				 tooltiptext="&printPages2Pdf_mainpopup.printSelection.tooltip;"
+                 oncommand="printPages2Pdf.UI.printSelection(event);event.stopPropagation();" />
+  </broadcasterset>
+
+  <menupopup id="viewSidebarMenu">
+    <menuitem key="printPages2Pdf_sidebar" label="&printPages2Pdf_topmenu.sidebar.label;"   >
+		<observes element="printPages2Pdf-bc_sidebar" attribute="autocheck"/>    
+		<observes element="printPages2Pdf-bc_sidebar" attribute="type"/>    
+		<observes element="printPages2Pdf-bc_sidebar" attribute="class"/>    
+		<observes element="printPages2Pdf-bc_sidebar" attribute="group"/>    
+		<observes element="printPages2Pdf-bc_sidebar" attribute="sidebarurl"/>    
+		<observes element="printPages2Pdf-bc_sidebar" attribute="sidebartitle"/>    
+		<observes element="printPages2Pdf-bc_sidebar" attribute="tooltiptext"/>    
+		<observes element="printPages2Pdf-bc_sidebar" attribute="oncommand"/>    
+		<observes element="printPages2Pdf-bc_sidebar" attribute="checked"/>    
+	</menuitem>
+  </menupopup>
+  
+
+	<!-- popup for AddOn multipletabs -->
+	<menupopup id="multipletab-selection-menu">
+    	<menuitem
+			id="printPages2Pdf-men_printSelectedTabs"
+             label="&printPages2Pdf_tabpopup.printSelectedTabs.label;"
+			 class="menuitem-iconic"
+			 tooltiptext="&printPages2Pdf_tabpopup.printSelectedTabs.tooltip;"
+             oncommand="printPages2Pdf.UI.printSelectedTabs({g_textOnly:false,});event.stopPropagation();" />
+	</menupopup>
+		
+   <!-- Tab Popup Menu -->
+	<menupopup id="tabContextMenu" >
+    	<menuitem
+			id="printPages2Pdf-men_printThisTab"
+             label="&printPages2Pdf_tabpopup.printThisTab.label;"
+			 class="menuitem-iconic"
+			 tooltiptext="&printPages2Pdf_tabpopup.printThisTab.tooltip;"
+             oncommand="printPages2Pdf.UI.printThisTab({g_textOnly:false,},TabContextMenu.contextTab);event.stopPropagation();" />
+	</menupopup>
+	
+   <!-- Popup Menu in Extra Main Menu -->
+	<menupopup id="menu_ToolsPopup"  >
+		<menu  label="&printPages2Pdf_mainmenu.label;"  key="printPages2Pdf_mainMenuKey"
+				class="menu-iconic printPages2Pdf_appIcon16" command="printPages2Pdf_showextramenu" >
+		  	<menupopup >
+		    	<menuitem  observes="printPages2Pdf-bc_printAllTabs"  id="printPages2Pdf-ui.showextramenus.printAllTabs"  />
+		    	<menuitem  observes="printPages2Pdf-bc_printAllTabsText"  id="printPages2Pdf-ui.showextramenus.printAllTabsText"  />
+		    	<menuitem  observes="printPages2Pdf-bc_printSelection"  id="printPages2Pdf-ui.showextramenus.printSelection"  />
+			    <menuseparator />
+		    	<menuitem  observes="printPages2Pdf-bc_printTab"  id="printPages2Pdf-ui.showextramenus.printActiveTab" />
+		    	<menuitem  observes="printPages2Pdf-bc_printTabText"  id="printPages2Pdf-ui.showextramenus.printActiveTabText"  />
+			    <menuseparator />
+		    	<menuitem  observes="printPages2Pdf-bc_processdlg" id="printPages2Pdf-ui.showextramenus.openProcessDlg"  />
+		    	<menuitem  observes="printPages2Pdf-bc_preferences"  id="printPages2Pdf-ui.showextramenus.openPrefsDlg"  />
+			    <menuseparator />
+		    	<menuitem  observes="printPages2Pdf-bc_sidebar"  id="printPages2Pdf-ui.showextramenus.toggleSidebar"  />
+			    <menuseparator />
+    			<menuitem 
+				 id="printPages2Pdf-ui.showextramenus.help" 
+				 section=""
+                 label="&printPages2Pdf_menitem.help.label;"
+				 class="helpmenuitem menuitem-iconic"
+				 tooltiptext="&printPages2Pdf_menitem.help.tooltip;"
+                 oncommand="RRprintPages2Pdf.showHelp(this.getAttribute('section'));event.stopPropagation();" />
+			</menupopup>
+		</menu>
+	</menupopup>
+
+  
+  <!-- Context Menu on Web Page -->
+  <menupopup id="contentAreaContextMenu" xpopup="printPages2Pdfmainpopup">
+    <menuseparator command="printPages2Pdf_showpagemenu" />
+	<menu label="&printPages2Pdf_mainmenu.label;" class="menu-iconic printPages2Pdf_appIcon16"
+				command="printPages2Pdf_showpagemenu">
+	  	<menupopup onpopupshowing="printPages2Pdf.UI.onPopupShowing(this);">	  		
+	    	<menuitem  observes="printPages2Pdf-bc_printTab" id="printPages2Pdf-ui.showpagemenus.printActiveTab" />
+	    	<menuitem  observes="printPages2Pdf-bc_printTabText" id="printPages2Pdf-ui.showpagemenus.printActiveTabText" />
+	    	<menuitem  id="printPages2Pdf_printFrame"  
+		                 label="&printPages2Pdf_mainpopup.printFrame.label;"
+						 tooltiptext="&printPages2Pdf_mainpopup.printFrame.tooltip;"
+						 class="menuitem-iconic" />
+	    	<menuitem  id="printPages2Pdf_printDocLink" 
+		                 label="&printPages2Pdf_mainpopup.printLink.label;"
+						 tooltiptext="&printPages2Pdf_mainpopup.printLink.tooltip;"
+						 class="menuitem-iconic" />
+	    	<menuitem  observes="printPages2Pdf-bc_printSelection"  id="printPages2Pdf-ui.showpagemenus.printSelection"  />
+		    <menuseparator />
+	    	<menuitem  observes="printPages2Pdf-bc_printAllTabs"  id="printPages2Pdf-ui.showpagemenus.printAllTabs" />
+	    	<menuitem  observes="printPages2Pdf-bc_printAllTabsText"   id="printPages2Pdf-ui.showpagemenus.printAllTabsText" />
+		    <menuseparator />			
+	    	<menuitem  observes="printPages2Pdf-bc_processdlg" id="printPages2Pdf-ui.showpagemenus.openProcessDlg"  />
+	    	<menuitem  observes="printPages2Pdf-bc_preferences"  id="printPages2Pdf-ui.showpagemenus.openPrefsDlg"  />
+		    <menuseparator />
+	    	<menuitem  observes="printPages2Pdf-bc_sidebar"  id="printPages2Pdf-ui.showpagemenus.toggleSidebar"  />
+		    <menuseparator />			
+			<menuitem 
+			 id="printPages2Pdf-ui.showpagemenus.help"
+			 section="convert_actual_page"
+             label="&printPages2Pdf_menitem.help.label;"
+			 class="helpmenuitem menuitem-iconic"
+			 tooltiptext="&printPages2Pdf_menitem.help.tooltip;"
+             oncommand="RRprintPages2Pdf.showHelp(this.getAttribute('section'));event.stopPropagation();" />			
+		</menupopup>
+    </menu>
+  </menupopup> 
+	
+	<!-- keyboard shortcut menu -->
+	<popupset>
+		<menupopup  id="printPages2Pdf_extraMenuPopup" >
+	    	<menuitem  observes="printPages2Pdf-bc_printAllTabs" />
+	    	<menuitem  observes="printPages2Pdf-bc_printAllTabsText"  />
+		    <menuseparator />
+	    	<menuitem  observes="printPages2Pdf-bc_printTab" />
+	    	<menuitem  observes="printPages2Pdf-bc_printTabText"  />
+		    <menuseparator />
+	    	<menuitem  observes="printPages2Pdf-bc_processdlg" />
+	    	<menuitem  observes="printPages2Pdf-bc_preferences"  />
+			    <menuseparator />
+		    	<menuitem  observes="printPages2Pdf-bc_sidebar"  />
+		    <menuseparator />
+			<menuitem 
+			 section="convert_actual_page"
+             label="&printPages2Pdf_menitem.help.label;"
+			 class="helpmenuitem menuitem-iconic"
+			 tooltiptext="&printPages2Pdf_menitem.help.tooltip;"
+             oncommand="RRprintPages2Pdf.showHelp(this.getAttribute('section'));event.stopPropagation();" />			
+		</menupopup>
+	</popupset>
+  
+   <!-- Toolbarbutton in Toolbarpalette -->
+	<toolbarpalette id="BrowserToolbarPalette">
+		<toolbarbutton type="menu-button" id="printPages2Pdf_toolbar_sidebar" label="&printPages2Pdf_palette.sidebar.label;">
+			<observes element="printPages2Pdf-bc_sidebar" attribute="autocheck"/>    
+			<observes element="printPages2Pdf-bc_sidebar" attribute="type"/>    
+			<observes element="printPages2Pdf-bc_sidebar" attribute="class"/>    
+			<observes element="printPages2Pdf-bc_sidebar" attribute="group"/>    
+			<observes element="printPages2Pdf-bc_sidebar" attribute="sidebarurl"/>    
+			<observes element="printPages2Pdf-bc_sidebar" attribute="sidebartitle"/>    
+			<observes element="printPages2Pdf-bc_sidebar" attribute="tooltiptext"/>    
+			<observes element="printPages2Pdf-bc_sidebar" attribute="oncommand"/>    
+			<observes element="printPages2Pdf-bc_sidebar" attribute="checked"/>    
+		</toolbarbutton>
+				
+		<toolbarbutton type="menu-button" id="printPages2Pdf_toolbarbutton" label="&printPages2Pdf_mainmenu.label;"
+			oncommand="printPages2Pdf.UI.onToolbarButton(event);event.stopPropagation();" tooltiptext="&printPages2Pdf_mainmenu.label;">
+		  	<!--<observes element="printPages2Pdf-bc_printAllTabs" attribute="oncommand"/>-->
+			<menupopup >
+		    	<menuitem  observes="printPages2Pdf-bc_printAllTabs"  id="printPages2Pdf-ui.showtbbmenus.printAllTabs" />
+		    	<menuitem  observes="printPages2Pdf-bc_printAllTabsText"  id="printPages2Pdf-ui.showtbbmenus.printAllTabsText" />
+			    <menuseparator />
+		    	<menuitem  observes="printPages2Pdf-bc_printTab"  id="printPages2Pdf-ui.showtbbmenus.printActiveTab" />
+		    	<menuitem  observes="printPages2Pdf-bc_printTabText"  id="printPages2Pdf-ui.showtbbmenus.printActiveTabText"  />
+		    	<menuitem  observes="printPages2Pdf-bc_printSelection"  id="printPages2Pdf-ui.showtbbmenus.printSelection"  />
+			    <menuseparator />
+		    	<menuitem  observes="printPages2Pdf-bc_processdlg" id="printPages2Pdf-ui.showtbbmenus.openProcessDlg" />
+		    	<menuitem  observes="printPages2Pdf-bc_preferences"  id="printPages2Pdf-ui.showtbbmenus.openPrefsDlg"  />
+			    <menuseparator />
+		    	<menuitem  observes="printPages2Pdf-bc_sidebar"  id="printPages2Pdf-ui.showtbbmenus.toggleSidebar"  />
+			    <menuseparator />
+				<menuitem 
+				 id="printPages2Pdf-ui.showtbbmenus.help" 
+				 section="convert_actual_page"
+	             label="&printPages2Pdf_menitem.help.label;"
+				 class="helpmenuitem menuitem-iconic"
+				 tooltiptext="&printPages2Pdf_menitem.help.tooltip;"
+	             oncommand="RRprintPages2Pdf.showHelp(this.getAttribute('section'));event.stopPropagation();" />			
+			</menupopup>
+		</toolbarbutton>	
+	</toolbarpalette>    
+
+</overlay>
+
+
+

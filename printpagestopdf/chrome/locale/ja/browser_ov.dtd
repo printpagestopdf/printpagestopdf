@@ -1,0 +1,28 @@
+<!ENTITY printPages2Pdf_mainmenu.label "Print pages to PDF">
+<!ENTITY printPages2Pdf_mainpopup.printAllTabs.label "すべてのタブをプリント">
+<!ENTITY printPages2Pdf_mainpopup.printAllTabs.tooltip "すべてのタブの内容を一つの PDF 文書にプリントします">
+<!ENTITY printPages2Pdf_mainpopup.printAllTabsText.label "すべてのタブをプリント (テキスト)">
+<!ENTITY printPages2Pdf_mainpopup.printAllTabsText.tooltip "すべてのタブの内容をテキストで一つの PDF 文書にプリントします">
+<!ENTITY printPages2Pdf_mainpopup.printTab.label "アクティブ タブをプリント">
+<!ENTITY printPages2Pdf_mainpopup.printTab.tooltip "アクティブ タブの内容を一つの PDF 文書にプリントします">
+<!ENTITY printPages2Pdf_mainpopup.printTabText.label "アクティブ タブをプリント (テキスト)">
+<!ENTITY printPages2Pdf_mainpopup.printTabText.tooltip "アクティブ タブの内容をテキストで一つの PDF 文書にプリントします">
+<!ENTITY printPages2Pdf_mainpopup.printFrame.label "フレームをプリント">
+<!ENTITY printPages2Pdf_mainpopup.printFrame.tooltip "フレームの内容を一つの PDF 文書にプリントします">
+<!ENTITY printPages2Pdf_mainpopup.printLink.label "リンクをプリント">
+<!ENTITY printPages2Pdf_mainpopup.printLink.tooltip "リンクの内容を一つの Pdf 文書にプリントします">
+<!ENTITY printPages2Pdf_tabpopup.printThisTab.label "タブを Pdf としてプリント">
+<!ENTITY printPages2Pdf_tabpopup.printThisTab.tooltip "タブの内容を Pdf にプリントします">
+<!ENTITY printPages2Pdf_tabpopup.printSelectedTabs.label "選択したタブを Pdf としてプリント">
+<!ENTITY printPages2Pdf_tabpopup.printSelectedTabs.tooltip "選択したタブの内容を Pdf にプリントします">
+<!ENTITY printPages2Pdf_mainpopup.preferences.label "設定…">
+<!ENTITY printPages2Pdf_mainpopup.preferences.tooltip "設定ダイアログを開く">
+<!ENTITY printPages2Pdf_mainpopup.openProcessDialog.label "変換ウィンドウ…">
+<!ENTITY printPages2Pdf_mainpopup.openProcessDialog.tooltip "Opens an empty conversion Window on which you can add Webpages">
+<!ENTITY printPages2Pdf_mainpopup.sidebar.label "Sidebar">
+<!ENTITY printPages2Pdf_mainpopup.sidebar.tooltip "Opens or closes the Print pages to Pdf Archive Sidebar">
+<!ENTITY printPages2Pdf_mainpopup.printSelection.label "Print selection">
+<!ENTITY printPages2Pdf_mainpopup.printSelection.tooltip "Select area with mouse and convert Selection to PDF.">
+<!ENTITY printPages2Pdf_topmenu.sidebar.label "PDF Archive">
+<!ENTITY printPages2Pdf_sidebar.sidebar.title "Print pages to PDF Archives">
+<!ENTITY printPages2Pdf_palette.sidebar.label "PDF Archives Sidebar">

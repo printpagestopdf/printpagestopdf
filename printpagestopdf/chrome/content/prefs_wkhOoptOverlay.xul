@@ -1,0 +1,350 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css"?>
+<?xml-stylesheet href="chrome://mozapps/content/preferences/preferences.css"?>
+<?xml-stylesheet href="chrome://browser/skin/preferences/preferences.css"?>
+<?xml-stylesheet href="chrome://printPages2Pdf/skin/prefs.css"?>
+
+<!--locale-->
+<!DOCTYPE overlay SYSTEM "chrome://printPages2Pdf/locale/prefs.dtd" >
+
+<overlay id="prefs_wkhOoptOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	
+	<script type="application/x-javascript"><![CDATA[
+		window.addEventListener("paneload", function(){ window.sizeToContent(); }, false);
+		
+		/** 
+		 * printPages2Pdf namespace. 
+		 */  
+		 
+		if (typeof printPages2Pdf == "undefined") {  
+		  var printPages2Pdf = {};  
+		};
+		Components.utils.import("resource://printPages2PdfMod/prefsUtils.jsm",printPages2Pdf); 
+		
+	]]></script>
+	
+	<broadcasterset>
+		<broadcaster id="bc_oopt_prefchange" onsyncfrompreference="return printPages2Pdf.prefsUtils.onSyncFromPreference(this);"  
+											onsynctopreference="return printPages2Pdf.prefsUtils.onSyncToPreference(this);" />
+		<broadcaster id="bc_std_labelcol" width="120" crop="end" />
+		<broadcaster id="bc_ctxmenHdrFtr" onpopupshowing="printPages2Pdf.prefsUtils.addHdrFooterMenu(event,document.getElementById('men_ctxmenHdrFtr'));" />
+ 	</broadcasterset>
+	<popupset>
+		<box hidden="true">
+		<menu label="&hdrftr.variables.menu.label;" tooltiptext="&hdrftr.variables.menu.tooltip;" id="men_ctxmenHdrFtr" oncommand="printPages2Pdf.prefsUtils.insertHdrFtrTag(event);" role="ctxmenHdrFtr">
+			<menupopup>
+				<menuitem label="&hdrftr.variables.page.label;" tooltiptext="&hdrftr.variables.page.tooltip;" value="[page]" />
+				<menuitem label="&hdrftr.variables.frompage.label;" tooltiptext="&hdrftr.variables.frompage.tooltip;" value="[frompage]" />
+				<menuitem label="&hdrftr.variables.topage.label;" tooltiptext="&hdrftr.variables.topage.tooltip;" value="[topage]" />
+				<menuitem label="&hdrftr.variables.webpage.label;" tooltiptext="&hdrftr.variables.webpage.tooltip;" value="[webpage]" />
+				<menuitem label="&hdrftr.variables.section.label;" tooltiptext="&hdrftr.variables.section.tooltip;" value="[section]" />
+				<menuitem label="&hdrftr.variables.subsection.label;" tooltiptext="&hdrftr.variables.subsection.tooltip;" value="[subsection]" />
+				<menuitem label="&hdrftr.variables.date.label;" tooltiptext="&hdrftr.variables.date.tooltip;" value="[date]" />
+				<menuitem label="&hdrftr.variables.time.label;" tooltiptext="&hdrftr.variables.time.tooltip;" value="[time]" />
+				<menuitem label="&hdrftr.variables.title.label;" tooltiptext="&hdrftr.variables.title.tooltip;" value="[title]" />
+				<menuitem label="&hdrftr.variables.doctitle.label;" tooltiptext="&hdrftr.variables.doctitle.tooltip;" value="[doctitle]" />
+			</menupopup>
+		</menu>
+		</box>
+	</popupset>
+
+	<prefpane  id="docWkhtmlObject" label="PDF Einst. (Webseite)" xflex="1" >
+		<preferences>
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.useExternalLinks" id="useExternalLinks" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.useLocalLinks" id="useLocalLinks" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.produceForms" id="produceForms" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.includeInOutline" id="includeInOutline" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.pagesCount" id="pagesCount" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.web.background" id="web.background" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.web.loadImages" id="web.loadImages" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.web.enableJavascript" id="web.enableJavascript" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.web.enableIntelligentShrinking" id="web.enableIntelligentShrinking" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.web.minimumFontSize" id="web.minimumFontSize" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.web.printMediaType" id="web.printMediaType" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.web.defaultEncoding" id="web.defaultEncoding" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.iopt.pageload.minLocal" id="pageload.minLocal" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.web.userStyleSheet" id="web.userStyleSheet" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.web.enablePlugins" id="web.enablePlugins" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.load.username" id="load.username" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.load.password" id="load.password" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.load.jsdelay" id="load.jsdelay" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.load.zoomFactor" id="load.zoomFactor" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.load.repeatCustomHeaders" id="load.repeatCustomHeaders" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.load.blockLocalFileAccess" id="load.blockLocalFileAccess" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.load.stopSlowScript" id="load.stopSlowScript" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.load.debugJavascript" id="load.debugJavascript" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.load.loadErrorHandling" id="load.loadErrorHandling" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.header.fontSize" id="header.fontSize" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.header.fontName" id="header.fontName" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.header.left" id="header.left" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.header.center" id="header.center" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.header.right" id="header.right" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.header.line" id="header.line" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.header.spacing" id="header.space" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.header.htmlUrl" id="header.htmlUrl" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.footer.fontSize" id="footer.fontSize" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.footer.fontName" id="footer.fontName" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.footer.left" id="footer.left" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.footer.center" id="footer.center" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.footer.right" id="footer.right" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.footer.line" id="footer.line" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.footer.spacing" id="footer.space" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.oopt.footer.htmlUrl" id="footer.htmlUrl" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.iopt.outline.titleOnly" id="outline.titleOnly" type="string" />
+			<preference  name="extensions.RRprintPages2Pdf.wkhtml.iopt.pageload.timeout" id="pageload.timeout" type="string" />
+		</preferences>	
+		<box hidden="true">
+			<hbox align="center"><label observes="bc_std_labelcol" control="symbol" value="load.repeatCustomHeaders" /><textbox flex="1" preference="load.repeatCustomHeaders" tooltiptext="&load.repeatCustomHeaders.tooltip;" id="tb_load.repeatCustomHeaders" /> </hbox>
+			<hbox align="center"><label observes="bc_std_labelcol" control="symbol" value="load.blockLocalFileAccess" /><textbox flex="1" preference="load.blockLocalFileAccess" tooltiptext="&load.blockLocalFileAccess.tooltip;" id="tb_load.blockLocalFileAccess" /> </hbox>
+			<hbox align="center">
+				<label observes="bc_std_labelcol" control="cb_pagesCount" value="&pagesCount;" tooltiptext="&pagesCount.tooltip;" />
+				<checkbox align="end" orient="vertical" preference="pagesCount" tooltiptext="&pagesCount.tooltip;" id="cb_pagesCount"  observes="bc_oopt_prefchange"	/> 
+			</hbox>
+			<hbox align="center">
+				<label observes="bc_std_labelcol" control="cb_produceForms" value="&produceForms;" tooltiptext="&produceForms.tooltip;" />
+				<checkbox align="end" orient="vertical" preference="produceForms" tooltiptext="&produceForms.tooltip;" id="cb_produceForms"  observes="bc_oopt_prefchange"	/> 
+			</hbox>
+		</box>
+		<tabbox flex="1" orient="vertical" xstyle="overflow:auto;">
+			<tabs>
+				<tab tooltiptext="&tab.styling.tooltip;" label="&tab.styling;" linkedpanel="panel_styling" />
+				<tab tooltiptext="&tab.pageinfo.tooltip;" label="&tab.pageinfo;" linkedpanel="panel_pageinfo" />
+				<tab tooltiptext="&tab.header.tooltip;" label="&tab.header;" linkedpanel="panel_header"  />
+				<tab tooltiptext="&tab.footer.tooltip;" label="&tab.footer;"  linkedpanel="panel_footer" />
+				<tab tooltiptext="&tab.javascript.tooltip;" label="&tab.javascript;"  linkedpanel="panel_javascript" />
+				<tab tooltiptext="&tab.tec.tooltip;" label="&tab.tec;"  linkedpanel="panel_tec" />
+			</tabs>
+			<tabpanels flex="1" orient="vertical" >
+				<tabpanel orient="vertical" id="panel_javascript" >
+					<groupbox >
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="cb_web.enableJavascript" value="&web.enableJavascript;" tooltiptext="&web.enableJavascript.tooltip;" />
+							<checkbox  preference="web.enableJavascript" tooltiptext="&web.enableJavascript.tooltip;" id="cb_web.enableJavascript" observes="bc_oopt_prefchange"	/> 
+						</hbox>
+						<hbox align="center">
+							<label  observes="bc_std_labelcol"  control="tb_load.jsdelay" value="&load.jsdelay;" tooltiptext="&load.jsdelay.tooltip;" />
+							<textbox width="60" dir="reverse" min="1" preference="load.jsdelay" tooltiptext="&load.jsdelay.tooltip;" id="tb_load.jsdelay" hidespinbuttons="false" type="number" increment="100"  observes="bc_oopt_prefchange"	/> 
+						</hbox>
+						<hbox align="center">
+							<label  observes="bc_std_labelcol"  control="cb_load.stopSlowScript" value="&load.stopSlowScript;" tooltiptext="&load.stopSlowScript.tooltip;" />
+							<checkbox align="end" orient="vertical" preference="load.stopSlowScript" tooltiptext="&load.stopSlowScript.tooltip;" id="cb_load.stopSlowScript"  observes="bc_oopt_prefchange"	/> 
+						</hbox>
+						<hbox align="center">
+							<label  observes="bc_std_labelcol"  control="cb_load.debugJavascript" value="&load.debugJavascript;" tooltiptext="&load.debugJavascript.tooltip;" />
+							<checkbox align="end" orient="vertical" preference="load.debugJavascript" tooltiptext="&load.debugJavascript.tooltip;" id="cb_load.debugJavascript"  observes="bc_oopt_prefchange"	/> 
+						</hbox>
+					</groupbox>
+				</tabpanel>
+				<tabpanel orient="vertical" id="panel_pageinfo" >
+					<groupbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="cb_useExternalLinks" value="&useExternalLinks;" tooltiptext="&useExternalLinks.tooltip;" />
+							<checkbox align="end" orient="vertical" preference="useExternalLinks" tooltiptext="&useExternalLinks.tooltip;" id="cb_useExternalLinks"  observes="bc_oopt_prefchange"	/> 
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="cb_useLocalLinks" value="&useLocalLinks;" tooltiptext="&useLocalLinks.tooltip;" />
+							<checkbox align="end" orient="vertical" preference="useLocalLinks" tooltiptext="&useLocalLinks.tooltip;" id="cb_useLocalLinks"  observes="bc_oopt_prefchange"	/> 
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="cb_includeInOutline" value="&includeInOutline;" tooltiptext="&includeInOutline.tooltip;" />
+							<checkbox align="end" orient="vertical" preference="includeInOutline" tooltiptext="&includeInOutline.tooltip;" id="cb_includeInOutline"  observes="bc_oopt_prefchange"	/> 
+						</hbox>						
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="cb_outline.titleOnly" value="&outline.titleOnly.title;" tooltiptext="&outline.titleOnly.tooltip;" />
+							<checkbox align="end" orient="vertical" preference="outline.titleOnly" tooltiptext="&includeInOutline.tooltip;" id="cb_outline.titleOnly"  observes="bc_oopt_prefchange"	/> 
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="tb_load.username" value="&load.username;" tooltiptext="&load.username.tooltip;" />
+							<textbox flex="1" preference="load.username" tooltiptext="&load.username.tooltip;" id="tb_load.username" /> 
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="symbol" value="&load.password;" tooltiptext="&load.password.tooltip;" />
+							<textbox flex="1" preference="load.password" tooltiptext="&load.password.tooltip;" id="tb_load.password" /> 
+						</hbox>
+					</groupbox>
+				</tabpanel>
+				<tabpanel orient="vertical" id="panel_styling" >
+					<groupbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="tb_load.zoomFactor" value="&load.zoomFactor;" tooltiptext="&load.zoomFactor.tooltip;" />
+							<textbox width="60" dir="reverse" preference="load.zoomFactor" tooltiptext="&load.zoomFactor.tooltip;" id="tb_load.zoomFactor"  hidespinbuttons="false" type="number" increment="1" decimalplaces="2"  observes="bc_oopt_prefchange"	/> 
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="cb_web.background" value="&web.background;" tooltiptext="&web.background.tooltip;" />
+							<checkbox preference="web.background" tooltiptext="&web.background.tooltip;" id="cb_web.background" observes="bc_oopt_prefchange"	/> 
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="cb_web.loadImages" value="&web.loadImages;" tooltiptext="&web.loadImages.tooltip;" />
+							<checkbox preference="web.loadImages" tooltiptext="&web.loadImages.tooltip;" id="cb_web.loadImages" observes="bc_oopt_prefchange"	/> 
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="tb_web.minimumFontSize" value="&web.minimumFontSize;" tooltiptext="&web.minimumFontSize.tooltip;" />
+							<textbox width="60" dir="reverse" preference="web.minimumFontSize" tooltiptext="&web.minimumFontSize.tooltip;" id="tb_web.minimumFontSize"  hidespinbuttons="false" type="number" increment="1"  observes="bc_oopt_prefchange"	 /> 
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="cb_web.printMediaType" value="&web.printMediaType;" tooltiptext="&web.printMediaType.tooltip;" />
+							<checkbox preference="web.printMediaType" tooltiptext="&web.printMediaType.tooltip;" id="cb_web.printMediaType" observes="bc_oopt_prefchange"	/> 
+						</hbox>
+						<hbox align="center" hidden="true">
+							<label observes="bc_std_labelcol" control="tb_web.userStyleSheet" value="&web.userStyleSheet;" tooltiptext="&web.userStyleSheet.tooltip;" />
+							<textbox flex="1" preference="web.userStyleSheet" tooltiptext="&web.userStyleSheet.tooltip;" id="tb_web.userStyleSheet" /> 
+							<button class="btFileDlg" oncommand="printPages2Pdf.prefsUtils.getExistingFileName(this,['css','&web.userStyleSheet.content.fileDlg.fileTypeName;',],'&web.userStyleSheet.content.fileDlg.title;');" />
+						</hbox>
+					</groupbox>
+				</tabpanel>
+				<tabpanel orient="vertical" id="panel_tec" >
+					<groupbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="symbol" value="&load.loadErrorHandling;" tooltiptext="&load.loadErrorHandling.tooltip;" />
+							<menulist preference="load.loadErrorHandling" tooltiptext="&load.loadErrorHandling.tooltip;"  dir="reverse" >
+							  <menupopup>
+							    <menuitem label="&load.loadErrorHandling.content.ignore;" tooltiptext="&load.loadErrorHandling.content.ignore.tooltip;"   value="ignore"/>
+							    <menuitem label="&load.loadErrorHandling.content.skip;" tooltiptext="&load.loadErrorHandling.content.skip.tooltip;" value="skip"/>
+							    <menuitem label="&load.loadErrorHandling.content.abort;" tooltiptext="&load.loadErrorHandling.content.abort.tooltip;"   value="abort"/>
+							  </menupopup>
+							</menulist>						
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="tb_pageload.timeout" value="&pageload.timeout;" tooltiptext="&pageload.timeout.tooltip;" />
+							<textbox width="80" dir="reverse" preference="pageload.timeout" tooltiptext="&pageload.timeout.tooltip;" id="tb_pageload.timeout"  hidespinbuttons="false" type="number" increment="1"  observes="bc_oopt_prefchange"	 /> 
+							<label value="ms" />
+						</hbox>
+						<!-- Option is dangerous, outline and links are positioned wrong if not enabled -->
+						<!--
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="cb_web.enableIntelligentShrinking" value="&web.enableIntelligentShrinking;" tooltiptext="&web.enableIntelligentShrinking.tooltip;" />
+							<checkbox flex="1" preference="web.enableIntelligentShrinking" tooltiptext="&web.enableIntelligentShrinking.tooltip;" id="cb_web.enableIntelligentShrinking" observes="bc_oopt_prefchange" /> 
+						</hbox>
+						-->
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="symbol" value="&web.defaultEncoding;" tooltiptext="&web.defaultEncoding.tooltip;" />
+							<!--<textbox flex="1" preference="web.defaultEncoding" tooltiptext="&web.defaultEncoding.tooltip;" id="tb_web.defaultEncoding" />--> 
+							<menulist preference="web.defaultEncoding" tooltiptext="&web.defaultEncoding.tooltip;"  editable="true"  dir="reverse"  >
+							  <menupopup>
+							    <menuitem label="utf-8" value="utf-8"/>
+							    <menuitem label="utf-16" value="utf-16"/>
+							    <menuitem label="iso-8859-1" value="iso-8859-1"/>
+							    <menuitem label="windows-1251" value="windows-1251"/>
+							    <menuitem label="us-ascii" value="us-ascii"/>
+							  </menupopup>
+							</menulist>						
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="cb_pageload.minLocal" value="&pageload.minLocal;" tooltiptext="&pageload.minLocal.tooltip;" />
+							<checkbox  preference="pageload.minLocal" tooltiptext="&web.enableJavascript.tooltip;" id="cb_pageload.minLocal" observes="bc_oopt_prefchange"	/> 
+						</hbox>
+						
+						
+<!--
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="cb_web.enablePlugins" value="&web.enablePlugins;" tooltiptext="&web.enablePlugins.tooltip;" />
+							<checkbox flex="1" preference="web.enablePlugins" tooltiptext="&web.enablePlugins.tooltip;" id="cb_web.enablePlugins"  observes="bc_oopt_prefchange"/> 
+						</hbox>
+-->
+					</groupbox>
+				</tabpanel>
+				<tabpanel orient="vertical" id="panel_header" >
+					<groupbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="tb_header.left" value="&header.left;" tooltiptext="&header.left.tooltip;" />
+							<textbox  observes="bc_ctxmenHdrFtr" flex="1" preference="header.left" tooltiptext="&header.left.tooltip;" id="tb_header.left" /> 
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="tb_header.center" value="&header.center;" tooltiptext="&header.center.tooltip;" />
+							<textbox  observes="bc_ctxmenHdrFtr" flex="1" preference="header.center" tooltiptext="&header.center.tooltip;" id="tb_header.center" /> 
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="tb_header.right" value="&header.right;" tooltiptext="&header.right.tooltip;" />
+							<textbox  observes="bc_ctxmenHdrFtr" flex="1" preference="header.right" tooltiptext="&header.right.tooltip;" id="tb_header.right" /> 
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="tb_header.htmlUrl" value="&header.htmlUrl;" tooltiptext="&header.htmlUrl.tooltip;" />
+							<textbox flex="1" preference="header.htmlUrl" tooltiptext="&header.htmlUrl.tooltip;" id="tb_header.htmlUrl" /> 
+							<button class="btFileDlg" oncommand="printPages2Pdf.prefsUtils.getExistingFileName(this,['filterHTML',],'&header.htmlUrl.content.fileDlg.title;');" />
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="cb_header.line" value="&header.line;" tooltiptext="&header.line.tooltip;" />
+							<checkbox align="end" orient="vertical" preference="header.line" tooltiptext="&header.line.tooltip;" id="cb_header.line"  observes="bc_oopt_prefchange"	/> 						
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="tb_header.space" value="&header.space;" tooltiptext="&header.space.tooltip;" />
+							<textbox width="60" dir="reverse" preference="header.space" tooltiptext="&header.space.tooltip;" id="tb_header.space"  hidespinbuttons="false" type="number" increment="1" decimalplaces="2"  observes="bc_oopt_prefchange"	/> 
+							<label value="mm" />
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="ml_header.fontName" value="&header.fontName;" tooltiptext="&header.fontName.tooltip;" />
+							<menulist preference="header.fontName" tooltiptext="&header.fontName.tooltip;"  editable="true"  dir="reverse" id="ml_header.fontName" >
+							  <menupopup>
+								<menuitem label="Avant Garde Gothic" value="Avant Garde Gothic" />
+								<menuitem label="Bookman" value="Bookman" />
+								<menuitem label="Courier" value="Courier" />
+								<menuitem label="Helvetica" value="Helvetica" />
+								<menuitem label="Helvetica Narrow" value="Helvetica Narrow" />
+								<menuitem label="New Centura Schoolbook" value="New Centura Schoolbook" />
+								<menuitem label="Palatino" value="Palatino" />
+								<menuitem label="Symbol" value="Symbol" />
+								<menuitem label="Times" value="Times" />
+							  </menupopup>
+							</menulist>						
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="tb_header.fontSize" value="&header.fontSize;" tooltiptext="&header.fontSize.tooltip;" />
+							<textbox width="60" dir="reverse" preference="header.fontSize" tooltiptext="&header.fontSize.tooltip;" id="tb_header.fontSize"  hidespinbuttons="false" type="number" increment="1"  observes="bc_oopt_prefchange"	 /> 
+						</hbox>
+					</groupbox>
+				</tabpanel>
+				<tabpanel orient="vertical" id="panel_footer">
+					<groupbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="tb_footer.left" value="&footer.left;" tooltiptext="&footer.left.tooltip;" />
+							<textbox  observes="bc_ctxmenHdrFtr" flex="1" preference="footer.left" tooltiptext="&footer.left.tooltip;" id="tb_footer.left" /> 
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="tb_footer.center" value="&footer.center;" tooltiptext="&footer.center.tooltip;" />
+							<textbox  observes="bc_ctxmenHdrFtr" flex="1" preference="footer.center" tooltiptext="&footer.center.tooltip;" id="tb_footer.center" /> 
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="tb_footer.right" value="&footer.right;" tooltiptext="&footer.right.tooltip;" />
+							<textbox  observes="bc_ctxmenHdrFtr" flex="1" preference="footer.right" tooltiptext="&footer.right.tooltip;" id="tb_footer.right" /> 
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="tb_footer.htmlUrl" value="&footer.htmlUrl;" tooltiptext="&footer.htmlUrl.tooltip;" />
+							<textbox flex="1" preference="footer.htmlUrl" tooltiptext="&footer.htmlUrl.tooltip;" id="tb_footer.htmlUrl" /> 
+							<button class="btFileDlg" oncommand="printPages2Pdf.prefsUtils.getExistingFileName(this,['filterHTML',],'&footer.htmlUrl.content.fileDlg.title;');" />
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="cb_footer.line" value="&footer.line;" tooltiptext="&footer.line.tooltip;" />
+							<checkbox align="end" orient="vertical" preference="footer.line" tooltiptext="&footer.line.tooltip;" id="cb_footer.line"  observes="bc_oopt_prefchange"	/> 						
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="tb_footer.space" value="&footer.space;" tooltiptext="&footer.space.tooltip;" />
+							<textbox width="60" dir="reverse" preference="footer.space" tooltiptext="&footer.space.tooltip;" id="tb_footer.space"  hidespinbuttons="false" type="number" increment="1" decimalplaces="2"  observes="bc_oopt_prefchange"	/> 
+							<label value="mm" />
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="ml_footer.fontName" value="&footer.fontName;" tooltiptext="&footer.fontName.tooltip;" />
+							<menulist preference="footer.fontName" tooltiptext="&footer.fontName.tooltip;"  editable="true"  dir="reverse" id="ml_footer.fontName" >
+							  <menupopup>
+								<menuitem label="Avant Garde Gothic" value="Avant Garde Gothic" />
+								<menuitem label="Bookman" value="Bookman" />
+								<menuitem label="Courier" value="Courier" />
+								<menuitem label="Helvetica" value="Helvetica" />
+								<menuitem label="Helvetica Narrow" value="Helvetica Narrow" />
+								<menuitem label="New Centura Schoolbook" value="New Centura Schoolbook" />
+								<menuitem label="Palatino" value="Palatino" />
+								<menuitem label="Symbol" value="Symbol" />
+								<menuitem label="Times" value="Times" />
+							  </menupopup>
+							</menulist>						
+						</hbox>
+						<hbox align="center">
+							<label observes="bc_std_labelcol" control="tb_footer.fontSize" value="&footer.fontSize;" tooltiptext="&footer.fontSize.tooltip;" />
+							<textbox width="60" dir="reverse" preference="footer.fontSize" tooltiptext="&footer.fontSize.tooltip;" id="tb_footer.fontSize"  hidespinbuttons="false" type="number" increment="1"  observes="bc_oopt_prefchange"	 /> 
+						</hbox>
+					</groupbox>
+				</tabpanel>
+			</tabpanels>
+		</tabbox>
+	</prefpane>	 
+</overlay>

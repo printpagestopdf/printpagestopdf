@@ -1,0 +1,20 @@
+<!ENTITY action.openwith.label "打开 ....">
+<!ENTITY action.openwith.tooltip "用操作系统默认应用程序打开元素">
+<!ENTITY action.cut.label "剪切">
+<!ENTITY action.cut.tooltip "将元素剪切到剪贴板并在此删除它">
+<!ENTITY action.copy.label "复制">
+<!ENTITY action.copy.tooltip "复制元素到剪贴板">
+<!ENTITY action.paste.label "插入">
+<!ENTITY action.paste.tooltip "从剪贴板插入元素">
+<!ENTITY action.delete.label "删除">
+<!ENTITY action.delete.tooltip "删除选中的元素">
+<!ENTITY action.newfolder.label "新建文件夹">
+<!ENTITY action.newfolder.tooltip "创建一个新文件夹">
+<!ENTITY action.newarchive.label "新建档案">
+<!ENTITY action.newarchive.tooltip "创建一个新档案">
+<!ENTITY action.rename.label "重命名">
+<!ENTITY action.rename.tooltip "重命名选中的元素">
+<!ENTITY action.help.label "帮助">
+<!ENTITY action.help.tooltip "打开 Print pages to PDF 档案模块的在线帮助">
+<!ENTITY action.fav.label "收藏夹">
+<!ENTITY action.fav.tooltip "添加选中的文件夹到收藏夹列表">

@@ -1,0 +1,26 @@
+[name="btOutlineUnindent"]{
+	list-style-image: url(chrome://printPages2Pdf/skin/left.png);
+}
+
+toolbarbutton[disabled="true"]{
+	border: #655a63 inset 1px;
+	cursor: not-allowed;
+	background-color:#bcbaba;
+}
+
+
+[name="btOutlineIndent"]{
+	list-style-image: url(chrome://printPages2Pdf/skin/right.png);	
+}
+
+[name="btOutlineDelete"]{
+	list-style-image: url(chrome://printPages2Pdf/skin/remove.png);	
+}
+
+[name="btHdrClear"]{
+	list-style-image: url(chrome://printPages2Pdf/skin/clearTree.png);	
+}
+
+[name="btHdrTitle"]{
+	list-style-image: url(chrome://printPages2Pdf/skin/addTitle.png);	
+}

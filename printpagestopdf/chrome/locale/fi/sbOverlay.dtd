@@ -1,0 +1,5 @@
+<!ENTITY printPages2Pdf_sboverlay.label "Tulosta sivut PDF-muodossa">
+<!ENTITY printPages2Pdf_sboverlay.print.label "Tulosta kirjanmerkit">
+<!ENTITY printPages2Pdf_mainpopup.print.tooltip "Tulosta valitut kirjanmerkit yhtenä PDF-asiakirjana">
+<!ENTITY printPages2Pdf_sboverlay.printText.label "Tulosta kirjanmerkit (teksti)">
+<!ENTITY printPages2Pdf_mainpopup.printText.tooltip "Tulosta valitut kirjanmerkit yhtenä PDF-asiakirjana (teksti)">

@@ -1,0 +1,5 @@
+<!ENTITY printPages2Pdf_sboverlay.label "Print pages to PDF">
+<!ENTITY printPages2Pdf_sboverlay.print.label "Print Bookmark(s)">
+<!ENTITY printPages2Pdf_mainpopup.print.tooltip "Print all selected Bookmarks into one Pdf Document">
+<!ENTITY printPages2Pdf_sboverlay.printText.label "Print Bookmark(s) (text)">
+<!ENTITY printPages2Pdf_mainpopup.printText.tooltip "Print all selected Bookmarks as text into one Pdf Document">

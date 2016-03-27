@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Footer one line</title>
+
+<script  type="text/javascript">
+function subst(){
+    var vars = {};
+    var x = document.location.search.substring(1).split('&');
+    for (var i in x) {
+        var z = x[i].split('=', 2);
+        vars[z[0]] = decodeURIComponent(z[1]);
+    }
+    var x = ['frompage', 'topage', 'page', 'section', 'subsection', 'date', 'time', 'title', 'doctitle'];
+    for (var i in x) {
+        var y = document.getElementsByName(x[i]);
+        for (var j = 0; j < y.length; ++j) {
+            y[j].textContent = vars[x[i]];
+        }
+    }
+       
+}
+</script>
+</head>
+<body onload="subst();" style="font-size: xx-small;">
+<hr style="width: 27cm; height: 1px;">
+<table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td>
+	<div  style="text-align:left;white-space: nowrap;width:24cm;overflow:hidden" name="webpage">[webpage]</div>
+</td>
+<td>
+	<div  style="text-align:right;white-space: nowrap;width:2cm;overflow:hidden">
+		<span name="page">[page]</span> / <span name="topage">[topage]</span>
+	</div>
+</td>
+</tr>
+</tbody>
+</table>
+</body></html>
